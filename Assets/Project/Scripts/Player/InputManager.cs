@@ -34,9 +34,9 @@ public class InputManager : MonoBehaviour
 
         _rigidBody.rotation = angle;
 
+        // Skew angle by 45 deg to determine quadrant
         float skewedAngle = (angle + 45) * Mathf.Deg2Rad;
 
-        // The suspense is killing me :(
         if (Mathf.Sign(Mathf.Sin(skewedAngle)) == 1 && Mathf.Sign(Mathf.Cos(skewedAngle)) == 1 && Mathf.Sign(Mathf.Tan(skewedAngle)) == 1)
         {
             // Back
@@ -59,7 +59,8 @@ public class InputManager : MonoBehaviour
             Debug.Log("Cos");
         }
 
-        //Debug.Log(transform.eulerAngles.z);
+        var vec = (mousePosition - new Vector2(transform.position.x, transform.position.y)).normalized;
+        Debug.Log(vec);
 
     }
 

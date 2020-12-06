@@ -4,24 +4,32 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-
+    [SerializeField] float movementSpeed = 10f;
     private Rigidbody2D _rigidBody;
     private SpriteRenderer _spriteRenderer;
+    private Animator _animator;
+    private Vector2 _movement;
+
     // Start is called before the first frame update
     void Start()
     {
         _rigidBody = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        _animator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         GetPlayerPosition();
-
-
+        GetUserInput();
     }
-    
+
+    private void FixedUpdate()
+    {
+        MovePlayer();
+    }
+
     /// <summary>
     /// Get mouse input
     /// </summary>
@@ -31,37 +39,33 @@ public class InputManager : MonoBehaviour
 
         float angle = GetAngleFromPosition(mousePosition, _rigidBody.position);
 
-
-        _rigidBody.rotation = angle;
-
         // Skew angle by 45 deg to determine quadrant
         float skewedAngle = (angle + 45) * Mathf.Deg2Rad;
 
         if (Mathf.Sign(Mathf.Sin(skewedAngle)) == 1 && Mathf.Sign(Mathf.Cos(skewedAngle)) == 1 && Mathf.Sign(Mathf.Tan(skewedAngle)) == 1)
         {
             // Back
-            Debug.Log("All");
-            //_spriteRenderer.sprite = Sprite 
+            _animator.SetFloat("Horizontal", 0);
+            _animator.SetFloat("Vertical", 1);
         }
         else if (Mathf.Sign(Mathf.Sin(skewedAngle)) == 1)
         {
             // Left
-            Debug.Log("Sin");
+            _animator.SetFloat("Horizontal", -1);
+            _animator.SetFloat("Vertical", 0);
         }
         else if (Mathf.Sign(Mathf.Tan(skewedAngle)) == 1)
         {
             // Front
-            Debug.Log("Tan");
+            _animator.SetFloat("Horizontal", 0);
+            _animator.SetFloat("Vertical", -1);
         }
         else if (Mathf.Sign(Mathf.Cos(skewedAngle)) == 1)
         {
             // Right
-            Debug.Log("Cos");
+            _animator.SetFloat("Horizontal", 1);
+            _animator.SetFloat("Vertical", 0);
         }
-
-        var vec = (mousePosition - new Vector2(transform.position.x, transform.position.y)).normalized;
-        Debug.Log(vec);
-
     }
 
     private float GetAngleFromPosition(Vector2 mouse, Vector2 player)
@@ -69,4 +73,14 @@ public class InputManager : MonoBehaviour
         return Mathf.Atan2(player.y - mouse.y, player.x - mouse.x) * Mathf.Rad2Deg + 90f;
     }
 
+    private void GetUserInput()
+    {
+        _movement.x = Input.GetAxisRaw("Horizontal");
+        _movement.y = Input.GetAxisRaw("Vertical");
+    }
+
+    private void MovePlayer()
+    {
+        _rigidBody.MovePosition(_rigidBody.position + _movement * movementSpeed * Time.fixedDeltaTime);
+    }
 }

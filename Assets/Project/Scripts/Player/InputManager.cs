@@ -10,6 +10,8 @@ public class InputManager : MonoBehaviour
     private Animator _animator;
     private Vector2 _movement;
 
+    [SerializeField] private GameEvent _onPlayerDamaged;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -82,5 +84,10 @@ public class InputManager : MonoBehaviour
     private void MovePlayer()
     {
         _rigidBody.MovePosition(_rigidBody.position + _movement * movementSpeed * Time.fixedDeltaTime);
+    }
+
+    private void OnMouseDown()
+    {
+        _onPlayerDamaged.Raise();
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     [SerializeField] float movementSpeed = 10f;
+    [SerializeField] Vector2Variable _position;
     private Rigidbody2D _rigidBody;
     private SpriteRenderer _spriteRenderer;
     private Animator _animator;
@@ -12,6 +13,10 @@ public class InputManager : MonoBehaviour
 
     [SerializeField] private GameEvent _onPlayerDamaged;
 
+    private void Awake()
+    {
+        _position.RuntimeValue = transform.position;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +30,7 @@ public class InputManager : MonoBehaviour
     {
         GetPlayerPosition();
         GetUserInput();
+        _position.RuntimeValue = transform.position;
     }
 
     private void FixedUpdate()

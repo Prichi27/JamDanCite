@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    [SerializeField] float movementSpeed = 10f;
+    [SerializeField] FloatVariable movementSpeed;
     [SerializeField] Vector2Variable _position;
     private Rigidbody2D _rigidBody;
     private SpriteRenderer _spriteRenderer;
@@ -89,7 +89,9 @@ public class InputManager : MonoBehaviour
 
     private void MovePlayer()
     {
-        _rigidBody.MovePosition(_rigidBody.position + _movement * movementSpeed * Time.fixedDeltaTime);
+        _rigidBody.MovePosition(_rigidBody.position + _movement * movementSpeed.RuntimeValue * Time.fixedDeltaTime);
+        _animator.SetBool("IsMoving", _movement.x != 0 || _movement.y != 0);
+
     }
 
     private void OnMouseDown()

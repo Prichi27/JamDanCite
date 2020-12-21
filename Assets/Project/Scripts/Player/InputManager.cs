@@ -11,8 +11,6 @@ public class InputManager : MonoBehaviour
     private Animator _animator;
     private Vector2 _movement;
 
-    [SerializeField] private GameEvent _onPlayerDamaged;
-
     private void Awake()
     {
         _position.RuntimeValue = transform.position;
@@ -92,10 +90,5 @@ public class InputManager : MonoBehaviour
         _rigidBody.MovePosition(_rigidBody.position + _movement * movementSpeed.RuntimeValue * Time.fixedDeltaTime);
         _animator.SetBool("IsMoving", _movement.x != 0 || _movement.y != 0);
 
-    }
-
-    private void OnMouseDown()
-    {
-        _onPlayerDamaged.Raise();
     }
 }

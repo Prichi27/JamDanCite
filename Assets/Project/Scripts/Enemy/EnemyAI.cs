@@ -26,7 +26,6 @@ public class EnemyAI : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
 
         InvokeRepeating("UpdatePath", 0f, .5f);
-
     }
 
     private void UpdatePath()

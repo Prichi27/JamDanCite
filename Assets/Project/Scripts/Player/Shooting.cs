@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-    public float crosshairDistance = 2.0f;
+    public float crosshairDistance = 0.6f;
 
-    public List<GameObject> staffPositions;
     public GameObject bulletPrefab;
     public GameObject crosshair;
 
-    private GameObject _currentStaffPosition;
     private Vector3 _mousePosition;
-    private Vector3 _direction;
+    private Vector2 _direction;
 
     private Animator _animator;
 
@@ -21,14 +19,16 @@ public class Shooting : MonoBehaviour
     private void Start()
     {
         _animator = GetComponentInChildren<Animator>();
-        Cursor.visible = false;
-        //Cursor.lockState = CursorLockMode.Confined;
+    }
+
+    private void Awake() 
+    {
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     // Update is called once per frame
     void Update()
     {
-        SetStaffPosition();
         ProcessInputs();
         Aim();
 
@@ -40,30 +40,20 @@ public class Shooting : MonoBehaviour
 
     void Attack()
     {
-        Debug.Log(_direction);
-        GameObject power = Instantiate(bulletPrefab, _currentStaffPosition.transform.position, _currentStaffPosition.transform.rotation);
+        GameObject power = Instantiate(bulletPrefab, crosshair.transform.position, crosshair.transform.rotation);
         Rigidbody2D rigidBody = power.GetComponent<Rigidbody2D>();
         rigidBody.AddForce(_direction * bulletForce, ForceMode2D.Impulse);
     }
 
-    // Sets staff position
-    void SetStaffPosition()
-    {
-        float horizontal = _animator.GetFloat("Horizontal");
-        if (horizontal < 0) _currentStaffPosition = staffPositions.Find(e => e.name == Constants.LEFT_STAFF); 
-        else _currentStaffPosition = staffPositions.Find(e => e.name == Constants.RIGHT_STAFF); 
-    }
-
     void ProcessInputs()
     {
-        _mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        _direction = (_mousePosition - _currentStaffPosition.transform.position);
+        _direction = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         _direction.Normalize();
     }
 
     void Aim()
     {
-        if (_direction != Vector3.zero)
+        if (_direction != Vector2.zero)
         {
             crosshair.transform.localPosition = _direction * crosshairDistance;
         }

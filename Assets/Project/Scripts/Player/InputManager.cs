@@ -10,6 +10,7 @@ public class InputManager : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     private Animator _animator;
     private Vector2 _movement;
+    private Vector2 _mousePosition;
 
     private void Awake()
     {
@@ -41,9 +42,9 @@ public class InputManager : MonoBehaviour
     /// </summary>
     private void GetPlayerPosition()
     {
-        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        _mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        float angle = GetAngleFromPosition(mousePosition, _rigidBody.position);
+        float angle = GetAngleFromPosition(_mousePosition, _rigidBody.position);
 
         // Skew angle by 45 deg to determine quadrant
         float skewedAngle = (angle + 45) * Mathf.Deg2Rad;

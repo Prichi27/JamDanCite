@@ -11,7 +11,7 @@ public class FloatVariable : ScriptableObject, ISerializationCallbackReceiver
 
     private float _runtimeValue;
 
-    public float RuntimeValue { get { return _runtimeValue; } set { _runtimeValue += value; } }
+    public float RuntimeValue { get { return _runtimeValue; } set { _runtimeValue = value; } }
 
     public void OnAfterDeserialize()
     {

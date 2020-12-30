@@ -4,14 +4,44 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D other) 
+    public Vector2 velocity = new Vector2(0.0f, 0.0f);
+    public Vector2 offset = new Vector2(0.0f, 0.0f);
+    public GameObject player;
+    [SerializeField] public GameEvent OnEnemyDamaged;
+
+    void Update()
     {
-        if(other.gameObject.layer == LayerMask.GetMask("Enemy"))
+        Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
+        Vector2 newPosition = currentPosition + velocity * Time.deltaTime;
+
+        Debug.DrawLine(currentPosition, newPosition, Color.cyan);
+
+        RaycastHit2D[] hits = Physics2D.LinecastAll(currentPosition + offset, newPosition + offset);
+
+        foreach (RaycastHit2D hit in hits)
         {
-            Debug.Log("Damage Enemy");
+            GameObject other = hit.collider.gameObject;
+
+            if(other != player)
+            {
+                if (other.CompareTag("Enemy"))
+                {
+                    Destroy(gameObject);
+                    OnEnemyDamaged.Raise();
+                    Debug.Log(other.name);
+                    break;
+                }
+                
+                if (other.CompareTag("Obstacle"))
+                {
+                    Destroy(gameObject);
+                    break;
+                }
+
+
+            }
         }
 
-        Debug.Log("Collision");
-        Destroy(this);
+        transform.position = newPosition;
     }
 }

@@ -14,9 +14,11 @@ GameObject:
   - component: {fileID: 552303781658521395}
   - component: {fileID: 4021704085724370}
   - component: {fileID: 1127444142527757376}
+  - component: {fileID: 8955945441990695130}
+  - component: {fileID: 6905806496610867293}
   m_Layer: 9
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,6 +134,47 @@ MonoBehaviour:
   _attackSpeed: {fileID: 11400000, guid: b65c3c16c87175d4bbea22ce8e7002dc, type: 2}
   _attackPoints: {fileID: 11400000, guid: 763a4ef545a110b42bfdb049e7c52965, type: 2}
   OnPlayerDamaged: {fileID: 11400000, guid: e40096e452acc89429c442e169f25a1a, type: 2}
+--- !u!114 &8955945441990695130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024227110546994298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3043487d5105d59499220075ed39957a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 11400000, guid: 4d4ab52c782f5204580707184b64bdf3, type: 2}
+--- !u!114 &6905806496610867293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024227110546994298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0243da7405d4af4b9574566f64455b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: 222b48a736eca7b47bb977e9da51e4dc, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8955945441990695130}
+        m_MethodName: UpdateHealth
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 53e152a87a997824fb8d4bba7c095c8a,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: FloatVariable, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2737571948195383637
 GameObject:
   m_ObjectHideFlags: 0

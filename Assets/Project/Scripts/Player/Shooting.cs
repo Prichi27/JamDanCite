@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
+    [Space]
+    [Header("Character attributes:")]
     public float crosshairDistance = 0.6f;
+    public float bulletForce = 10f;
 
-    public GameObject bulletPrefab;
+    [Space]
+    [Header("References:")]
     public GameObject crosshair;
-
+    private Animator _animator;
+    
+    [Space]
+    [Header("Prefabs:")]
+    public GameObject bulletPrefab;
+    
     private Vector3 _mousePosition;
     private Vector2 _direction;
-
-    private Animator _animator;
-
-    public float bulletForce = 20f;
 
     private void Start()
     {
@@ -23,7 +28,7 @@ public class Shooting : MonoBehaviour
 
     private void Awake() 
     {
-        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -31,7 +36,7 @@ public class Shooting : MonoBehaviour
     {
         ProcessInputs();
         Aim();
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                               
         if (Input.GetButtonDown("Fire1"))
         {
             Attack();
@@ -40,9 +45,18 @@ public class Shooting : MonoBehaviour
 
     void Attack()
     {
-        GameObject power = Instantiate(bulletPrefab, crosshair.transform.position, crosshair.transform.rotation);
-        Rigidbody2D rigidBody = power.GetComponent<Rigidbody2D>();
-        rigidBody.AddForce(_direction * bulletForce, ForceMode2D.Impulse);
+        // GameObject power = Instantiate(bulletPrefab, crosshair.transform.position, crosshair.transform.rotation);
+        // Rigidbody2D rigidBody = power.GetComponent<Rigidbody2D>();
+        // rigidBody.AddForce(_direction * bulletForce, ForceMode2D.Impulse);
+        Vector2 shootingDirection = crosshair.transform.localPosition;
+        shootingDirection.Normalize();
+
+        GameObject power = Instantiate(bulletPrefab, crosshair.transform.position, Quaternion.identity);
+        Projectile projectileScript = power.GetComponent<Projectile>();
+        projectileScript.velocity = shootingDirection * bulletForce;
+        projectileScript.player = gameObject;
+        power.transform.Rotate(0, 0, Mathf.Atan2(shootingDirection.y, shootingDirection.x) * Mathf.Rad2Deg);
+        Destroy(power, 2.0f);
     }
 
     void ProcessInputs()

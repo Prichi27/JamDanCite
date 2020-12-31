@@ -54,7 +54,6 @@ public class Shooting : MonoBehaviour
         GameObject power = Instantiate(bulletPrefab, crosshair.transform.position, Quaternion.identity);
         Projectile projectileScript = power.GetComponent<Projectile>();
         projectileScript.velocity = shootingDirection * bulletForce;
-        projectileScript.player = gameObject;
         power.transform.Rotate(0, 0, Mathf.Atan2(shootingDirection.y, shootingDirection.x) * Mathf.Rad2Deg);
         Destroy(power, 2.0f);
     }

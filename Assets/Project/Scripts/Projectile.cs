@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    [SerializeField] private FloatVariable damage;
     public Vector2 velocity = new Vector2(0.0f, 0.0f);
     public Vector2 offset = new Vector2(0.0f, 0.0f);
-    public GameObject player;
     [SerializeField] public GameEvent OnEnemyDamaged;
 
     void Update()
     {
-        Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
+        Vector2 currentPosition = transform.position;
         Vector2 newPosition = currentPosition + velocity * Time.deltaTime;
-
-        Debug.DrawLine(currentPosition, newPosition, Color.cyan);
 
         RaycastHit2D[] hits = Physics2D.LinecastAll(currentPosition + offset, newPosition + offset);
 
@@ -22,24 +20,23 @@ public class Projectile : MonoBehaviour
         {
             GameObject other = hit.collider.gameObject;
 
-            if(other != player)
+            if (other.CompareTag("Enemy"))
             {
-                if (other.CompareTag("Enemy"))
+                var enemyHealth = other.GetComponent<EnemyHealth>();
+                if (enemyHealth)
                 {
-                    Destroy(gameObject);
-                    OnEnemyDamaged.Raise();
-                    Debug.Log(other.name);
-                    break;
+                    enemyHealth.UpdateHealth(damage);
                 }
-                
-                if (other.CompareTag("Obstacle"))
-                {
-                    Destroy(gameObject);
-                    break;
-                }
-
-
+                Destroy(gameObject);
+                break;
             }
+                
+            if (other.CompareTag("Obstacle"))
+            {
+                Destroy(gameObject);
+                break;
+            }
+            
         }
 
         transform.position = newPosition;

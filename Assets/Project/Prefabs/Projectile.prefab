@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9828c8d0eec8f140aa89cabcdab49cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: {fileID: 11400000, guid: 53e152a87a997824fb8d4bba7c095c8a, type: 2}
   velocity: {x: 0, y: 0}
   offset: {x: 0, y: 0}
-  player: {fileID: 5239676918454948116, guid: 4a4bf36dda16ace458cb5eef8351d87c, type: 3}
   OnEnemyDamaged: {fileID: 11400000, guid: 222b48a736eca7b47bb977e9da51e4dc, type: 2}

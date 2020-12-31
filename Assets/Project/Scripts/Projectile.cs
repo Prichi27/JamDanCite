@@ -20,7 +20,7 @@ public class Projectile : MonoBehaviour
         {
             GameObject other = hit.collider.gameObject;
 
-            if (other.CompareTag("Enemy"))
+            if (other.CompareTag(Constants.ENEMY_TAG))
             {
                 var enemyHealth = other.GetComponent<EnemyHealth>();
                 if (enemyHealth)
@@ -31,7 +31,7 @@ public class Projectile : MonoBehaviour
                 break;
             }
                 
-            if (other.CompareTag("Obstacle"))
+            if (other.CompareTag(Constants.OBSTACLE_TAG))
             {
                 Destroy(gameObject);
                 break;

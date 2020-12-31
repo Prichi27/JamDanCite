@@ -2,6 +2,8 @@
 {
     public static string SPAWNER = "Spawner";
     public static string ENEMIES_PARENT = "Enemies";
+    public static string ENEMY_TAG = "Enemy";
+    public static string OBSTACLE_TAG = "Obstacle";
     public static string RIGHT_STAFF = "Right";
     public static string LEFT_STAFF = "Left";
 }

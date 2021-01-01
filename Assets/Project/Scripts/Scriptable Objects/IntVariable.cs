@@ -10,7 +10,7 @@ public class IntVariable : ScriptableObject, ISerializationCallbackReceiver
 
     private int _runtimeValue;
 
-    public int RuntimeValue { get { return _runtimeValue; } set { _runtimeValue += value; } }
+    public int RuntimeValue { get { return _runtimeValue; } set { _runtimeValue = value; } }
 
     public void OnAfterDeserialize()
     {

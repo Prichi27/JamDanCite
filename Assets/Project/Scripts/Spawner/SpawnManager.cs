@@ -8,21 +8,32 @@ public class SpawnManager : MonoBehaviour
     private GameObject _enemyParent;
 
     [SerializeField]
+    [Tooltip("Array of all the enemies to be spawned")]
     private GameObject[] _enemies;
 
     [SerializeField]
+    [Tooltip("The number of enemies in current wave")]
     private IntVariable _waveEnemy;
 
     [SerializeField]
+    [Tooltip("Gets the current player location")]
     private Vector2Variable _playerPosition;
 
     [SerializeField]
+    [Tooltip("Radius within which player can be spawned")]
     private FloatVariable _spawnRadius;
 
     [SerializeField]
+    [Tooltip("Radius within which player can be spawned")]
+    private FloatVariable _colliderRadius;
+
+    [SerializeField]
+    [Tooltip("Radius from player where enemies cannot be spawned")]
     private FloatVariable _offset;
 
-    private Collider2D[] colliders;
+    [SerializeField]
+    [Tooltip("Radius from player where enemies cannot be spawned")]
+    private EnemyRuntimeSet _enemyRuntimeSet;
 
     void Start()
     {
@@ -30,6 +41,9 @@ public class SpawnManager : MonoBehaviour
         SpawnEnemy();
     }
 
+    /// <summary>
+    /// Spawn enemies randomly on map
+    /// </summary>
     public void SpawnEnemy()
     {
         for (int i = 0; i < _waveEnemy.RuntimeValue; i++)
@@ -38,6 +52,19 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
+    public void NextWave()
+    {
+        if(_enemyRuntimeSet.Items.Count <= 0)
+        {
+            _waveEnemy.RuntimeValue += 5;
+            SpawnEnemy();
+        }
+    }
+
+    /// <summary>
+    /// Calculates if gameobject can be spawned at current location
+    /// </summary>
+    /// <returns></returns>
     private Vector2 SetSpawnPosition()
     {
         Vector2 spawnPos = _playerPosition.RuntimeValue;
@@ -45,14 +72,14 @@ public class SpawnManager : MonoBehaviour
 
         // Checks if Enemy is too close to Player 
         // and makes sure _spawnRadius is always greater than _offset to prevent Recursive from running endlessly 
-        if ( _spawnRadius.RuntimeValue > _offset.RuntimeValue && Vector2.Distance(spawnPos, _playerPosition.RuntimeValue) < _offset.RuntimeValue && PreventSpawnOverlap(spawnPos)) spawnPos = SetSpawnPosition();
+        if (_colliderRadius.RuntimeValue > _offset.RuntimeValue && !PreventSpawnOverlap(spawnPos)) spawnPos = SetSpawnPosition();
 
         return spawnPos;
     }
 
     private bool PreventSpawnOverlap(Vector3 spawnPos)
-    {
-        colliders = Physics2D.OverlapCircleAll(_playerPosition.RuntimeValue, _spawnRadius.RuntimeValue);
+    {  
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(spawnPos, _colliderRadius.RuntimeValue);
 
         for (int i = 0; i < colliders.Length; i++)
         {
@@ -65,6 +92,8 @@ public class SpawnManager : MonoBehaviour
             float lowerExtent = centerPoint.y - height;
             float upperExtent = centerPoint.y + height;
 
+            if (Vector2.Distance(centerPoint, spawnPos) <= _offset.RuntimeValue) return false;
+
             if (spawnPos.x >= leftExtent && spawnPos.x <= rightExtent)
             {
                 if (spawnPos.y >= lowerExtent && spawnPos.y <= upperExtent)
@@ -73,8 +102,6 @@ public class SpawnManager : MonoBehaviour
                 }
             }
         }
-
         return true;
     }
-
 }

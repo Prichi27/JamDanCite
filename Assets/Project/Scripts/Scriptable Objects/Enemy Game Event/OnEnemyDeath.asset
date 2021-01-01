@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d79f171b94ae0b94b9e552fe1b6554cb, type: 3}
-  m_Name: PlayerOffset
+  m_Script: {fileID: 11500000, guid: 75b469f0d7f0cfd44aae3e97e068824e, type: 3}
+  m_Name: OnEnemyDeath
   m_EditorClassIdentifier: 
-  Value: 2

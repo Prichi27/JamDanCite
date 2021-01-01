@@ -17,7 +17,11 @@ public class Shooting : MonoBehaviour
     [Space]
     [Header("Prefabs:")]
     public GameObject bulletPrefab;
-    
+
+    [SerializeField]
+    [Tooltip("Gets reference to gameobject pool")]
+    private GameObjectPool _projectilePool;
+
     private Vector3 _mousePosition;
     private Vector2 _direction;
 
@@ -45,17 +49,12 @@ public class Shooting : MonoBehaviour
 
     void Attack()
     {
-        // GameObject power = Instantiate(bulletPrefab, crosshair.transform.position, crosshair.transform.rotation);
-        // Rigidbody2D rigidBody = power.GetComponent<Rigidbody2D>();
-        // rigidBody.AddForce(_direction * bulletForce, ForceMode2D.Impulse);
         Vector2 shootingDirection = crosshair.transform.localPosition;
         shootingDirection.Normalize();
-
-        GameObject power = Instantiate(bulletPrefab, crosshair.transform.position, Quaternion.identity);
+        GameObject power = _projectilePool.GetPooledObject(crosshair.transform.position, Quaternion.identity);
         Projectile projectileScript = power.GetComponent<Projectile>();
         projectileScript.velocity = shootingDirection * bulletForce;
         power.transform.Rotate(0, 0, Mathf.Atan2(shootingDirection.y, shootingDirection.x) * Mathf.Rad2Deg);
-        Destroy(power, 2.0f);
     }
 
     void ProcessInputs()

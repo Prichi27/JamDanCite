@@ -11,6 +11,7 @@ public class Projectile : MonoBehaviour
 
     void Update()
     {
+        ChecksIfObjectOutOfCameraView();
         Vector2 currentPosition = transform.position;
         Vector2 newPosition = currentPosition + velocity * Time.deltaTime;
 
@@ -27,18 +28,23 @@ public class Projectile : MonoBehaviour
                 {
                     enemyHealth.UpdateHealth(damage);
                 }
-                Destroy(gameObject);
+                gameObject.SetActive(false);
                 break;
             }
                 
             if (other.CompareTag(Constants.OBSTACLE_TAG))
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
                 break;
             }
             
         }
 
         transform.position = newPosition;
+    }
+
+    void ChecksIfObjectOutOfCameraView()
+    {
+        if(!GetComponent<Renderer>().isVisible) gameObject.SetActive(false);
     }
 }

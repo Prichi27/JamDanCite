@@ -9,6 +9,8 @@ public class GameObjectPool : ScriptableObject
 
     public int amount;
 
+    public bool canExpand;
+
     private Queue<GameObject> spawnedObjects;
 
     private Transform parent;
@@ -39,6 +41,12 @@ public class GameObjectPool : ScriptableObject
 
         GameObject obj = spawnedObjects.Dequeue();
         spawnedObjects.Enqueue(obj);
+
+        if (obj.activeSelf && canExpand)
+        {
+            obj = Instantiate(prefab, parent);
+            spawnedObjects.Enqueue(obj);
+        }  
 
         obj.SetActive(false);
         obj.transform.position = position;

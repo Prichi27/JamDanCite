@@ -12,6 +12,10 @@ public class SpawnManager : MonoBehaviour
     private GameObject[] _enemies;
 
     [SerializeField]
+    [Tooltip("Gets reference to gameobject pool")]
+    private GameObjectPool _enemyPool;
+
+    [SerializeField]
     [Tooltip("The number of enemies in current wave")]
     private IntVariable _waveEnemy;
 
@@ -48,7 +52,8 @@ public class SpawnManager : MonoBehaviour
     {
         for (int i = 0; i < _waveEnemy.RuntimeValue; i++)
         {
-            Instantiate(_enemies[Random.Range(0, _enemies.Length)], SetSpawnPosition(), Quaternion.identity, _enemyParent.transform);
+            //Instantiate(_enemies[Random.Range(0, _enemies.Length)], SetSpawnPosition(), Quaternion.identity, _enemyParent.transform);
+            _enemyPool.GetPooledObject(SetSpawnPosition(), Quaternion.identity);
         }
     }
 

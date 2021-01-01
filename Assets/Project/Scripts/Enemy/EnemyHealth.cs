@@ -20,7 +20,7 @@ public class EnemyHealth : MonoBehaviour
         
         if (_currentHealt <= 0)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
             _deathEvent.Invoke();
         }
     }

@@ -52,7 +52,6 @@ public class SpawnManager : MonoBehaviour
     {
         for (int i = 0; i < _waveEnemy.RuntimeValue; i++)
         {
-            //Instantiate(_enemies[Random.Range(0, _enemies.Length)], SetSpawnPosition(), Quaternion.identity, _enemyParent.transform);
             _enemyPool.GetPooledObject(SetSpawnPosition(), Quaternion.identity);
         }
     }

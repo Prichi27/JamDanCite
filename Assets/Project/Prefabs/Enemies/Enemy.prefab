@@ -15,7 +15,9 @@ GameObject:
   - component: {fileID: 7334330173215453473}
   - component: {fileID: 552303781658521395}
   - component: {fileID: 1127444142527757376}
+  - component: {fileID: 448824869723553334}
   - component: {fileID: 8955945441990695130}
+  - component: {fileID: 6557585662408909389}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Enemy
@@ -147,6 +149,19 @@ MonoBehaviour:
   _attackSpeed: {fileID: 11400000, guid: b65c3c16c87175d4bbea22ce8e7002dc, type: 2}
   _attackPoints: {fileID: 11400000, guid: 763a4ef545a110b42bfdb049e7c52965, type: 2}
   OnPlayerDamaged: {fileID: 11400000, guid: e40096e452acc89429c442e169f25a1a, type: 2}
+--- !u!114 &448824869723553334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024227110546994298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5372d11edac4b9b4fa36ea54a4cc34df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _flashMat: {fileID: 2100000, guid: 02633a89ffceb444eb7ea7343ec6cfec, type: 2}
 --- !u!114 &8955945441990695130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,6 +175,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 11400000, guid: 4d4ab52c782f5204580707184b64bdf3, type: 2}
+  playerAttack: {fileID: 11400000, guid: 53e152a87a997824fb8d4bba7c095c8a, type: 2}
+  _damageEvent: {fileID: 6557585662408909389}
   _deathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -174,6 +191,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6557585662408909389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024227110546994298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0243da7405d4af4b9574566f64455b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: 222b48a736eca7b47bb977e9da51e4dc, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls: []
+  _specificResponse:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2737571948195383637
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,7 +312,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1e624e1a997d8411ebe498d51d9dcc6d, type: 3}
-  m_Color: {r: 0.94275045, g: 0, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

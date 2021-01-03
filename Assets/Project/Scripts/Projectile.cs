@@ -23,11 +23,12 @@ public class Projectile : MonoBehaviour
 
             if (other.CompareTag(Constants.ENEMY_TAG))
             {
-                var enemyHealth = other.GetComponent<EnemyHealth>();
-                if (enemyHealth)
-                {
-                    enemyHealth.UpdateHealth(damage);
-                }
+                //var enemyHealth = other.GetComponent<EnemyHealth>();
+                //if (enemyHealth)
+                //{
+                //    enemyHealth.UpdateHealth(damage);
+                //}
+                OnEnemyDamaged.Raise(other.GetInstanceID());
                 gameObject.SetActive(false);
                 break;
             }

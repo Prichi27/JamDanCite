@@ -7,18 +7,18 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] public FloatVariable health;
     [SerializeField] private UnityEvent _deathEvent;
-    private float _currentHealt;
+    private float _currentHealth;
 
     private void Start()
     {
-        _currentHealt = health.RuntimeValue;
+        _currentHealth = health.RuntimeValue;
     }
 
-    public void UpdateHealth(FloatVariable playerAttack)
+    public void UpdateHealth(float playerAttack)
     {
-        _currentHealt -= playerAttack.RuntimeValue;
+        _currentHealth -= playerAttack;
         
-        if (_currentHealt <= 0)
+        if (_currentHealth <= 0)
         {
             gameObject.SetActive(false);
             _deathEvent.Invoke();

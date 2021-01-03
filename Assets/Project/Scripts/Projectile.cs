@@ -5,9 +5,20 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField] private FloatVariable damage;
+    [SerializeField] private Power power;
+    private Animator _animator;
     public Vector2 velocity = new Vector2(0.0f, 0.0f);
     public Vector2 offset = new Vector2(0.0f, 0.0f);
     [SerializeField] public GameEvent OnEnemyDamaged;
+
+    private void Start() 
+    {
+        GetComponent<SpriteRenderer>().sprite = power.sprite;
+
+        _animator = GetComponent<Animator>();        
+
+        _animator.SetTrigger(power.name);
+    }
 
     void Update()
     {
@@ -26,7 +37,7 @@ public class Projectile : MonoBehaviour
                 var enemyHealth = other.GetComponent<EnemyHealth>();
                 if (enemyHealth)
                 {
-                    enemyHealth.UpdateHealth(damage);
+                    enemyHealth.UpdateHealth(power.damage);
                 }
                 gameObject.SetActive(false);
                 break;

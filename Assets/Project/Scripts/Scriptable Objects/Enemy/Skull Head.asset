@@ -15,5 +15,8 @@ MonoBehaviour:
   enemyName: Skull Head
   health: 200
   damage: 30
-  speed: 8
+  speed: 200
+  waypointDistance: 100
   score: 20
+  isLongRanged: 1
+  attackSpeed: 3

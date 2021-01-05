@@ -5,38 +5,23 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
 
-    [SerializeField] private FloatVariable _attackSpeed;
-    [SerializeField] private FloatVariable _attackPoints;
-    [SerializeField] private GameEvent OnPlayerDamaged;
+    [SerializeField]
+    private EnemyStats _enemy;
+
+    [SerializeField]
+    private GameEvent OnPlayerDamaged;
 
     private float _nextAttack = 0f;
     private bool _canAttack = false;
-
-    void Start()
-    {        
-        //StartCoroutine("AttackPlayer");
-    }
 
     private void Update() 
     {
         if(_canAttack && Time.time > _nextAttack)
         {
             OnPlayerDamaged.Raise();
-            _nextAttack = Time.time + _attackSpeed.RuntimeValue; 
+            _nextAttack = Time.time + _enemy.AttackSpeed; 
         }
     }
-
-    // private IEnumerator AttackPlayer()
-    // {
-    //     while(true)
-    //     {            
-    //         if(_rigidbody.IsTouchingLayers(LayerMask.GetMask("Player")))
-    //         {
-    //             OnPlayerDamaged.Raise();
-    //         }
-    //         yield return new WaitForSeconds(_attackSpeed.RuntimeValue);
-    //     }
-    // }
 
     private void OnCollisionEnter2D(Collision2D other) 
     {

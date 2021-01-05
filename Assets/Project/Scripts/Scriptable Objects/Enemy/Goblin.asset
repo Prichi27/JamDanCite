@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Goblin
   m_EditorClassIdentifier: 
   enemyName: Goblin
+  texture: {fileID: 0}
   health: 100
   damage: 10
   speed: 10
+  waypointDistance: 1
   score: 5
+  isLongRanged: 0

@@ -16,7 +16,7 @@ public class CSVToSO
         {
             string[] splitData = s.Split(',');
 
-            if (splitData.Length != 5)
+            if (splitData.Length != 7)
             {
                 Debug.LogError(s + " does not have correct number of columns");
                 continue;
@@ -28,6 +28,8 @@ public class CSVToSO
             enemy.damage = float.Parse(splitData[2]);
             enemy.speed = float.Parse(splitData[3]);
             enemy.score = float.Parse(splitData[4]);
+            enemy.waypointDistance = float.Parse(splitData[5]);
+            enemy.isLongRanged = bool.Parse(splitData[6]);
 
             AssetDatabase.CreateAsset(enemy, $"Assets/Project/Scripts/Scriptable Objects/Enemy/{enemy.enemyName}.asset");
         }

@@ -4,16 +4,10 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    
-    private GameObject _enemyParent;
-
-    [SerializeField]
-    [Tooltip("Array of all the enemies to be spawned")]
-    private GameObject[] _enemies;
 
     [SerializeField]
     [Tooltip("Gets reference to gameobject pool")]
-    private GameObjectPool _enemyPool;
+    private GameObjectPool[] _enemyPools;
 
     [SerializeField]
     [Tooltip("The number of enemies in current wave")]
@@ -41,7 +35,6 @@ public class SpawnManager : MonoBehaviour
 
     void Start()
     {
-        _enemyParent = GameObject.Find(Constants.ENEMIES_PARENT);
         SpawnEnemy();
     }
 
@@ -52,7 +45,7 @@ public class SpawnManager : MonoBehaviour
     {
         for (int i = 0; i < _waveEnemy.RuntimeValue; i++)
         {
-            _enemyPool.GetPooledObject(SetSpawnPosition(), Quaternion.identity);
+            _enemyPools[Random.Range(0, _enemyPools.Length)].GetPooledObject(SetSpawnPosition(), Quaternion.identity);
         }
     }
 

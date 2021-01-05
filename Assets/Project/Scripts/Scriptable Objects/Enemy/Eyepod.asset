@@ -9,9 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70756fe085663cc47a98eb14da10ed46, type: 3}
-  m_Name: Goblins
+  m_Script: {fileID: 11500000, guid: 5ed34495bdda0d7469389f385c829002, type: 3}
+  m_Name: Eyepod
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2024227110546994298, guid: ca4ece252cccd24429e8fed7322341b5, type: 3}
-  amount: 50
-  canExpand: 1
+  enemyName: Eyepod
+  texture: {fileID: 0}
+  health: 400
+  damage: 75
+  speed: 20
+  waypointDistance: 4
+  score: 50
+  isLongRanged: 1

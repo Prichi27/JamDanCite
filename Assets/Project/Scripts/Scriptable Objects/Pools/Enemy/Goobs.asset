@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70756fe085663cc47a98eb14da10ed46, type: 3}
-  m_Name: Goblins
+  m_Name: Goobs
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2024227110546994298, guid: ca4ece252cccd24429e8fed7322341b5, type: 3}
+  prefab: {fileID: 2024227110546994298, guid: a1a1d44879898194c92c286ec69ed298, type: 3}
   amount: 50
   canExpand: 1

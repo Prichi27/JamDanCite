@@ -5,10 +5,13 @@ using UnityEngine;
 public class PoolSpawner : MonoBehaviour
 {
     [SerializeField]
-    private GameObjectPool pool;
+    private GameObjectPool[] pools;
 
     private void Awake()
     {
-        pool.SpawnPool();
+        foreach (var pool in pools)
+        {
+            pool.SpawnPool();
+        }
     }
 }

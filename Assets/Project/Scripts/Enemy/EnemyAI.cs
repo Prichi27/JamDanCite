@@ -3,16 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class EnemyAI : MonoBehaviour
 {
     [SerializeField]
     private Vector2Variable _target;
 
     [SerializeField]
-    private FloatVariable _enemySpeed;
-
-    [SerializeField]
-    private FloatVariable _nextWaypointDistace;
+    private EnemyStats _enemy;
 
     private Path _path;
     private int _currentWaypoint;
@@ -42,13 +40,13 @@ public class EnemyAI : MonoBehaviour
         if (_reachedEndOfPath) return;
 
         Vector2 direction = ((Vector2)_path.vectorPath[_currentWaypoint] - _rigidbody.position).normalized;
-        Vector2 force = direction * _enemySpeed.RuntimeValue * Time.deltaTime;
+        Vector2 force = direction * _enemy.Speed * Time.deltaTime;
 
         _rigidbody.AddForce(force);
 
         float distance = Vector2.Distance(_rigidbody.position, _path.vectorPath[_currentWaypoint]);
 
-        if (distance < _nextWaypointDistace.RuntimeValue)
+        if (distance < _enemy.WaypointDistance)
         {
             _currentWaypoint++;
         }

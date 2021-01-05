@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 8955945441990695130}
   - component: {fileID: 6557585662408909389}
   m_Layer: 9
-  m_Name: Enemy
+  m_Name: Goobs
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 2024227110546994298}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.0930235, y: -1.0175674, z: -2.1668453}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 5580853821406704843}
   m_Father: {fileID: 0}
@@ -53,9 +53,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06, y: -0.17}
+  m_Offset: {x: -0.04, y: -0.15}
   serializedVersion: 2
-  m_Radius: 1.2
+  m_Radius: 2.08
 --- !u!50 &4021704085724370
 Rigidbody2D:
   serializedVersion: 4
@@ -131,9 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 11400000, guid: e4559eebfd4e7e34f9b1b5ea2191e214, type: 2}
-  _enemySpeed: {fileID: 11400000, guid: eb5e8ac26093e474bb1d2a6e40653710, type: 2}
-  _nextWaypointDistace: {fileID: 11400000, guid: 03b881b6670bccb479902ef269270d93,
-    type: 2}
+  _enemy: {fileID: 11400000, guid: 3f6d906aebe4dd646b2a4e932d7ed48e, type: 2}
 --- !u!114 &1127444142527757376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,8 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d96c725cf4e3cb746be41b7df0c0d630, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _attackSpeed: {fileID: 11400000, guid: b65c3c16c87175d4bbea22ce8e7002dc, type: 2}
-  _attackPoints: {fileID: 11400000, guid: 763a4ef545a110b42bfdb049e7c52965, type: 2}
+  _enemy: {fileID: 11400000, guid: 3f6d906aebe4dd646b2a4e932d7ed48e, type: 2}
   OnPlayerDamaged: {fileID: 11400000, guid: e40096e452acc89429c442e169f25a1a, type: 2}
 --- !u!114 &448824869723553334
 MonoBehaviour:
@@ -311,7 +308,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2564044837951841777, guid: 9dbd89124e4e5164182a09be89c9485f,
+  m_Sprite: {fileID: -4076368763769866963, guid: da829f206719b0b4caa3375173b14f75,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

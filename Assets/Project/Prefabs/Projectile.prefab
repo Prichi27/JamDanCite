@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: {fileID: 11400000, guid: 53e152a87a997824fb8d4bba7c095c8a, type: 2}
-  power: {fileID: 11400000, guid: 970f523c51326f7409fad75a222f909e, type: 2}
+  power: {fileID: 11400000, guid: 464373f2cf8ed26458e88862d7812ce4, type: 2}
   velocity: {x: 0, y: 0}
   offset: {x: 0, y: 0}
   OnEnemyDamaged: {fileID: 11400000, guid: 222b48a736eca7b47bb977e9da51e4dc, type: 2}

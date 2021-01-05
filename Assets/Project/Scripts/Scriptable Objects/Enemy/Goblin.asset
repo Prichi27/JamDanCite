@@ -9,13 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89af1094c8de1934b96783bd61349020, type: 3}
-  m_Name: Lightning
+  m_Script: {fileID: 11500000, guid: 5ed34495bdda0d7469389f385c829002, type: 3}
+  m_Name: Goblin
   m_EditorClassIdentifier: 
-  powerName: Lightning
-  sprite: {fileID: 0}
-  projectileSpeed: 10
-  damage: 20
-  damageRadius: 4
-  particleOnShoot: {fileID: 0}
-  particleOnDestroy: {fileID: 0}
+  enemyName: Goblin
+  health: 100
+  damage: 10
+  speed: 10
+  score: 5

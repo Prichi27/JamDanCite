@@ -278,6 +278,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: e18f81b062339ab47b5d99a1e5f2ea76,
         type: 2}
+    - target: {fileID: 291542519, guid: 4a4bf36dda16ace458cb5eef8351d87c, type: 3}
+      propertyPath: cursorTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: b6b739ca95270514eb36250f5820a93c, type: 3}
     - target: {fileID: 5239676918454948116, guid: 4a4bf36dda16ace458cb5eef8351d87c,
         type: 3}
       propertyPath: m_Name

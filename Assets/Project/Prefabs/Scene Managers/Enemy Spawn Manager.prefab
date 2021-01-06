@@ -44,8 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd62a2d2b8574746913929e8c25ec90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemies:
-  - {fileID: 2024227110546994298, guid: e29b4f24b17309f4a8288f79aa971cd1, type: 3}
+  _enemyPools:
+  - {fileID: 11400000, guid: 51b3010cf7057e74d90506b9fbd4945a, type: 2}
+  - {fileID: 11400000, guid: e50cd6e8d68e7134a8bfac945011e927, type: 2}
+  - {fileID: 11400000, guid: a7ac1efef9569434791e4f95c6418f70, type: 2}
+  - {fileID: 11400000, guid: 533a156da280af847b620ac75b2eeb20, type: 2}
+  - {fileID: 11400000, guid: 4ca8259a948eab94c89ecaf8bfcfb5cd, type: 2}
+  - {fileID: 11400000, guid: 0482be2b46f6cbe49b1516afe72d0aba, type: 2}
+  - {fileID: 11400000, guid: 9cf0a874ece0fd646a434a0043d82d62, type: 2}
   _waveEnemy: {fileID: 11400000, guid: 8ea38989318e09943bff14b4414851fc, type: 2}
   _playerPosition: {fileID: 11400000, guid: e4559eebfd4e7e34f9b1b5ea2191e214, type: 2}
   _spawnRadius: {fileID: 11400000, guid: 4eb24007b9b0c694eb64ace5b881e09d, type: 2}
@@ -79,3 +85,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _specificResponse:
+    m_PersistentCalls:
+      m_Calls: []

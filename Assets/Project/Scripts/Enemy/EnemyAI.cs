@@ -17,6 +17,7 @@ public class EnemyAI : MonoBehaviour
     private bool _reachedEndOfPath = false;
     private Seeker _seeker;
     private Rigidbody2D _rigidbody;
+    private bool _canAttack;
 
     private void Start()
     {
@@ -32,6 +33,11 @@ public class EnemyAI : MonoBehaviour
     }
 
     private void Update()
+    {
+        if (!CanEnemyAttack()) FollowPlayer();
+    }
+
+    private void FollowPlayer()
     {
         if (_path == null) return;
 
@@ -50,7 +56,6 @@ public class EnemyAI : MonoBehaviour
         {
             _currentWaypoint++;
         }
-        
     }
 
     private void OnPathComplete(Path p)
@@ -60,6 +65,11 @@ public class EnemyAI : MonoBehaviour
             _path = p;
             _currentWaypoint = 0;
         }
+    }
+
+    public bool CanEnemyAttack()
+    {
+        return Vector2.Distance(_target.RuntimeValue, _rigidbody.position) <= _enemy.WaypointDistance;
     }
 
 }

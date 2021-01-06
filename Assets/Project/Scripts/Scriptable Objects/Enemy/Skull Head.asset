@@ -16,7 +16,7 @@ MonoBehaviour:
   health: 200
   damage: 30
   speed: 200
-  waypointDistance: 100
+  waypointDistance: 4
   score: 20
   isLongRanged: 1
   attackSpeed: 3

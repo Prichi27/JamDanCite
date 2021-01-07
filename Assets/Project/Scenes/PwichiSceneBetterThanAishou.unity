@@ -196,6 +196,56 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &216214436 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7629618395574180254, guid: 4b2ac4cc15986ac4d91866481ea5c4f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1545690772}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &216214438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216214436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 982102e00be1b4d44ba37f5706bfe44d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _intensity: 5
+  _time: 0.5
+--- !u!114 &216214439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216214436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0243da7405d4af4b9574566f64455b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: f35169fe5b73b1243975409e395aa765, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 216214438}
+        m_MethodName: ShakeCamera
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _specificResponse:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &308663344
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -224,6 +274,11 @@ PrefabInstance:
       propertyPath: cursorTexture
       value: 
       objectReference: {fileID: 2800000, guid: b6b739ca95270514eb36250f5820a93c, type: 3}
+    - target: {fileID: 291542519, guid: 4a4bf36dda16ace458cb5eef8351d87c, type: 3}
+      propertyPath: _shootEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: f35169fe5b73b1243975409e395aa765,
+        type: 2}
     - target: {fileID: 5239676918454948116, guid: 4a4bf36dda16ace458cb5eef8351d87c,
         type: 3}
       propertyPath: m_Name
@@ -301,6 +356,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a4bf36dda16ace458cb5eef8351d87c, type: 3}
+--- !u!1 &406182431 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7629618394900118753, guid: 4b2ac4cc15986ac4d91866481ea5c4f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1545690772}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &406182435
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406182431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 1
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &542444615
 GameObject:
   m_ObjectHideFlags: 0

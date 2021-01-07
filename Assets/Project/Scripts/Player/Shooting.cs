@@ -24,6 +24,9 @@ public class Shooting : MonoBehaviour
     [Tooltip("Gets reference to gameobject pool")]
     private GameObjectPool _projectilePool;
 
+    [SerializeField]
+    private GameEvent _shootEvent;
+
     private Vector2 _direction;
     private GameObject _currentStaffPosition;
 
@@ -45,6 +48,7 @@ public class Shooting : MonoBehaviour
         
         if (Input.GetButtonDown("Fire1"))
         {
+            _shootEvent.Raise();
             Attack();
         }
     }

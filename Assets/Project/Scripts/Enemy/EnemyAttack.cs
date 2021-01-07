@@ -11,6 +11,9 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField]
     private GameEvent OnPlayerDamaged;
 
+    [SerializeField]
+    private GameObjectPool projectile;
+
     private EnemyAI _enemyAI;
     private Animator _anim;
 
@@ -42,7 +45,7 @@ public class EnemyAttack : MonoBehaviour
             if (_enemy.IsLongRanged)
             {
                 // Shoot
-                Debug.Log("Shoot");
+                AttackFromDistance();
             }
 
             else
@@ -57,6 +60,11 @@ public class EnemyAttack : MonoBehaviour
     private void CanAttackFromDistance()
     {
         if (_enemy.IsLongRanged) _canAttack = _enemyAI.CanEnemyAttack();
+    }
+
+    private void AttackFromDistance()
+    {
+        projectile.GetPooledObject(transform.position, Quaternion.identity);
     }
 
     private void OnCollisionEnter2D(Collision2D other) 

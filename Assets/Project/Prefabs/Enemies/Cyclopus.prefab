@@ -146,6 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemy: {fileID: 11400000, guid: 107b077b47fdd5346bf1a5e1fd6368bb, type: 2}
   OnPlayerDamaged: {fileID: 11400000, guid: e40096e452acc89429c442e169f25a1a, type: 2}
+  projectile: {fileID: 0}
 --- !u!114 &448824869723553334
 MonoBehaviour:
   m_ObjectHideFlags: 0

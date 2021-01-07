@@ -19,4 +19,4 @@ MonoBehaviour:
   waypointDistance: 4
   score: 20
   isLongRanged: 1
-  attackSpeed: 3
+  attackSpeed: 1

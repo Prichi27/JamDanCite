@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Eyepod
   m_EditorClassIdentifier: 
   enemyName: Eyepod
-  texture: {fileID: 0}
   health: 400
   damage: 75
   speed: 20
   waypointDistance: 4
   score: 50
   isLongRanged: 1
+  attackSpeed: 5

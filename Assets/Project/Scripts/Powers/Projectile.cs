@@ -16,8 +16,8 @@ public class Projectile : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = power.sprite;
 
         _animator = GetComponent<Animator>();
-        _animator.keepAnimatorControllerStateOnDisable = true;
-        _animator.SetTrigger(power.name);
+        // _animator.keepAnimatorControllerStateOnDisable = true;
+        // _animator.SetTrigger(power.name);
     }
 
     void Update()

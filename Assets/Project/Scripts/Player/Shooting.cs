@@ -83,4 +83,9 @@ public class Shooting : MonoBehaviour
     //         crosshair.transform.localPosition = _direction.normalized * crosshairDistance;
     //     }
     // }
+
+    public void SetProjectilePool(GameObjectPool projectilePool)
+    {
+        _projectilePool = projectilePool;
+    }
 }

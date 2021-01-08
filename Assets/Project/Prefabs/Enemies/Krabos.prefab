@@ -146,6 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemy: {fileID: 11400000, guid: a7486028347cb2e4382e6ba458f41171, type: 2}
   OnPlayerDamaged: {fileID: 11400000, guid: e40096e452acc89429c442e169f25a1a, type: 2}
+  projectile: {fileID: 0}
 --- !u!114 &448824869723553334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,6 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: {fileID: 11400000, guid: 4d4ab52c782f5204580707184b64bdf3, type: 2}
   playerAttack: {fileID: 11400000, guid: 53e152a87a997824fb8d4bba7c095c8a, type: 2}
+  playerPosition: {fileID: 11400000, guid: e4559eebfd4e7e34f9b1b5ea2191e214, type: 2}
   _damageEvent: {fileID: 6557585662408909389}
   _deathEvent:
     m_PersistentCalls:

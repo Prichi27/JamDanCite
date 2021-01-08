@@ -40,6 +40,7 @@ public class Projectile : MonoBehaviour
                 //    enemyHealth.UpdateHealth(damage);
                 //}
                 OnEnemyDamaged.Raise(other.GetInstanceID());
+                OnEnemyDamaged.Raise();
                 gameObject.SetActive(false);
                 break;
             }

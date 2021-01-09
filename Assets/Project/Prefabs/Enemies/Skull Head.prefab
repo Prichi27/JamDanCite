@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3043487d5105d59499220075ed39957a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 11400000, guid: 4d4ab52c782f5204580707184b64bdf3, type: 2}
+  enemyStats: {fileID: 11400000, guid: 8ca787c428b88fc408f2e5acddf4c7a5, type: 2}
   playerAttack: {fileID: 11400000, guid: 53e152a87a997824fb8d4bba7c095c8a, type: 2}
   playerPosition: {fileID: 11400000, guid: e4559eebfd4e7e34f9b1b5ea2191e214, type: 2}
   _damageEvent: {fileID: 6557585662408909389}

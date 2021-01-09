@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyProjectile : MonoBehaviour
 {
     [SerializeField] Vector2Variable _playerPostion;
+    [SerializeField] EnemyStats _enemy;
     [SerializeField] float _speed;
     [SerializeField] private GameEvent _onPlayerDamaged;
 
@@ -25,6 +26,7 @@ public class EnemyProjectile : MonoBehaviour
     {
         if(collision.gameObject.CompareTag(Constants.PLAYER_TAG))
         {
+            _onPlayerDamaged.Raise(_enemy);
             _onPlayerDamaged.Raise();
             gameObject.SetActive(false);
         }

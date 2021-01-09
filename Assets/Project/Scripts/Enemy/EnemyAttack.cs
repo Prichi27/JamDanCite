@@ -50,6 +50,7 @@ public class EnemyAttack : MonoBehaviour
 
             else
             {
+                OnPlayerDamaged.Raise(_enemy);
                 OnPlayerDamaged.Raise();
             }
 

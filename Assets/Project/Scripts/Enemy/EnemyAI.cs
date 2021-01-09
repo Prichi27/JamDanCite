@@ -19,6 +19,7 @@ public class EnemyAI : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private bool _canAttack;
 
+
     private void Start()
     {
         _seeker = GetComponent<Seeker>();

@@ -23,6 +23,15 @@ public class GameEvent : ScriptableObject
         }
     }
 
+    public void Raise(EnemyStats stats)
+    {
+        for (int i = _listeners.Count - 1; i >= 0; i--)
+        {
+            _listeners[i].OnEventRaised(stats);
+        }
+    }
+
+
     public void RegisterListener(GameEventListener listener)
     {
         _listeners.Add(listener);

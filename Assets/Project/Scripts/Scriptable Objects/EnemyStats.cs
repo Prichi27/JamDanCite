@@ -27,10 +27,6 @@ public class EnemyStats : ScriptableObject, ISerializationCallbackReceiver
     public void OnAfterDeserialize()
     {
         
-    }
-
-    public void OnBeforeSerialize()
-    {
         Name = enemyName;
         Health = health;
         Damage = damage;
@@ -39,5 +35,9 @@ public class EnemyStats : ScriptableObject, ISerializationCallbackReceiver
         WaypointDistance = waypointDistance;
         IsLongRanged = isLongRanged;
         AttackSpeed = attackSpeed;
+    }
+
+    public void OnBeforeSerialize()
+    {
     }
 }

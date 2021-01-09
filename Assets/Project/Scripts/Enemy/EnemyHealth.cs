@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class EnemyHealth : MonoBehaviour
 {
-    [SerializeField] public FloatVariable health;
+    [SerializeField] public EnemyStats enemyStats;
     [SerializeField] public FloatVariable playerAttack;
     [SerializeField] public Vector2Variable playerPosition;
     [SerializeField] private GameEventListener _damageEvent;
@@ -16,10 +16,14 @@ public class EnemyHealth : MonoBehaviour
 
     private void Start()
     {
-        _currentHealth = health.RuntimeValue;
         _id = transform.gameObject.GetInstanceID();
         _rb = GetComponent<Rigidbody2D>();
         _damageEvent.AddResponse(UpdateHealth);
+    }
+
+    private void OnEnable() 
+    {
+        _currentHealth = enemyStats.Health;
     }
 
     public void UpdateHealth(int id)

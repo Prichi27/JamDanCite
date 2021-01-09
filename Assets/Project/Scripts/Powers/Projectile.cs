@@ -2,14 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public abstract class Projectile : MonoBehaviour
 {
     [SerializeField] private FloatVariable damage;
-    [SerializeField] private Power power;
+    [SerializeField] protected Power power;
     private Animator _animator;
-    public Vector2 velocity = new Vector2(0.0f, 0.0f);
+    protected Vector2 _velocity = new Vector2(0.0f, 0.0f);
     public Vector2 offset = new Vector2(0.0f, 0.0f);
     [SerializeField] public GameEvent OnEnemyDamaged;
+
+    protected Vector2 _currentPosition;
+    protected Vector2 _newPosition;
+
+    protected bool HasSpawned;
 
     private void Start() 
     {
@@ -20,44 +25,34 @@ public class Projectile : MonoBehaviour
         // _animator.SetTrigger(power.name);
     }
 
+    private void OnEnable() 
+    {
+        HasSpawned = false;
+        Invoke("DeactivateProjectile", 3.0f);
+    }
+
     void Update()
     {
         ChecksIfObjectOutOfCameraView();
-        Vector2 currentPosition = transform.position;
-        Vector2 newPosition = currentPosition + velocity * Time.deltaTime;
+        SetPosition();
+        if(!HasSpawned) HitEnemies();        
+    }
 
-        RaycastHit2D[] hits = Physics2D.LinecastAll(currentPosition + offset, newPosition + offset);
-
-        foreach (RaycastHit2D hit in hits)
-        {
-            GameObject other = hit.collider.gameObject;
-
-            if (other.CompareTag(Constants.ENEMY_TAG))
-            {
-                //var enemyHealth = other.GetComponent<EnemyHealth>();
-                //if (enemyHealth)
-                //{
-                //    enemyHealth.UpdateHealth(damage);
-                //}
-                OnEnemyDamaged.Raise(other.GetInstanceID());
-                OnEnemyDamaged.Raise();
-                gameObject.SetActive(false);
-                break;
-            }
-                
-            if (other.CompareTag(Constants.OBSTACLE_TAG))
-            {
-                gameObject.SetActive(false);
-                break;
-            }
-            
-        }
-
-        transform.position = newPosition;
+    public void DeactivateProjectile()
+    {
+        gameObject.SetActive(false);
     }
 
     void ChecksIfObjectOutOfCameraView()
     {
         if(!GetComponent<Renderer>().isVisible) gameObject.SetActive(false);
     }
+
+    public abstract void SetPosition();
+    
+    public abstract void SetVelocity(Vector2 velocity);
+
+    public abstract void SetRotation(float zAngle);
+
+    public abstract void HitEnemies();
 }

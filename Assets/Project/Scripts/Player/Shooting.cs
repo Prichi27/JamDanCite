@@ -12,7 +12,6 @@ public class Shooting : MonoBehaviour
     [Space]
     [Header("References:")]
     public List<GameObject> staffPositions;
-    public GameObject crosshair;
     private Animator _animator;
     public Texture2D cursorTexture;
     
@@ -63,29 +62,26 @@ public class Shooting : MonoBehaviour
 
     void Attack()
     {
-        Vector2 shootingDirection = _direction.normalized;
+        Vector2 shootingDirection = _direction - (Vector2)transform.position;
+        shootingDirection.Normalize();
+
+        Vector2 firepoint = IsLightningPower() ? new Vector2(_direction.x, _direction.y) : new Vector2(_currentStaffPosition.transform.position.x, _currentStaffPosition.transform.position.y);
         
-        GameObject power = _projectilePool.GetPooledObject(_currentStaffPosition.transform.position, Quaternion.identity);
+        GameObject power = _projectilePool.GetPooledObject(firepoint, Quaternion.identity);
         Projectile projectileScript = power.GetComponent<Projectile>();
-        projectileScript.velocity = shootingDirection * bulletForce;
-        power.transform.Rotate(0, 0, Mathf.Atan2(shootingDirection.y, shootingDirection.x) * Mathf.Rad2Deg);
+        projectileScript.SetVelocity(shootingDirection * bulletForce);
+        projectileScript.SetRotation(Mathf.Atan2(shootingDirection.y, shootingDirection.x) * Mathf.Rad2Deg);
     }
 
     void ProcessInputs()
     {
-        _direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        _direction = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
-
-    // void Aim()
-    // {
-    //     if (_direction != Vector2.zero)
-    //     {
-    //         crosshair.transform.localPosition = _direction.normalized * crosshairDistance;
-    //     }
-    // }
 
     public void SetProjectilePool(GameObjectPool projectilePool)
     {
         _projectilePool = projectilePool;
     }
+
+    private bool IsLightningPower(){ return _projectilePool.name.Equals("Lightning"); }
 }

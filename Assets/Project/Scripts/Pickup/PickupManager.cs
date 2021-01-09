@@ -16,15 +16,24 @@ public class PickupManager : MonoBehaviour
     [Tooltip("Radius within which player can be spawned")]
     private FloatVariable _spawnRadius;
 
+    private GameObjectPool _lastPool;
+    private GameObjectPool _currentPool;
+
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnPickup", 30.0f, 45.0f);
+        InvokeRepeating("SpawnPickup", 30.0f, 30.0f);
     }
 
     void SpawnPickup()
     {
         _pickupPools[Random.Range(0, _pickupPools.Length)].GetPooledObject(SetSpawnPosition(), Quaternion.identity);
+        // while(_currentPool == _lastPool )
+        // {
+        //     _currentPool = _pickupPools[Random.Range(0, _pickupPools.Length)];
+        // }
+        // _currentPool.GetPooledObject(SetSpawnPosition(), Quaternion.identity);
+        // _lastPool = _currentPool;
     }
 
     /// <summary>

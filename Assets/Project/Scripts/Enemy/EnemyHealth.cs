@@ -13,6 +13,8 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] public Vector2Variable playerPosition;
     [SerializeField] private GameEventListener _damageEvent;
     [SerializeField] private GameEvent _deathEvent;
+    [SerializeField] private GameObjectPool[] _drops;
+
     private float _currentHealth;
     private int _id;
     private Vector2 _direction;
@@ -44,6 +46,10 @@ public class EnemyHealth : MonoBehaviour
             BloodParticleSystemHandler.Instance.SpawnBlood(transform.position, new Vector3(-_direction.x, -_direction.y, 0));
             _currentHealth -= power.damage;
            
+            if(_currentHealth <= 0)
+            {
+                RandomDrop();
+            } 
         }
     }
 
@@ -51,7 +57,7 @@ public class EnemyHealth : MonoBehaviour
     {
         transform.position -= (Vector3)_direction * _flyingSpeed.RuntimeValue * Time.deltaTime;
         transform.localScale += Vector3.one * _scaleSpeed.RuntimeValue * Time.deltaTime;
-        transform.eulerAngles += new Vector3(0, 0, _eulerAngle.RuntimeValue);
+        transform.eulerAngles += new Vector3(0, 0, _eulerAngle.RuntimeValue * Time.deltaTime * 360);
 
         BloodParticleSystemHandler.Instance.SpawnBlood(transform.position, new Vector3(_direction.x, _direction.y, 0));
         ChecksIfObjectOutOfCameraView();
@@ -65,5 +71,15 @@ public class EnemyHealth : MonoBehaviour
             _deathEvent.Raise(enemyStats);
             _deathEvent.Raise();
         }
+    }
+
+    private void RandomDrop()
+    {
+        int index = Random.Range(0, _drops.Length + 10);
+        if(index < _drops.Length)
+        {
+            _drops[index].GetPooledObject(transform.position, Quaternion.identity);
+        }
+
     }
 }

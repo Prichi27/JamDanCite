@@ -7,7 +7,7 @@ using UnityEngine;
 public class FloatVariable : ScriptableObject, ISerializationCallbackReceiver
 {
     [SerializeField]
-    private float Value;
+    public float Value;
 
     private float _runtimeValue;
 

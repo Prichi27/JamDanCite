@@ -181,6 +181,10 @@ MonoBehaviour:
   playerPosition: {fileID: 11400000, guid: e4559eebfd4e7e34f9b1b5ea2191e214, type: 2}
   _damageEvent: {fileID: 6557585662408909389}
   _deathEvent: {fileID: 11400000, guid: eb73e180abe2a5749a047d39672fb035, type: 2}
+  _drops:
+  - {fileID: 11400000, guid: b56a608770fbc9b47971db590b85313d, type: 2}
+  - {fileID: 11400000, guid: 915e2cb706005504ebeb00f3554aad8f, type: 2}
+  - {fileID: 11400000, guid: 711bbfacb69d695409eeca75158cc8d5, type: 2}
 --- !u!114 &6557585662408909389
 MonoBehaviour:
   m_ObjectHideFlags: 0

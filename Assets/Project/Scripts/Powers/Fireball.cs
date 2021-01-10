@@ -47,4 +47,10 @@ public class Fireball : Projectile
         transform.position = _newPosition;
     }
 
+
+    public override void IsAnimationOver()
+    {
+        return;
+    }
+
 }

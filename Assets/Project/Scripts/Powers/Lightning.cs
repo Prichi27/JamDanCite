@@ -46,4 +46,12 @@ public class Lightning : Projectile
 
         HasSpawned = true;
     }
+
+    public override void IsAnimationOver()
+    {
+        if (_animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !_animator.IsInTransition(0))
+        {
+            DeactivateProjectile();
+        }
+    }
 }

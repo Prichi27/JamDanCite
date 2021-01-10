@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Lightning
   m_EditorClassIdentifier: 
   powerName: Lightning
-  sprite: {fileID: -1972665956256705010, guid: 9aa6f2fc5e3185a43b51df40b18bed10, type: 3}
+  sprite: {fileID: -1183300073134848680, guid: 402bb3dc590a3664e9f3fa5071ceb39b, type: 3}
   projectileSpeed: 5
   damage: 50
-  damageRadius: 4
+  damageRadius: 2
   particleOnShoot: {fileID: 0}
   particleOnDestroy: {fileID: 0}

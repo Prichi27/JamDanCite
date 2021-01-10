@@ -17,6 +17,16 @@ public class PowerPickup : MonoBehaviour
         
     }
 
+    private void OnEnable() 
+    {
+        Invoke("DeactivateObject", 10.0f);
+    }
+
+    private void DeactivateObject()
+    {
+        gameObject.SetActive(false);
+    }
+
     private void OnCollisionEnter2D(Collision2D other) 
     {
         if(other.collider.CompareTag("Player"))

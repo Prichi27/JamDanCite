@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Runtime/Set", order = 22)]
 public class RuntimeSet<T> : ScriptableObject
 {
-    public List<T> Items = new List<T>();
+    private List<T> Items = new List<T>();
 
     public void Add(T item)
     {
@@ -15,5 +15,10 @@ public class RuntimeSet<T> : ScriptableObject
     public void Remove(T item)
     {
         if (Items.Contains(item)) Items.Remove(item);
+    }
+
+    public int Count()
+    {
+        return Items.Count;
     }
 }

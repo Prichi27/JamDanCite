@@ -51,7 +51,7 @@ public class SpawnManager : MonoBehaviour
 
     public void NextWave()
     {
-        if(_enemyRuntimeSet.Items.Count <= 0)
+        if(_enemyRuntimeSet.Count() <= 0)
         {
             _waveEnemy.RuntimeValue += 5;
             SpawnEnemy();

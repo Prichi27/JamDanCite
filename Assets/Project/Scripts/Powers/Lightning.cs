@@ -37,6 +37,7 @@ public class Lightning : Projectile
                 Vector2 force = (Vector2)other.transform.position - (Vector2)_playerPosition.RuntimeValue;
                 rb.AddForce(force.normalized * _explosionForce.RuntimeValue, ForceMode2D.Impulse);
                 OnEnemyDamaged.Raise(other.GetInstanceID());
+                OnEnemyDamaged.Raise(other.GetInstanceID(),power);
                 OnEnemyDamaged.Raise();
             }
         }

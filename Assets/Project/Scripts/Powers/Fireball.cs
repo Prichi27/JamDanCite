@@ -31,6 +31,7 @@ public class Fireball : Projectile
             if (other.CompareTag(Constants.ENEMY_TAG))
             {
                 OnEnemyDamaged.Raise(other.GetInstanceID());
+                OnEnemyDamaged.Raise(other.GetInstanceID(), power);
                 OnEnemyDamaged.Raise();
                 gameObject.SetActive(false);
                 break;

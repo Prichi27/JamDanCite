@@ -34,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 2024227110546994298}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.0930235, y: -1.0175674, z: -2.1668453}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 5580853821406704843}
   m_Father: {fileID: 0}
@@ -69,7 +69,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0.5
+  m_LinearDrag: 2
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -175,6 +175,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyStats: {fileID: 11400000, guid: 107b077b47fdd5346bf1a5e1fd6368bb, type: 2}
   playerAttack: {fileID: 11400000, guid: 53e152a87a997824fb8d4bba7c095c8a, type: 2}
+  _flyingSpeed: {fileID: 11400000, guid: eb5e8ac26093e474bb1d2a6e40653710, type: 2}
+  _scaleSpeed: {fileID: 11400000, guid: 283a1f1931582c546ba0f2d815995933, type: 2}
+  _eulerAngle: {fileID: 11400000, guid: 520c2cf55732a714991031ede26cb102, type: 2}
   playerPosition: {fileID: 11400000, guid: e4559eebfd4e7e34f9b1b5ea2191e214, type: 2}
   _damageEvent: {fileID: 6557585662408909389}
   _deathEvent: {fileID: 11400000, guid: eb73e180abe2a5749a047d39672fb035, type: 2}
@@ -198,6 +201,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _enemyEventResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  _attackEventResponse:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &2737571948195383637

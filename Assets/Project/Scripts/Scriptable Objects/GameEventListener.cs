@@ -13,6 +13,12 @@ public class EnemyEvent : UnityEvent<EnemyStats>
 {
 }
 
+[System.Serializable]
+public class AttackEvent : UnityEvent<int,Power>
+{
+}
+
+
 public class GameEventListener : MonoBehaviour
 {
     [SerializeField] private GameEvent _gameEvent;
@@ -22,6 +28,8 @@ public class GameEventListener : MonoBehaviour
     [SerializeField] private IntEvent _specificResponse;
 
     [SerializeField] private EnemyEvent _enemyEventResponse;
+
+    [SerializeField] private AttackEvent _attackEventResponse;
 
     private void OnEnable()
     {
@@ -43,6 +51,10 @@ public class GameEventListener : MonoBehaviour
         _enemyEventResponse.AddListener(call);
     }
 
+    public void AddResponse(UnityAction<int, Power> call)
+    {
+        _attackEventResponse.AddListener(call);
+    }
 
     public void OnEventRaised()
     {
@@ -57,5 +69,10 @@ public class GameEventListener : MonoBehaviour
     public void OnEventRaised(EnemyStats stats)
     {
         _enemyEventResponse.Invoke(stats);
+    }
+
+    public void OnEventRaised(int id, Power power)
+    {
+        _attackEventResponse.Invoke(id, power);
     }
 }

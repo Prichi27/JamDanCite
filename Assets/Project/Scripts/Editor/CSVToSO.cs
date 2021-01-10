@@ -27,7 +27,7 @@ public class CSVToSO
             enemy.health = float.Parse(splitData[1]);
             enemy.damage = float.Parse(splitData[2]);
             enemy.speed = float.Parse(splitData[3]);
-            enemy.score = float.Parse(splitData[4]);
+            enemy.score = int.Parse(splitData[4]);
             enemy.waypointDistance = float.Parse(splitData[5]);
             enemy.isLongRanged = bool.Parse(splitData[6]);
 

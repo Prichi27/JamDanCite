@@ -56,9 +56,9 @@ public class BloodParticleSystemHandler : MonoBehaviour
             this.direction = direction;
             this.meshParticleSystem = meshParticleSystem;
 
-            quadSize = new Vector3(1f, 1f);
+            quadSize = new Vector3(0.5f, 0.5f);
             rotation = Random.Range(0, 360);
-            moveSpeed = Random.Range(1, 5);
+            moveSpeed = Random.Range(1, 2);
             uvIndex = Random.Range(0, 5);
 
             quadIndex = meshParticleSystem.AddQuad(position, 0, quadSize, true, uvIndex);

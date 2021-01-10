@@ -12,6 +12,9 @@ public class EnemyAttack : MonoBehaviour
     private GameEvent OnPlayerDamaged;
 
     [SerializeField]
+    private Vector2Variable playerPosition;
+
+    [SerializeField]
     private GameObjectPool projectile;
 
     private EnemyAI _enemyAI;
@@ -50,6 +53,9 @@ public class EnemyAttack : MonoBehaviour
 
             else
             {
+                // Spawn Blood
+                var dir = ((Vector2)transform.position - playerPosition.RuntimeValue).normalized;
+                BloodParticleSystemHandler.Instance.SpawnBlood(playerPosition.RuntimeValue, new Vector3(-dir.x, -dir.y, 0));
                 OnPlayerDamaged.Raise(_enemy);
                 OnPlayerDamaged.Raise();
             }

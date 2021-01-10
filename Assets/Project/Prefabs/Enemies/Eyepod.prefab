@@ -146,6 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemy: {fileID: 11400000, guid: a052f4168b3f6134fbc157999151f75d, type: 2}
   OnPlayerDamaged: {fileID: 11400000, guid: e40096e452acc89429c442e169f25a1a, type: 2}
+  playerPosition: {fileID: 11400000, guid: e4559eebfd4e7e34f9b1b5ea2191e214, type: 2}
   projectile: {fileID: 11400000, guid: 4654e77baf64b044fb7e6e9c782cc574, type: 2}
 --- !u!114 &448824869723553334
 MonoBehaviour:
@@ -176,20 +177,7 @@ MonoBehaviour:
   playerAttack: {fileID: 11400000, guid: 53e152a87a997824fb8d4bba7c095c8a, type: 2}
   playerPosition: {fileID: 11400000, guid: e4559eebfd4e7e34f9b1b5ea2191e214, type: 2}
   _damageEvent: {fileID: 6557585662408909389}
-  _deathEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: eb73e180abe2a5749a047d39672fb035, type: 2}
-        m_MethodName: Raise
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  _deathEvent: {fileID: 11400000, guid: eb73e180abe2a5749a047d39672fb035, type: 2}
 --- !u!114 &6557585662408909389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,6 +195,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _specificResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  _enemyEventResponse:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &2737571948195383637

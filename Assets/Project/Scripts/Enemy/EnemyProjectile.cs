@@ -26,6 +26,9 @@ public class EnemyProjectile : MonoBehaviour
     {
         if(collision.gameObject.CompareTag(Constants.PLAYER_TAG))
         {
+            // Spawn Blood
+            var dir = ((Vector2)transform.position - _playerPostion.RuntimeValue).normalized;
+            BloodParticleSystemHandler.Instance.SpawnBlood(_playerPostion.RuntimeValue, new Vector3(-dir.x, -dir.y, 0));
             _onPlayerDamaged.Raise(_enemy);
             _onPlayerDamaged.Raise();
             gameObject.SetActive(false);

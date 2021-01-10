@@ -9,7 +9,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] public FloatVariable playerAttack;
     [SerializeField] public Vector2Variable playerPosition;
     [SerializeField] private GameEventListener _damageEvent;
-    [SerializeField] private UnityEvent _deathEvent;
+    [SerializeField] private GameEvent _deathEvent;
     private float _currentHealth;
     private int _id;
     private Rigidbody2D _rb;
@@ -37,7 +37,8 @@ public class EnemyHealth : MonoBehaviour
             if (_currentHealth <= 0)
             {
                 gameObject.SetActive(false);
-                _deathEvent.Invoke();
+                _deathEvent.Raise(enemyStats);
+                _deathEvent.Raise();
             }
         }
     }

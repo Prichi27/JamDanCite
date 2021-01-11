@@ -167,6 +167,9 @@ MonoBehaviour:
   _enemyEventResponse:
     m_PersistentCalls:
       m_Calls: []
+  _attackEventResponse:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5710100678842108767
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,7 +207,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -18.9, y: 13.6}
+  m_AnchoredPosition: {x: -20, y: 7.6}
   m_SizeDelta: {x: 42.78894, y: 37.686844}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &5710100678842107042
@@ -307,6 +310,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _enemyEventResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  _attackEventResponse:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &5710100678961074249

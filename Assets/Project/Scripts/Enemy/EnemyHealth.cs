@@ -18,6 +18,7 @@ public class EnemyHealth : MonoBehaviour
     private float _currentHealth;
     private int _id;
     private Vector2 _direction;
+    private float _currentSpeed;
 
     private void Start()
     {
@@ -28,6 +29,7 @@ public class EnemyHealth : MonoBehaviour
     private void OnEnable() 
     {
         _currentHealth = enemyStats.Health;
+        _currentSpeed = enemyStats.Speed;
     }
 
     private void Update()
@@ -38,7 +40,7 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    public void UpdateHealth(int id, Power power)
+    public void UpdateHealth(int id, Power power, bool isIce)
     {
         if (_id == id)
         {

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Fireball
   m_EditorClassIdentifier: 
   powerName: Fireball
-  sprite: {fileID: 21300000, guid: b5e57f5712faaf24cb862012829e1be9, type: 3}
+  sprite: {fileID: 5353841184698615464, guid: 40580ca8d0cf2c14f87d319fba5f18d1, type: 3}
   projectileSpeed: 8
   damage: 25
   damageRadius: 1
   particleOnShoot: {fileID: 0}
-  particleOnDestroy: {fileID: 0}
+  particleOnDestroy: {fileID: 11400000, guid: 1f5863e8f2cac7042bc416c47ab9d4ce, type: 2}

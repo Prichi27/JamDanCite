@@ -4,7 +4,6 @@ using UnityEngine;
 
 public abstract class Projectile : MonoBehaviour
 {
-    [SerializeField] private FloatVariable damage;
     [SerializeField] protected Power power;
     [SerializeField] protected FloatVariable _explosionForce;
     [SerializeField] protected Vector2Variable _playerPosition;
@@ -19,10 +18,6 @@ public abstract class Projectile : MonoBehaviour
 
     protected bool HasSpawned;
 
-    [SerializeField]
-    [Tooltip("Gets reference to gameobject pool")]
-    protected GameObjectPool _particleSystemPool;
-
     private void Awake() 
     {
         _animator = GetComponent<Animator>();
@@ -32,6 +27,8 @@ public abstract class Projectile : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().sprite = power.sprite;
         // _animator.keepAnimatorControllerStateOnDisable = true;
+
+        if(power.particleOnShoot) ShowParticleOnShoot();
     }
 
     private void OnEnable() 
@@ -56,12 +53,33 @@ public abstract class Projectile : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    void SetPosition()
+    {        
+        _currentPosition = transform.position;
+        _newPosition = _currentPosition + _velocity * Time.deltaTime;
+    }
+
     void ChecksIfObjectOutOfCameraView()
     {
         if(!GetComponent<Renderer>().isVisible) gameObject.SetActive(false);
     }
 
-    public abstract void SetPosition();
+    protected void ShowParticleOnShoot()
+    {
+        power.particleOnShoot.GetPooledObject(transform.position, Quaternion.identity);
+    }
+
+    protected void ShowParticleOnDestroy()
+    {
+        power.particleOnDestroy.GetPooledObject(transform.position, Quaternion.identity);
+    }
+
+    protected void AddExplosionForce(GameObject other)
+    {                        
+        Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
+        Vector2 force = (Vector2)other.transform.position - (Vector2)_playerPosition.RuntimeValue;
+        rb.AddForce(force.normalized * _explosionForce.RuntimeValue, ForceMode2D.Impulse);
+    }
     
     public abstract void SetVelocity(Vector2 velocity);
 

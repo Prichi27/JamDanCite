@@ -31,11 +31,11 @@ public class GameEvent : ScriptableObject
         }
     }
 
-    public void Raise(int id, Power power)
+    public void Raise(int id, Power power, bool isIce)
     {
         for (int i = _listeners.Count - 1; i >= 0; i--)
         {
-            _listeners[i].OnEventRaised(id, power);
+            _listeners[i].OnEventRaised(id, power, isIce);
         }
     }
 

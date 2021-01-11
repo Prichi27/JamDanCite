@@ -14,10 +14,6 @@ public class Shooting : MonoBehaviour
     public List<GameObject> staffPositions;
     private Animator _animator;
     public Texture2D cursorTexture;
-    
-    [Space]
-    [Header("Prefabs:")]
-    public GameObject bulletPrefab;
 
     [SerializeField]
     [Tooltip("Gets reference to gameobject pool")]

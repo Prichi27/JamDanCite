@@ -12,6 +12,9 @@ public class EnemyAI : MonoBehaviour
     [SerializeField]
     private EnemyStats _enemy;
 
+    [SerializeField]
+    private BoolVariable _isDead;
+
     private Path _path;
     private int _currentWaypoint;
     private bool _reachedEndOfPath = false;
@@ -35,6 +38,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Update()
     {
+        if (_isDead.RuntimeValue) return; 
         if (!CanEnemyAttack()) FollowPlayer();
     }
 

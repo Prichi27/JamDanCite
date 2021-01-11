@@ -26,6 +26,8 @@ public class Shooting : MonoBehaviour
     [SerializeField]
     private GameEvent _shootEvent;
 
+    [SerializeField] BoolVariable _isDead;
+
     private Vector2 _direction;
     private GameObject _currentStaffPosition;
 
@@ -42,6 +44,8 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (_isDead.RuntimeValue) return;
+
         SetStaffPosition();
         ProcessInputs();
         

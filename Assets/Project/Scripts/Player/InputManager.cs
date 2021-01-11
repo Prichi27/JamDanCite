@@ -6,6 +6,7 @@ public class InputManager : MonoBehaviour
 {
     [SerializeField] FloatVariable movementSpeed;
     [SerializeField] Vector2Variable _position;
+    [SerializeField] BoolVariable _isDead;
     private Rigidbody2D _rigidBody;
     private SpriteRenderer _spriteRenderer;
     private Animator _animator;
@@ -27,6 +28,8 @@ public class InputManager : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if (_isDead.RuntimeValue) return;
+
         GetPlayerPosition();
         GetUserInput();
         _position.RuntimeValue = transform.position;
@@ -34,6 +37,8 @@ public class InputManager : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (_isDead.RuntimeValue) return;
+
         MovePlayer();
     }
 

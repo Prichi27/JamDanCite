@@ -17,6 +17,9 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField]
     private GameObjectPool projectile;
 
+    [SerializeField]
+    private BoolVariable _isDead;
+
     private EnemyAI _enemyAI;
     private Animator _anim;
 
@@ -31,6 +34,8 @@ public class EnemyAttack : MonoBehaviour
 
     private void Update()
     {
+        if (_isDead.RuntimeValue) return;
+
         CanAttackFromDistance();
         Attack();
     }

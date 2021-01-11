@@ -8,6 +8,15 @@ public class Health : MonoBehaviour
     [SerializeField]
     private FloatVariable _health;
 
+    [SerializeField] BoolVariable _isDead;
+
+    private Animator _anim;
+
+    private void Awake()
+    {
+        _anim = GetComponentInChildren<Animator>();
+    }
+
     public void UpdateHealth(EnemyStats enemy)
     {
         _health.RuntimeValue -= enemy.Damage;
@@ -15,6 +24,8 @@ public class Health : MonoBehaviour
         if (_health.RuntimeValue <= 0)
         {
             // The sucker dies! 
+            _anim.SetBool("IsDead", true);
+            _isDead.RuntimeValue = true;
         }
     }
 }

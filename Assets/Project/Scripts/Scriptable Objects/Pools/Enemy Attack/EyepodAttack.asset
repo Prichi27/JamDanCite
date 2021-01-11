@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70756fe085663cc47a98eb14da10ed46, type: 3}
   m_Name: EyepodAttack
   m_EditorClassIdentifier: 
-  prefab: {fileID: 3159047898031168799, guid: af0f5a85467fece438260b8a591480e3, type: 3}
+  prefab: {fileID: 3159047898031168799, guid: 4dc7d07f785863b4fa09a053837ec500, type: 3}
   amount: 10
   canExpand: 1

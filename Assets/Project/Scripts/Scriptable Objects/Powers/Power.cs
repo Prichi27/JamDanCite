@@ -9,6 +9,6 @@ public class Power : ScriptableObject {
     public float projectileSpeed;
     public float damage;
     public float damageRadius;
-    public ParticleSystem particleOnShoot;
-    public ParticleSystem particleOnDestroy;
+    public GameObjectPool particleOnShoot;
+    public GameObjectPool particleOnDestroy;
 }

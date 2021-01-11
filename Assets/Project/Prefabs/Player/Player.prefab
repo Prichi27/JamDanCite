@@ -147,8 +147,6 @@ GameObject:
   - component: {fileID: 5239676918454948123}
   - component: {fileID: 5239676918454948119}
   - component: {fileID: 291542519}
-  - component: {fileID: 1424263152}
-  - component: {fileID: 1424263153}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -170,7 +168,6 @@ Transform:
   - {fileID: 6793237677818620901}
   - {fileID: 2931879816099311304}
   - {fileID: 5239676918300438939}
-  - {fileID: 8578999036522709732}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -275,7 +272,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: {fileID: 11400000, guid: 334b5d8f013f29247a6ec36f08181dfd, type: 2}
   _position: {fileID: 11400000, guid: e4559eebfd4e7e34f9b1b5ea2191e214, type: 2}
-  _isDead: {fileID: 11400000, guid: d31c92d3fde3d294e820796a5ee9039d, type: 2}
 --- !u!114 &291542519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,92 +289,9 @@ MonoBehaviour:
   staffPositions:
   - {fileID: 6700498701641707534}
   - {fileID: 6518537766733683582}
-  cursorTexture: {fileID: 2800000, guid: b6b739ca95270514eb36250f5820a93c, type: 3}
-  bulletPrefab: {fileID: 1252938634341199718, guid: ac98efae761ed1d4dbe85234f4118edc,
-    type: 3}
+  cursorTexture: {fileID: 0}
   _projectilePool: {fileID: 11400000, guid: e18f81b062339ab47b5d99a1e5f2ea76, type: 2}
-  _shootEvent: {fileID: 11400000, guid: f35169fe5b73b1243975409e395aa765, type: 2}
-  _isDead: {fileID: 11400000, guid: d31c92d3fde3d294e820796a5ee9039d, type: 2}
---- !u!114 &1424263152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5239676918454948116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57aea8bed5f04ed4698c7152f76d6bf3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _health: {fileID: 11400000, guid: 1a2aa61643c492c44a3993c0334286c3, type: 2}
-  _isDead: {fileID: 11400000, guid: d31c92d3fde3d294e820796a5ee9039d, type: 2}
---- !u!114 &1424263153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5239676918454948116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0243da7405d4af4b9574566f64455b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _gameEvent: {fileID: 11400000, guid: e40096e452acc89429c442e169f25a1a, type: 2}
-  _response:
-    m_PersistentCalls:
-      m_Calls: []
-  _specificResponse:
-    m_PersistentCalls:
-      m_Calls: []
-  _enemyEventResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1424263152}
-        m_MethodName: UpdateHealth
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _attackEventResponse:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!1 &6374509180906013884
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8578999036522709732}
-  m_Layer: 10
-  m_Name: Crosshair
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8578999036522709732
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6374509180906013884}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5239676918454948118}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  _shootEvent: {fileID: 0}
 --- !u!1 &6518537766733683582
 GameObject:
   m_ObjectHideFlags: 0

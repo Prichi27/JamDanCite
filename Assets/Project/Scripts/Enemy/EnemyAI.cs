@@ -12,8 +12,8 @@ public class EnemyAI : MonoBehaviour
     [SerializeField]
     private EnemyStats _enemy;
 
-    [SerializeField]
-    private BoolVariable _isDead;
+    [SerializeField] 
+    private GameEventListener _damageEvent;
 
     private Path _path;
     private int _currentWaypoint;
@@ -22,9 +22,18 @@ public class EnemyAI : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private bool _canAttack;
 
+    private float _currentSpeed;
+    private int _id;
+
+    private void OnEnable() 
+    {
+        _currentSpeed = _enemy.Speed;
+    }
 
     private void Start()
     {
+        _id = transform.gameObject.GetInstanceID();
+        _damageEvent.AddResponse(FreezeEnemy);
         _seeker = GetComponent<Seeker>();
         _rigidbody = GetComponent<Rigidbody2D>();
 
@@ -38,7 +47,6 @@ public class EnemyAI : MonoBehaviour
 
     private void Update()
     {
-        if (_isDead.RuntimeValue) return; 
         if (!CanEnemyAttack()) FollowPlayer();
     }
 
@@ -51,7 +59,7 @@ public class EnemyAI : MonoBehaviour
         if (_reachedEndOfPath) return;
 
         Vector2 direction = ((Vector2)_path.vectorPath[_currentWaypoint] - _rigidbody.position).normalized;
-        Vector2 force = direction * _enemy.Speed * Time.deltaTime;
+        Vector2 force = direction * _currentSpeed * Time.deltaTime;
 
         _rigidbody.AddForce(force);
 
@@ -75,6 +83,24 @@ public class EnemyAI : MonoBehaviour
     public bool CanEnemyAttack()
     {
         return Vector2.Distance(_target.RuntimeValue, _rigidbody.position) <= _enemy.WaypointDistance;
+    }
+
+    public void FreezeEnemy(int id, Power power, bool isIce)
+    {
+        if (_id == id && isIce)
+        {
+            _currentSpeed = 1;
+            _rigidbody.bodyType = RigidbodyType2D.Static;
+            transform.Find("FreezeLayer").GetComponent<SpriteRenderer>().enabled = true;
+            Invoke("UnfreezeEnemy", 6.0f);
+        }
+    }
+
+    void UnfreezeEnemy()
+    {
+        _currentSpeed = _enemy.Speed;
+        _rigidbody.bodyType = RigidbodyType2D.Dynamic;
+        transform.Find("FreezeLayer").GetComponent<SpriteRenderer>().enabled = false;
     }
 
 }

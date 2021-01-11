@@ -46,5 +46,6 @@ MonoBehaviour:
   _pickupPools:
   - {fileID: 11400000, guid: 915e2cb706005504ebeb00f3554aad8f, type: 2}
   - {fileID: 11400000, guid: b56a608770fbc9b47971db590b85313d, type: 2}
+  - {fileID: 11400000, guid: 37f4a69bb7b101f4cb5d897f44a4ac90, type: 2}
   _playerPosition: {fileID: 11400000, guid: e4559eebfd4e7e34f9b1b5ea2191e214, type: 2}
   _spawnRadius: {fileID: 11400000, guid: 21eb85a680baecc468557444be251884, type: 2}

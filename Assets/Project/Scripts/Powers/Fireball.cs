@@ -3,13 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Fireball : Projectile
-{
-    public override void SetPosition()
-    {
-        _currentPosition = transform.position;
-        _newPosition = _currentPosition + _velocity * Time.deltaTime;
-    }
-    
+{    
     public override void SetVelocity(Vector2 velocity)
     {
         _velocity = velocity;
@@ -30,15 +24,13 @@ public class Fireball : Projectile
 
             if (other.CompareTag(Constants.ENEMY_TAG))
             {
-                Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
-                Vector2 force = (Vector2)other.transform.position - (Vector2)_playerPosition.RuntimeValue;
-                rb.AddForce(force.normalized * _explosionForce.RuntimeValue, ForceMode2D.Impulse);
+                AddExplosionForce(other);
                 
                 OnEnemyDamaged.Raise(other.GetInstanceID());
-                OnEnemyDamaged.Raise(other.GetInstanceID(), power);
+                OnEnemyDamaged.Raise(other.GetInstanceID(), power, false);
                 OnEnemyDamaged.Raise();
 
-                _particleSystemPool.GetPooledObject(transform.position, Quaternion.identity);
+                ShowParticleOnDestroy();
 
                 gameObject.SetActive(false);
                 break;
@@ -46,7 +38,7 @@ public class Fireball : Projectile
                 
             if (other.CompareTag(Constants.OBSTACLE_TAG))
             {        
-                _particleSystemPool.GetPooledObject(transform.position, Quaternion.identity);
+                ShowParticleOnDestroy();
 
                 gameObject.SetActive(false);
                 break;

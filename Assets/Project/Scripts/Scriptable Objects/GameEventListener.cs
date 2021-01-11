@@ -14,10 +14,9 @@ public class EnemyEvent : UnityEvent<EnemyStats>
 }
 
 [System.Serializable]
-public class AttackEvent : UnityEvent<int,Power>
+public class AttackEvent : UnityEvent<int,Power, bool>
 {
 }
-
 
 public class GameEventListener : MonoBehaviour
 {
@@ -51,7 +50,7 @@ public class GameEventListener : MonoBehaviour
         _enemyEventResponse.AddListener(call);
     }
 
-    public void AddResponse(UnityAction<int, Power> call)
+    public void AddResponse(UnityAction<int, Power, bool> call)
     {
         _attackEventResponse.AddListener(call);
     }
@@ -71,8 +70,8 @@ public class GameEventListener : MonoBehaviour
         _enemyEventResponse.Invoke(stats);
     }
 
-    public void OnEventRaised(int id, Power power)
+    public void OnEventRaised(int id, Power power, bool isIce)
     {
-        _attackEventResponse.Invoke(id, power);
+        _attackEventResponse.Invoke(id, power, isIce);
     }
 }

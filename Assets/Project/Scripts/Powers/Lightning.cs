@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class Lightning : Projectile
 {
-    public override void SetPosition()
-    {
-        _currentPosition = transform.position;
-        _newPosition = _currentPosition + _velocity * Time.deltaTime;
-    }
-
     public override void SetVelocity(Vector2 velocity)
     {
         return;
@@ -20,7 +14,7 @@ public class Lightning : Projectile
     }
 
     public override void HitEnemies()
-    {
+    {        
         Vector2 explosionPos = transform.position;
         Collider2D[] colliders = Physics2D.OverlapCircleAll(explosionPos, power.damageRadius);
 
@@ -29,12 +23,11 @@ public class Lightning : Projectile
             GameObject other = hit.gameObject;
 
             if (other.CompareTag(Constants.ENEMY_TAG))
-            {                
-                Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
-                Vector2 force = (Vector2)other.transform.position - (Vector2)_playerPosition.RuntimeValue;
-                rb.AddForce(force.normalized * _explosionForce.RuntimeValue, ForceMode2D.Impulse);
+            {
+                AddExplosionForce(other);
+
                 OnEnemyDamaged.Raise(other.GetInstanceID());
-                OnEnemyDamaged.Raise(other.GetInstanceID(),power);
+                OnEnemyDamaged.Raise(other.GetInstanceID(),power, false);
                 OnEnemyDamaged.Raise();
             }
         }

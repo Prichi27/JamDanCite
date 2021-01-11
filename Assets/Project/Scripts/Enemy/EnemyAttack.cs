@@ -53,6 +53,7 @@ public class EnemyAttack : MonoBehaviour
             if (_enemy.IsLongRanged)
             {
                 // Shoot
+                //var currentPlayerPosition = new Vector2(playerPosition.RuntimeValue.x, playerPosition.RuntimeValue.y);
                 AttackFromDistance();
             }
 
@@ -76,7 +77,14 @@ public class EnemyAttack : MonoBehaviour
 
     private void AttackFromDistance()
     {
-        projectile.GetPooledObject(transform.position, Quaternion.identity);
+        if(_enemy.IsLongRanged && _enemy.canAttackAtPlayerPosition)
+        {
+            projectile.GetPooledObject(playerPosition.RuntimeValue, Quaternion.identity);
+        }
+        else
+        {
+            projectile.GetPooledObject(transform.position, Quaternion.identity);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other) 

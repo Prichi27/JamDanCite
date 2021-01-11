@@ -28,7 +28,7 @@ public abstract class Projectile : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = power.sprite;
         // _animator.keepAnimatorControllerStateOnDisable = true;
 
-        if(power.particleOnShoot) ShowParticleOnShoot();
+        ShowParticleOnShoot();
     }
 
     private void OnEnable() 
@@ -66,12 +66,12 @@ public abstract class Projectile : MonoBehaviour
 
     protected void ShowParticleOnShoot()
     {
-        power.particleOnShoot.GetPooledObject(transform.position, Quaternion.identity);
+        if(power.particleOnShoot) power.particleOnShoot.GetPooledObject(transform.position, Quaternion.identity);
     }
 
     protected void ShowParticleOnDestroy()
     {
-        power.particleOnDestroy.GetPooledObject(transform.position, Quaternion.identity);
+        if(power.particleOnDestroy) power.particleOnDestroy.GetPooledObject(transform.position, Quaternion.identity);
     }
 
     protected void AddExplosionForce(GameObject other)

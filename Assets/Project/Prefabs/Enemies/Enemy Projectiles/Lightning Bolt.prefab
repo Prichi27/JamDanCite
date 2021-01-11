@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 731452718670258524}
   - component: {fileID: 6348488795741441429}
-  - component: {fileID: 3822435409945959548}
+  - component: {fileID: 9068662834752358137}
   - component: {fileID: 6396175774099501714}
   - component: {fileID: 1160938387981379530}
   - component: {fileID: 7933214494770134062}
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3159047898031168799}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 979733229
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1972665956256705010, guid: 9aa6f2fc5e3185a43b51df40b18bed10,
+  m_Sprite: {fileID: 5926225187413268724, guid: 9aa6f2fc5e3185a43b51df40b18bed10,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &3822435409945959548
+--- !u!58 &9068662834752358137
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,9 +99,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.059999943, y: 0.6462898}
+  m_Offset: {x: 0, y: 0.65}
   serializedVersion: 2
-  m_Radius: 1.5224307
+  m_Radius: 0.0001
 --- !u!50 &6396175774099501714
 Rigidbody2D:
   serializedVersion: 4
@@ -137,8 +137,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerPostion: {fileID: 11400000, guid: e4559eebfd4e7e34f9b1b5ea2191e214, type: 2}
   _enemy: {fileID: 11400000, guid: 13f7254efa52e924c80b30493cca744c, type: 2}
-  _speed: 50
+  _speed: 0
   _onPlayerDamaged: {fileID: 11400000, guid: e40096e452acc89429c442e169f25a1a, type: 2}
+  _particlesPool: {fileID: 11400000, guid: 32b7e9637484abd499d8c377c8dc81a7, type: 2}
 --- !u!95 &7933214494770134062
 Animator:
   serializedVersion: 3

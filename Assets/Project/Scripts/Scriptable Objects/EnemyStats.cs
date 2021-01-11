@@ -12,6 +12,7 @@ public class EnemyStats : ScriptableObject, ISerializationCallbackReceiver
     [SerializeField] public float waypointDistance;
     [SerializeField] public int score;
     [SerializeField] public bool isLongRanged;
+    [SerializeField] public bool canAttackAtPlayerPosition;
     [SerializeField] public float attackSpeed;
 
     public string Name { get; set; }

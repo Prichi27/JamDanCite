@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Sparks
   m_EditorClassIdentifier: 
   prefab: {fileID: 7513866911617728404, guid: 6d87c1ce4e3c2e540b604d9fe50eca7b, type: 3}
-  amount: 2
+  amount: 5
   canExpand: 0

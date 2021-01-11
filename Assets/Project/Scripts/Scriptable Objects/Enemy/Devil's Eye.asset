@@ -19,4 +19,5 @@ MonoBehaviour:
   waypointDistance: 4
   score: 30
   isLongRanged: 1
+  canAttackAtPlayerPosition: 1
   attackSpeed: 3

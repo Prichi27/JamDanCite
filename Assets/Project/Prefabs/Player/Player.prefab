@@ -147,6 +147,9 @@ GameObject:
   - component: {fileID: 5239676918454948123}
   - component: {fileID: 5239676918454948119}
   - component: {fileID: 291542519}
+  - component: {fileID: 5061473888696643501}
+  - component: {fileID: 554949656824476878}
+  - component: {fileID: 7067945007247554977}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -272,6 +275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: {fileID: 11400000, guid: 334b5d8f013f29247a6ec36f08181dfd, type: 2}
   _position: {fileID: 11400000, guid: e4559eebfd4e7e34f9b1b5ea2191e214, type: 2}
+  _isDead: {fileID: 11400000, guid: d31c92d3fde3d294e820796a5ee9039d, type: 2}
 --- !u!114 &291542519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291,7 +295,83 @@ MonoBehaviour:
   - {fileID: 6518537766733683582}
   cursorTexture: {fileID: 0}
   _projectilePool: {fileID: 11400000, guid: e18f81b062339ab47b5d99a1e5f2ea76, type: 2}
-  _shootEvent: {fileID: 0}
+  _shootEvent: {fileID: 11400000, guid: f35169fe5b73b1243975409e395aa765, type: 2}
+  _isDead: {fileID: 11400000, guid: d31c92d3fde3d294e820796a5ee9039d, type: 2}
+--- !u!114 &5061473888696643501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5239676918454948116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0243da7405d4af4b9574566f64455b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 0}
+  _response:
+    m_PersistentCalls:
+      m_Calls: []
+  _specificResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  _enemyEventResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  _attackEventResponse:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &554949656824476878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5239676918454948116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57aea8bed5f04ed4698c7152f76d6bf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: {fileID: 11400000, guid: 1a2aa61643c492c44a3993c0334286c3, type: 2}
+  _isDead: {fileID: 11400000, guid: d31c92d3fde3d294e820796a5ee9039d, type: 2}
+--- !u!114 &7067945007247554977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5239676918454948116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0243da7405d4af4b9574566f64455b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: e40096e452acc89429c442e169f25a1a, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls: []
+  _specificResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  _enemyEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 554949656824476878}
+        m_MethodName: UpdateHealth
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _attackEventResponse:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6518537766733683582
 GameObject:
   m_ObjectHideFlags: 0

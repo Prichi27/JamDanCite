@@ -220,6 +220,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5061473888696643501, guid: 4a4bf36dda16ace458cb5eef8351d87c,
+        type: 3}
+      propertyPath: _gameEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 222b48a736eca7b47bb977e9da51e4dc,
+        type: 2}
+    - target: {fileID: 5061473888696643501, guid: 4a4bf36dda16ace458cb5eef8351d87c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5239676918454948116, guid: 4a4bf36dda16ace458cb5eef8351d87c,
         type: 3}
       propertyPath: m_Name
@@ -704,7 +715,7 @@ PrefabInstance:
     - target: {fileID: 7629618395574180255, guid: 4b2ac4cc15986ac4d91866481ea5c4f2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.38119566
+      value: -0.426098
       objectReference: {fileID: 0}
     - target: {fileID: 7629618395574180255, guid: 4b2ac4cc15986ac4d91866481ea5c4f2,
         type: 3}
@@ -729,7 +740,7 @@ PrefabInstance:
     - target: {fileID: 7629618395780585726, guid: 4b2ac4cc15986ac4d91866481ea5c4f2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.38119566
+      value: -0.426098
       objectReference: {fileID: 0}
     - target: {fileID: 7629618395780585726, guid: 4b2ac4cc15986ac4d91866481ea5c4f2,
         type: 3}

@@ -134,6 +134,7 @@ MonoBehaviour:
   _target: {fileID: 11400000, guid: e4559eebfd4e7e34f9b1b5ea2191e214, type: 2}
   _enemy: {fileID: 11400000, guid: 107b077b47fdd5346bf1a5e1fd6368bb, type: 2}
   _damageEvent: {fileID: 6557585662408909389}
+  _isDead: {fileID: 11400000, guid: d31c92d3fde3d294e820796a5ee9039d, type: 2}
 --- !u!114 &1127444142527757376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,6 +151,7 @@ MonoBehaviour:
   OnPlayerDamaged: {fileID: 11400000, guid: e40096e452acc89429c442e169f25a1a, type: 2}
   playerPosition: {fileID: 11400000, guid: e4559eebfd4e7e34f9b1b5ea2191e214, type: 2}
   projectile: {fileID: 0}
+  _isDead: {fileID: 11400000, guid: d31c92d3fde3d294e820796a5ee9039d, type: 2}
 --- !u!114 &448824869723553334
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -30,15 +30,24 @@ public class Fireball : Projectile
 
             if (other.CompareTag(Constants.ENEMY_TAG))
             {
+                Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
+                Vector2 force = (Vector2)other.transform.position - (Vector2)_playerPosition.RuntimeValue;
+                rb.AddForce(force.normalized * _explosionForce.RuntimeValue, ForceMode2D.Impulse);
+                
                 OnEnemyDamaged.Raise(other.GetInstanceID());
                 OnEnemyDamaged.Raise(other.GetInstanceID(), power);
                 OnEnemyDamaged.Raise();
+
+                _particleSystemPool.GetPooledObject(transform.position, Quaternion.identity);
+
                 gameObject.SetActive(false);
                 break;
             }
                 
             if (other.CompareTag(Constants.OBSTACLE_TAG))
-            {
+            {        
+                _particleSystemPool.GetPooledObject(transform.position, Quaternion.identity);
+
                 gameObject.SetActive(false);
                 break;
             }            

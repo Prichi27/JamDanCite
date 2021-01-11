@@ -6,15 +6,22 @@ public abstract class Projectile : MonoBehaviour
 {
     [SerializeField] private FloatVariable damage;
     [SerializeField] protected Power power;
+    [SerializeField] protected FloatVariable _explosionForce;
+    [SerializeField] protected Vector2Variable _playerPosition;
+    [SerializeField] public GameEvent OnEnemyDamaged;
+
     protected Animator _animator;
     protected Vector2 _velocity = new Vector2(0.0f, 0.0f);
     public Vector2 offset = new Vector2(0.0f, 0.0f);
-    [SerializeField] public GameEvent OnEnemyDamaged;
 
     protected Vector2 _currentPosition;
     protected Vector2 _newPosition;
 
     protected bool HasSpawned;
+
+    [SerializeField]
+    [Tooltip("Gets reference to gameobject pool")]
+    protected GameObjectPool _particleSystemPool;
 
     private void Awake() 
     {

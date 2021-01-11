@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class Lightning : Projectile
 {
-    [SerializeField] private FloatVariable _explosionForce;
-    [SerializeField] private Vector2Variable _playerPosition;
-
     public override void SetPosition()
     {
         _currentPosition = transform.position;

@@ -61,8 +61,12 @@ public abstract class Projectile : MonoBehaviour
     }
 
     public void DeactivateProjectile()
-    {        
-        if (power.manaDrain > 0) OnPlayerAttack.Raise(power);        
+    {
+        if(power.manaDrain > 0)
+        {
+            OnPlayerAttack.Raise();
+            OnPlayerAttack.Raise(power);
+        }
         gameObject.SetActive(false);
     }
 

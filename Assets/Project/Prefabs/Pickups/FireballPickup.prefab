@@ -132,3 +132,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pickup: {fileID: 11400000, guid: 2a5687f8f8bd7524f883f804c5d4bc36, type: 2}
+  _powerPickupEvent: {fileID: 11400000, guid: 431bcde8b89b34d4a8b0ebe673e37c9a, type: 2}

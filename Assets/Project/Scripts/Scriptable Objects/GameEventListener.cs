@@ -23,6 +23,11 @@ public class PlayerAttackEvent : UnityEvent<Power>
 {
 }
 
+[System.Serializable]
+public class PowerPickupEvent : UnityEvent<Pickup>
+{
+}
+
 public class GameEventListener : MonoBehaviour
 {
     [SerializeField] private GameEvent _gameEvent;
@@ -36,6 +41,8 @@ public class GameEventListener : MonoBehaviour
     [SerializeField] private AttackEvent _attackEventResponse;
 
     [SerializeField] private PlayerAttackEvent _playerAttackEventResponse;
+
+    [SerializeField] private PowerPickupEvent _powerPickupEvent;
 
     private void OnEnable()
     {
@@ -67,6 +74,11 @@ public class GameEventListener : MonoBehaviour
         _playerAttackEventResponse.AddListener(call);
     }
 
+    public void AddResponse(UnityAction<Pickup> call)
+    {
+        _powerPickupEvent.AddListener(call);
+    }
+
     public void OnEventRaised()
     {
         _response.Invoke();
@@ -90,5 +102,10 @@ public class GameEventListener : MonoBehaviour
     public void OnEventRaised(Power power)
     {
         _playerAttackEventResponse.Invoke(power);
+    }
+
+    public void OnEventRaised(Pickup pickup)
+    {
+        _powerPickupEvent.Invoke(pickup);
     }
 }

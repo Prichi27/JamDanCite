@@ -8,4 +8,5 @@ public class Pickup : ScriptableObject
     public Sprite sprite;
     public GameObjectPool projectilePool;
     public ParticleSystem particleOnPickup;
+    public float manaIncrease;
 }

@@ -26,5 +26,6 @@ public class Bar : MonoBehaviour
     {
         _slider.value = _value.RuntimeValue;
         _fill.color = _gradient.Evaluate(_slider.normalizedValue);
+        Debug.Log(_value.RuntimeValue);
     }
 }

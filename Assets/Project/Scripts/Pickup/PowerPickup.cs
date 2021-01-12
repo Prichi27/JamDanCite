@@ -5,6 +5,8 @@ using UnityEngine;
 public class PowerPickup : MonoBehaviour
 {
     [SerializeField] private Pickup _pickup;
+    [SerializeField] private GameEvent _powerPickupEvent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +34,8 @@ public class PowerPickup : MonoBehaviour
         if(other.collider.CompareTag("Player"))
         {
             Shooting script = other.gameObject.GetComponent<Shooting>();
-            script.SetProjectilePool(_pickup.projectilePool);
+            // script.SetProjectilePool(_pickup.projectilePool);
+            _powerPickupEvent.Raise(_pickup);
             gameObject.SetActive(false);
         }
     }

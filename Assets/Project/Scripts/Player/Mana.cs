@@ -7,8 +7,9 @@ public class Mana : MonoBehaviour
 {
     [SerializeField]
     private FloatVariable _mana;
+    [SerializeField] private GameEvent _powerPickup;
     
-    public void UpdateMana(Power power)
+    public void ReduceMana(Power power)
     {
         _mana.RuntimeValue = power.manaDrain <= _mana.RuntimeValue ? _mana.RuntimeValue - power.manaDrain : 0;
 
@@ -16,6 +17,14 @@ public class Mana : MonoBehaviour
         {
             GetComponent<Shooting>().SetDefaultPool();
         }
-        Debug.LogError("Mana: " + _mana.RuntimeValue);
+        Debug.Log("Mana decreased: " + _mana.RuntimeValue);
+    }
+
+    public void IncreaseMana(Pickup pickup)
+    {        
+        _mana.RuntimeValue += pickup.manaIncrease;
+        if (_mana.RuntimeValue >= _mana.Value) _mana.RuntimeValue = _mana.Value;
+        _powerPickup.Raise();
+        Debug.Log("Mana increased: " + _mana.RuntimeValue);
     }
 }

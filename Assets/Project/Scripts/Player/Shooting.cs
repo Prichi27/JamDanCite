@@ -8,6 +8,7 @@ public class Shooting : MonoBehaviour
     [Header("Character attributes:")]
     public float crosshairDistance = 0.75f;
     public float bulletForce = 10f;
+    public FloatVariable _playerMP;
 
     [Space]
     [Header("References:")]
@@ -81,9 +82,9 @@ public class Shooting : MonoBehaviour
         _direction = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
-    public void SetProjectilePool(GameObjectPool projectilePool)
+    public void SetProjectilePool(Pickup pickup)
     {
-        _currentPool = projectilePool;
+        _currentPool = pickup.projectilePool;
     }
 
     public void SetDefaultPool()

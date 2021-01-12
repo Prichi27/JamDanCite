@@ -87,7 +87,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.829
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -133,7 +133,7 @@ MonoBehaviour:
     m_Mode: 1
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
-  _health: {fileID: 11400000, guid: 1a2aa61643c492c44a3993c0334286c3, type: 2}
+  _value: {fileID: 0}
 --- !u!114 &5710100678703074077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,7 +151,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5710100678703074146}
-        m_MethodName: UpdateHealth
+        m_MethodName: UpdateValue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -168,6 +168,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _attackEventResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  _playerAttackEventResponse:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &5710100678842108767
@@ -313,6 +316,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _attackEventResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  _playerAttackEventResponse:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &5710100678961074249

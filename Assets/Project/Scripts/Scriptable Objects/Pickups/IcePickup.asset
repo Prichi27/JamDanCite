@@ -15,3 +15,4 @@ MonoBehaviour:
   sprite: {fileID: 7918995251456540536, guid: 27a3dc288513ac644a1d1fa3c6b0be47, type: 3}
   projectilePool: {fileID: 11400000, guid: eb7e3d4d86149e0438f85dc560332194, type: 2}
   particleOnPickup: {fileID: 0}
+  manaIncrease: 40

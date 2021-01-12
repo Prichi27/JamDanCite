@@ -182,6 +182,9 @@ MonoBehaviour:
   _attackEventResponse:
     m_PersistentCalls:
       m_Calls: []
+  _playerAttackEventResponse:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &153854254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1f6b723732f9764aa3039f47f30f40f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fill: {fileID: 0}
+  _fill: {fileID: 2071537389}
   _gradient:
     serializedVersion: 2
     key0: {r: 1, g: 1, b: 1, a: 1}
@@ -224,7 +227,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  _health: {fileID: 0}
+  _value: {fileID: 0}
 --- !u!4 &153854255
 Transform:
   m_ObjectHideFlags: 0
@@ -305,18 +308,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 291542519, guid: 4a4bf36dda16ace458cb5eef8351d87c, type: 3}
-      propertyPath: cursorTexture
-      value: 
-      objectReference: {fileID: 2800000, guid: b6b739ca95270514eb36250f5820a93c, type: 3}
-    - target: {fileID: 291542519, guid: 4a4bf36dda16ace458cb5eef8351d87c, type: 3}
-      propertyPath: _shootEvent
-      value: 
-      objectReference: {fileID: 11400000, guid: f35169fe5b73b1243975409e395aa765,
-        type: 2}
-    - target: {fileID: 291542519, guid: 4a4bf36dda16ace458cb5eef8351d87c, type: 3}
       propertyPath: _projectilePool
       value: 
       objectReference: {fileID: 11400000, guid: 66942e763f162fc45a8c9e496e098cf3,
+        type: 2}
+    - target: {fileID: 291542519, guid: 4a4bf36dda16ace458cb5eef8351d87c, type: 3}
+      propertyPath: _defaultPool
+      value: 
+      objectReference: {fileID: 11400000, guid: e18f81b062339ab47b5d99a1e5f2ea76,
+        type: 2}
+    - target: {fileID: 5061473888696643501, guid: 4a4bf36dda16ace458cb5eef8351d87c,
+        type: 3}
+      propertyPath: _gameEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 6c57ce5709a29524cbc150a9e982853b,
         type: 2}
     - target: {fileID: 5239676918454948116, guid: 4a4bf36dda16ace458cb5eef8351d87c,
         type: 3}
@@ -377,16 +382,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5239676918454948121, guid: 4a4bf36dda16ace458cb5eef8351d87c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6374509180906013884, guid: 4a4bf36dda16ace458cb5eef8351d87c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a4bf36dda16ace458cb5eef8351d87c, type: 3}
@@ -544,6 +539,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 420521850358515041, guid: 6c0550a3dd43e2b41be6c3c706df3d9d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 420521850358515041, guid: 6c0550a3dd43e2b41be6c3c706df3d9d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425641494569604589, guid: 6c0550a3dd43e2b41be6c3c706df3d9d,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425641494569604589, guid: 6c0550a3dd43e2b41be6c3c706df3d9d,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.3211561
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425641494569604589, guid: 6c0550a3dd43e2b41be6c3c706df3d9d,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425641494569604589, guid: 6c0550a3dd43e2b41be6c3c706df3d9d,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3460213252943850811, guid: 6c0550a3dd43e2b41be6c3c706df3d9d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3460213252943850811, guid: 6c0550a3dd43e2b41be6c3c706df3d9d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6430779701513340745, guid: 6c0550a3dd43e2b41be6c3c706df3d9d,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -553,6 +588,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430779701839391070, guid: 6c0550a3dd43e2b41be6c3c706df3d9d,
+        type: 3}
+      propertyPath: m_Value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6430779702956833345, guid: 6c0550a3dd43e2b41be6c3c706df3d9d,
         type: 3}
@@ -663,6 +703,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8352486610007097716, guid: 6c0550a3dd43e2b41be6c3c706df3d9d,
+        type: 3}
+      propertyPath: m_Value
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c0550a3dd43e2b41be6c3c706df3d9d, type: 3}
@@ -2321,6 +2366,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &2071537389 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6430779701513340744, guid: 6c0550a3dd43e2b41be6c3c706df3d9d,
+    type: 3}
+  m_PrefabInstance: {fileID: 941498929}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1543226336531588149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2529,7 +2586,7 @@ PrefabInstance:
     - target: {fileID: 6376810910275875245, guid: 84f1a68cfb778e54480d78c785bb7e69,
         type: 3}
       propertyPath: _enemyPools.Array.size
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6376810910275875245, guid: 84f1a68cfb778e54480d78c785bb7e69,
         type: 3}
@@ -2577,7 +2634,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _enemyPools.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: a7ac1efef9569434791e4f95c6418f70,
+      objectReference: {fileID: 11400000, guid: 0482be2b46f6cbe49b1516afe72d0aba,
         type: 2}
     - target: {fileID: 6376810910275875246, guid: 84f1a68cfb778e54480d78c785bb7e69,
         type: 3}

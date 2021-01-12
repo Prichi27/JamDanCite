@@ -118,5 +118,7 @@ MonoBehaviour:
   _explosionForce: {fileID: 0}
   _playerPosition: {fileID: 11400000, guid: e4559eebfd4e7e34f9b1b5ea2191e214, type: 2}
   OnEnemyDamaged: {fileID: 11400000, guid: 222b48a736eca7b47bb977e9da51e4dc, type: 2}
+  OnPlayerAttack: {fileID: 11400000, guid: 6c57ce5709a29524cbc150a9e982853b, type: 2}
+  OnManaUsed: {fileID: 11400000, guid: 6c57ce5709a29524cbc150a9e982853b, type: 2}
   offset: {x: 0, y: 0}
   OnEnemyFreeze: {fileID: 11400000, guid: 15492035a34955a408ddac8583426b04, type: 2}

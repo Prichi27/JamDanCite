@@ -31,16 +31,14 @@ public class Fireball : Projectile
                 OnEnemyDamaged.Raise();
 
                 ShowParticleOnDestroy();
-
-                gameObject.SetActive(false);
+                DeactivateProjectile();
                 break;
             }
                 
             if (other.CompareTag(Constants.OBSTACLE_TAG))
             {        
                 ShowParticleOnDestroy();
-
-                gameObject.SetActive(false);
+                DeactivateProjectile();
                 break;
             }            
         }

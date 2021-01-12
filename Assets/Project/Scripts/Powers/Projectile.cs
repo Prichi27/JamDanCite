@@ -8,6 +8,8 @@ public abstract class Projectile : MonoBehaviour
     [SerializeField] protected FloatVariable _explosionForce;
     [SerializeField] protected Vector2Variable _playerPosition;
     [SerializeField] public GameEvent OnEnemyDamaged;
+    [SerializeField] public GameEvent OnPlayerAttack;
+    [SerializeField] public GameEvent OnManaUsed;
 
     protected Animator _animator;
     protected Vector2 _velocity = new Vector2(0.0f, 0.0f);
@@ -17,6 +19,8 @@ public abstract class Projectile : MonoBehaviour
     protected Vector2 _newPosition;
 
     protected bool HasSpawned;
+
+    protected bool isAnimationOver;
 
     private void Awake() 
     {
@@ -33,11 +37,19 @@ public abstract class Projectile : MonoBehaviour
 
     private void OnEnable() 
     {
+        // OnManaUsed.Raise(power);
+
         _animator.SetTrigger("Shoot");
 
+        isAnimationOver = false;
         HasSpawned = false;
 
         Invoke("DeactivateProjectile", 3.0f);
+    }
+
+    private void OnDisable() 
+    {
+        CancelInvoke();
     }
 
     void Update()
@@ -45,11 +57,12 @@ public abstract class Projectile : MonoBehaviour
         ChecksIfObjectOutOfCameraView();
         SetPosition();
         if(!HasSpawned) HitEnemies();        
-        IsAnimationOver();
+        if(!isAnimationOver) IsAnimationOver();
     }
 
     public void DeactivateProjectile()
-    {
+    {        
+        if (power.manaDrain > 0) OnPlayerAttack.Raise(power);        
         gameObject.SetActive(false);
     }
 

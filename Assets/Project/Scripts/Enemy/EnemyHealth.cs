@@ -28,6 +28,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void OnEnable() 
     {
+        transform.localScale = Vector3.one;
         _currentHealth = enemyStats.Health;
         _currentSpeed = enemyStats.Speed;
     }

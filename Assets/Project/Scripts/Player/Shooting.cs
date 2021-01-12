@@ -15,9 +15,11 @@ public class Shooting : MonoBehaviour
     private Animator _animator;
     public Texture2D cursorTexture;
 
+    private GameObjectPool _currentPool;
+
     [SerializeField]
     [Tooltip("Gets reference to gameobject pool")]
-    private GameObjectPool _projectilePool;
+    private GameObjectPool _defaultPool;
 
     [SerializeField]
     private GameEvent _shootEvent;
@@ -30,6 +32,7 @@ public class Shooting : MonoBehaviour
     private void Start()
     {
         _animator = GetComponentInChildren<Animator>();
+        SetDefaultPool();
     }
 
     private void Awake() 
@@ -67,7 +70,7 @@ public class Shooting : MonoBehaviour
 
         Vector2 firepoint = IsLightningPower() ? new Vector2(_direction.x, _direction.y) : new Vector2(_currentStaffPosition.transform.position.x, _currentStaffPosition.transform.position.y);
         
-        GameObject power = _projectilePool.GetPooledObject(firepoint, Quaternion.identity);
+        GameObject power = _currentPool.GetPooledObject(firepoint, Quaternion.identity);
         Projectile projectileScript = power.GetComponent<Projectile>();
         projectileScript.SetVelocity(shootingDirection * bulletForce);
         projectileScript.SetRotation(Mathf.Atan2(shootingDirection.y, shootingDirection.x) * Mathf.Rad2Deg);
@@ -80,8 +83,13 @@ public class Shooting : MonoBehaviour
 
     public void SetProjectilePool(GameObjectPool projectilePool)
     {
-        _projectilePool = projectilePool;
+        _currentPool = projectilePool;
     }
 
-    private bool IsLightningPower(){ return _projectilePool.name.Equals("Lightning"); }
+    public void SetDefaultPool()
+    {
+        _currentPool = _defaultPool;
+    }
+
+    private bool IsLightningPower(){ return _currentPool.name.Equals("Lightning"); }
 }

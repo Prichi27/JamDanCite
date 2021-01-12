@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 943565594077073302, guid: dff2f8a99526ac2478591c08b200a43b, type: 3}
   amount: 20
-  canExpand: 1
+  canExpand: 0

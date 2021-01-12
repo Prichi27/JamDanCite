@@ -32,7 +32,7 @@ public class EnemyProjectile : MonoBehaviour
     {
         if(_speed == 0)
         {
-            GetComponent<CircleCollider2D>().radius = 0;
+            GetComponent<CircleCollider2D>().enabled = false;
         }
     }
 
@@ -46,13 +46,16 @@ public class EnemyProjectile : MonoBehaviour
     {
         if(collision.gameObject.CompareTag(Constants.PLAYER_TAG))
         {
-            // Spawn Blood
-            var dir = ((Vector2)transform.position - _playerPostion.RuntimeValue).normalized;
-            BloodParticleSystemHandler.Instance.SpawnBlood(_playerPostion.RuntimeValue, new Vector3(-dir.x, -dir.y, 0));
-            _onPlayerDamaged.Raise(_enemy);
-            _onPlayerDamaged.Raise();
-
+            DamagePlayer();
             if(_speed != 0) gameObject.SetActive(false);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision) 
+    {
+        if(collision.gameObject.CompareTag(Constants.PLAYER_TAG)) 
+        {
+            DamagePlayer();
         }
     }
 
@@ -66,15 +69,25 @@ public class EnemyProjectile : MonoBehaviour
         if (_animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !_animator.IsInTransition(0))
         {
             _isAnimationOver = true;
-            Invoke("HitPlayer", 1.0f);
+            Invoke("EnableCollider", 1.0f);
         }
     }
 
-    void HitPlayer()
+    private void DamagePlayer()
+    {
+        // Spawn Blood
+        var dir = ((Vector2)transform.position - _playerPostion.RuntimeValue).normalized;
+        BloodParticleSystemHandler.Instance.SpawnBlood(_playerPostion.RuntimeValue, new Vector3(-dir.x, -dir.y, 0));
+        _onPlayerDamaged.Raise(_enemy);
+        _onPlayerDamaged.Raise();
+
+    }
+
+    void EnableCollider()
     {
         if(_particlesPool) _particlesPool.GetPooledObject(transform.position, Quaternion.identity);
         
-        GetComponent<CircleCollider2D>().radius = 0.65f;
+        GetComponent<CircleCollider2D>().enabled = true;
 
         Invoke("DeactivateProjectile", 0.5f);
     }

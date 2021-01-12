@@ -41,6 +41,7 @@ public class Lightning : Projectile
     {
         if (_animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !_animator.IsInTransition(0))
         {
+            isAnimationOver = true;
             DeactivateProjectile();
         }
     }

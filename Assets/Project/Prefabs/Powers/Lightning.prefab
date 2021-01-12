@@ -95,12 +95,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11dc597eeda8aed46ad07f4bb6659e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: {fileID: 11400000, guid: 763a4ef545a110b42bfdb049e7c52965, type: 2}
   power: {fileID: 11400000, guid: 970f523c51326f7409fad75a222f909e, type: 2}
-  offset: {x: 0, y: 0}
-  OnEnemyDamaged: {fileID: 11400000, guid: 222b48a736eca7b47bb977e9da51e4dc, type: 2}
   _explosionForce: {fileID: 11400000, guid: d23ecca9d26102648b97cd637ed6ec35, type: 2}
   _playerPosition: {fileID: 11400000, guid: e4559eebfd4e7e34f9b1b5ea2191e214, type: 2}
+  OnEnemyDamaged: {fileID: 11400000, guid: 222b48a736eca7b47bb977e9da51e4dc, type: 2}
+  OnPlayerAttack: {fileID: 11400000, guid: 6c57ce5709a29524cbc150a9e982853b, type: 2}
+  OnManaUsed: {fileID: 11400000, guid: 6c57ce5709a29524cbc150a9e982853b, type: 2}
+  offset: {x: 0, y: 0}
 --- !u!95 &2092489436552412377
 Animator:
   serializedVersion: 3

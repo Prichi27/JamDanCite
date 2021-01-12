@@ -17,5 +17,7 @@ MonoBehaviour:
   projectileSpeed: 5
   damage: 50
   damageRadius: 2
+  manaDrain: 15
+  attackSpeed: 3
   particleOnShoot: {fileID: 11400000, guid: a3047c70b62a3904eb9402f5ed5e2639, type: 2}
   particleOnDestroy: {fileID: 0}

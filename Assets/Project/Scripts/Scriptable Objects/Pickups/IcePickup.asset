@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d3577db8b2f83b4abaf49f0e2138404, type: 3}
   m_Name: IcePickup
   m_EditorClassIdentifier: 
-  sprite: {fileID: -856085545168688419, guid: 6250e678db476354e92529793850f441, type: 3}
+  sprite: {fileID: 7918995251456540536, guid: 27a3dc288513ac644a1d1fa3c6b0be47, type: 3}
   projectilePool: {fileID: 11400000, guid: eb7e3d4d86149e0438f85dc560332194, type: 2}
   particleOnPickup: {fileID: 0}

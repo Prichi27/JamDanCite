@@ -29,14 +29,13 @@ public class Ice : Projectile
                 OnEnemyDamaged.Raise(other.GetInstanceID());
                 OnEnemyDamaged.Raise(other.GetInstanceID(), power, true);
                 OnEnemyDamaged.Raise();
-
-                gameObject.SetActive(false);
+                DeactivateProjectile();
                 break;
             }
                 
             if (other.CompareTag(Constants.OBSTACLE_TAG))
             {        
-                gameObject.SetActive(false);
+                DeactivateProjectile();
                 break;
             }            
         }

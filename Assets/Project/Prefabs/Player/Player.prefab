@@ -147,9 +147,10 @@ GameObject:
   - component: {fileID: 5239676918454948123}
   - component: {fileID: 5239676918454948119}
   - component: {fileID: 291542519}
-  - component: {fileID: 5061473888696643501}
   - component: {fileID: 554949656824476878}
   - component: {fileID: 7067945007247554977}
+  - component: {fileID: 308663346}
+  - component: {fileID: 5061473888696643501}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -192,7 +193,7 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &5239676918454948121
@@ -293,35 +294,10 @@ MonoBehaviour:
   staffPositions:
   - {fileID: 6700498701641707534}
   - {fileID: 6518537766733683582}
-  cursorTexture: {fileID: 0}
-  _projectilePool: {fileID: 11400000, guid: e18f81b062339ab47b5d99a1e5f2ea76, type: 2}
+  cursorTexture: {fileID: 2800000, guid: b6b739ca95270514eb36250f5820a93c, type: 3}
+  _projectilePool: {fileID: 11400000, guid: 66942e763f162fc45a8c9e496e098cf3, type: 2}
   _shootEvent: {fileID: 11400000, guid: f35169fe5b73b1243975409e395aa765, type: 2}
   _isDead: {fileID: 11400000, guid: d31c92d3fde3d294e820796a5ee9039d, type: 2}
---- !u!114 &5061473888696643501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5239676918454948116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0243da7405d4af4b9574566f64455b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _gameEvent: {fileID: 0}
-  _response:
-    m_PersistentCalls:
-      m_Calls: []
-  _specificResponse:
-    m_PersistentCalls:
-      m_Calls: []
-  _enemyEventResponse:
-    m_PersistentCalls:
-      m_Calls: []
-  _attackEventResponse:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &554949656824476878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -372,6 +348,61 @@ MonoBehaviour:
   _attackEventResponse:
     m_PersistentCalls:
       m_Calls: []
+  _playerAttackEventResponse:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &308663346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5239676918454948116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91d42dacd427a98449ebe7a2f17ef6b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mana: {fileID: 11400000, guid: 09f3534c0328d5c4883781494b5aca35, type: 2}
+--- !u!114 &5061473888696643501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5239676918454948116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0243da7405d4af4b9574566f64455b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: 6c57ce5709a29524cbc150a9e982853b, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls: []
+  _specificResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  _enemyEventResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  _attackEventResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  _playerAttackEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 308663346}
+        m_MethodName: UpdateMana
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6518537766733683582
 GameObject:
   m_ObjectHideFlags: 0

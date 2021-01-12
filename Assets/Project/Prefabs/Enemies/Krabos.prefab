@@ -37,7 +37,7 @@ Transform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 5580853821406704843}
-  - {fileID: 869429979946388655}
+  - {fileID: 588342666013378887}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -214,6 +214,12 @@ MonoBehaviour:
   _attackEventResponse:
     m_PersistentCalls:
       m_Calls: []
+  _playerAttackEventResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  _powerPickupEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2737571948195383637
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +353,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &8617848364900865726
+--- !u!1 &6280847113718878038
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -355,8 +361,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 869429979946388655}
-  - component: {fileID: 7320076648144680391}
+  - component: {fileID: 588342666013378887}
+  - component: {fileID: 1885658847649886807}
   m_Layer: 9
   m_Name: FreezeLayer
   m_TagString: Untagged
@@ -364,27 +370,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &869429979946388655
+--- !u!4 &588342666013378887
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8617848364900865726}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.51999986, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 6280847113718878038}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.31, y: 0.02, z: 2.1668453}
+  m_LocalScale: {x: 9.059614, y: 5.870525, z: 1}
   m_Children: []
   m_Father: {fileID: 6161363479168806198}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7320076648144680391
+--- !u!212 &1885658847649886807
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8617848364900865726}
+  m_GameObject: {fileID: 6280847113718878038}
   m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -417,9 +423,8 @@ SpriteRenderer:
   m_SortingLayerID: 979733229
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -856085545168688419, guid: 6250e678db476354e92529793850f441,
-    type: 3}
-  m_Color: {r: 0.48989856, g: 0.9245011, b: 0.9528302, a: 0.84313726}
+  m_Sprite: {fileID: 21300000, guid: d794b31b32455664ab6e88f085bf7011, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.62352943}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

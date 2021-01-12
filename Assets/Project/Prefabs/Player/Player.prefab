@@ -295,7 +295,7 @@ MonoBehaviour:
   - {fileID: 6700498701641707534}
   - {fileID: 6518537766733683582}
   cursorTexture: {fileID: 2800000, guid: b6b739ca95270514eb36250f5820a93c, type: 3}
-  _projectilePool: {fileID: 11400000, guid: 66942e763f162fc45a8c9e496e098cf3, type: 2}
+  _defaultPool: {fileID: 0}
   _shootEvent: {fileID: 11400000, guid: f35169fe5b73b1243975409e395aa765, type: 2}
   _isDead: {fileID: 11400000, guid: d31c92d3fde3d294e820796a5ee9039d, type: 2}
 --- !u!114 &554949656824476878
@@ -312,6 +312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: {fileID: 11400000, guid: 1a2aa61643c492c44a3993c0334286c3, type: 2}
   _isDead: {fileID: 11400000, guid: d31c92d3fde3d294e820796a5ee9039d, type: 2}
+  _onPlayerDeath: {fileID: 11400000, guid: 15b111f5b0e42ee41b2b61917f986e18, type: 2}
 --- !u!114 &7067945007247554977
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,6 +10,8 @@ public class Health : MonoBehaviour
 
     [SerializeField] BoolVariable _isDead;
 
+    [SerializeField] GameEvent _onPlayerDeath;
+
     private Animator _anim;
 
     private void Awake()
@@ -26,6 +28,7 @@ public class Health : MonoBehaviour
             // The sucker dies! 
             _anim.SetBool("IsDead", true);
             _isDead.RuntimeValue = true;
+            _onPlayerDeath.Raise();
         }
     }
 }

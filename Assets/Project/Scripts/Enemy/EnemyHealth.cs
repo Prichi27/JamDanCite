@@ -31,6 +31,7 @@ public class EnemyHealth : MonoBehaviour
         transform.localScale = Vector3.one;
         _currentHealth = enemyStats.Health;
         _currentSpeed = enemyStats.Speed;
+        GetComponent<CircleCollider2D>().enabled = true;
     }
 
     private void Update()
@@ -58,6 +59,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void Death()
     {
+        GetComponent<CircleCollider2D>().enabled = false;
         transform.position -= (Vector3)_direction * _flyingSpeed.RuntimeValue * Time.deltaTime;
         transform.localScale += Vector3.one * _scaleSpeed.RuntimeValue * Time.deltaTime;
         transform.eulerAngles += new Vector3(0, 0, _eulerAngle.RuntimeValue * Time.deltaTime * 360);

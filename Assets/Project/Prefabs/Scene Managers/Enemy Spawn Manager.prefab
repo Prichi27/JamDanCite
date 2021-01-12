@@ -45,19 +45,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyPools:
-  - {fileID: 11400000, guid: 51b3010cf7057e74d90506b9fbd4945a, type: 2}
-  - {fileID: 11400000, guid: e50cd6e8d68e7134a8bfac945011e927, type: 2}
+  - {fileID: 11400000, guid: 4ca8259a948eab94c89ecaf8bfcfb5cd, type: 2}
   - {fileID: 11400000, guid: a7ac1efef9569434791e4f95c6418f70, type: 2}
   - {fileID: 11400000, guid: 533a156da280af847b620ac75b2eeb20, type: 2}
-  - {fileID: 11400000, guid: 4ca8259a948eab94c89ecaf8bfcfb5cd, type: 2}
-  - {fileID: 11400000, guid: 0482be2b46f6cbe49b1516afe72d0aba, type: 2}
   - {fileID: 11400000, guid: 9cf0a874ece0fd646a434a0043d82d62, type: 2}
+  - {fileID: 11400000, guid: 0482be2b46f6cbe49b1516afe72d0aba, type: 2}
+  - {fileID: 11400000, guid: 51b3010cf7057e74d90506b9fbd4945a, type: 2}
+  - {fileID: 11400000, guid: e50cd6e8d68e7134a8bfac945011e927, type: 2}
   _waveEnemy: {fileID: 11400000, guid: 8ea38989318e09943bff14b4414851fc, type: 2}
-  _playerPosition: {fileID: 11400000, guid: e4559eebfd4e7e34f9b1b5ea2191e214, type: 2}
+  _spawnPosition: {fileID: 11400000, guid: 2615a8d9bd1afe64db4bb08bf7446cee, type: 2}
   _spawnRadius: {fileID: 11400000, guid: 4eb24007b9b0c694eb64ace5b881e09d, type: 2}
   _colliderRadius: {fileID: 11400000, guid: 9c0ab4d730bb1a548bc39e7f065e3f92, type: 2}
   _offset: {fileID: 11400000, guid: ace42438fc3d9dd4f8c3faea1931f230, type: 2}
   _enemyRuntimeSet: {fileID: 11400000, guid: e5711c5ddef92c14ab13ec26e298151e, type: 2}
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 7680
 --- !u!114 &6376810910275875243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,5 +89,17 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _specificResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  _enemyEventResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  _attackEventResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  _playerAttackEventResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  _powerPickupEvent:
     m_PersistentCalls:
       m_Calls: []

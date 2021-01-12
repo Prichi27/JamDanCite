@@ -15,7 +15,7 @@ public class SpawnManager : MonoBehaviour
 
     [SerializeField]
     [Tooltip("Gets the current player location")]
-    private Vector2Variable _playerPosition;
+    private Vector2Variable _spawnPosition;
 
     [SerializeField]
     [Tooltip("Radius within which player can be spawned")]
@@ -32,6 +32,9 @@ public class SpawnManager : MonoBehaviour
     [SerializeField]
     [Tooltip("Radius from player where enemies cannot be spawned")]
     private EnemyRuntimeSet _enemyRuntimeSet;
+
+    [SerializeField]
+    LayerMask _layerMask;
 
     void Start()
     {
@@ -64,7 +67,7 @@ public class SpawnManager : MonoBehaviour
     /// <returns></returns>
     private Vector2 SetSpawnPosition()
     {
-        Vector2 spawnPos = _playerPosition.RuntimeValue;
+        Vector2 spawnPos = _spawnPosition.RuntimeValue;
         spawnPos += (Vector2)Random.insideUnitSphere.normalized * _spawnRadius.RuntimeValue;
 
         // Checks if Enemy is too close to Player 
@@ -76,7 +79,7 @@ public class SpawnManager : MonoBehaviour
 
     private bool PreventSpawnOverlap(Vector3 spawnPos)
     {  
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(spawnPos, _colliderRadius.RuntimeValue);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(spawnPos, _colliderRadius.RuntimeValue, _layerMask);
 
         for (int i = 0; i < colliders.Length; i++)
         {

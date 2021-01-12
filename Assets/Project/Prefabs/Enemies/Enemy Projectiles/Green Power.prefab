@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 979733229
-  m_SortingLayer: 1
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: -6795113574326519384, guid: 5723fd903969eab4babce69d62f865f0,
     type: 3}
@@ -139,6 +139,7 @@ MonoBehaviour:
   _enemy: {fileID: 11400000, guid: a052f4168b3f6134fbc157999151f75d, type: 2}
   _speed: 50
   _onPlayerDamaged: {fileID: 11400000, guid: e40096e452acc89429c442e169f25a1a, type: 2}
+  _particlesPool: {fileID: 0}
 --- !u!95 &7933214494770134062
 Animator:
   serializedVersion: 3

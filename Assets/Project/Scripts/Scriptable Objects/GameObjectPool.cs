@@ -42,6 +42,8 @@ public class GameObjectPool : ScriptableObject
         GameObject obj = spawnedObjects.Dequeue();
         spawnedObjects.Enqueue(obj);
 
+        if (!obj) return null;
+
         if (obj.activeSelf && canExpand)
         {
             obj = Instantiate(prefab, parent);

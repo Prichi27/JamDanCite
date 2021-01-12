@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Project/Scenes/Main Menu.unity
+    guid: 477d7f6db311c774aacdb330ce8ee720
+  - enabled: 1
+    path: Assets/Project/Scenes/LeaderBoard.unity
+    guid: 0b5c13abdd8744940a29be27930361de
+  - enabled: 1
+    path: Assets/Project/Scenes/Main Game.unity
+    guid: cfe410da3c1191549acd40640dcd2ca1
+  - enabled: 1
     path: Assets/Project/Scenes/PwichiSceneBetterThanAishou.unity
     guid: 24040939f678f894184c185919798b43
   - enabled: 0

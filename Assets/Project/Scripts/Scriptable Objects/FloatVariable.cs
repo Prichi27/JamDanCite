@@ -19,4 +19,9 @@ public class FloatVariable : ScriptableObject, ISerializationCallbackReceiver
     }
 
     public void OnBeforeSerialize() {}
+
+    public void Reset()
+    {
+        _runtimeValue = Value;
+    }
 }

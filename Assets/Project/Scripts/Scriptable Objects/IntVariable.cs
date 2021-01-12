@@ -18,4 +18,9 @@ public class IntVariable : ScriptableObject, ISerializationCallbackReceiver
     }
 
     public void OnBeforeSerialize() { }
+
+    public void Reset()
+    {
+        _runtimeValue = Value;
+    }
 }

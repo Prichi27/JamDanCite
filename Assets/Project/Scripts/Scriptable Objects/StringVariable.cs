@@ -17,4 +17,9 @@ public class StringVariable : ScriptableObject, ISerializationCallbackReceiver
     }
 
     public void OnBeforeSerialize() { }
+
+    public void Reset()
+    {
+        _runtimeValue = Value;
+    }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Networking;
 using System.Text;
@@ -12,6 +13,9 @@ public class HighScoreInput : MonoBehaviour
     [SerializeField] private IntVariable _score;
     [SerializeField] private TextMeshProUGUI _scoreText;
     [SerializeField] private TMP_InputField _username;
+    [SerializeField] private GameObject _inputGroup;
+    [SerializeField] private GameObject _menuGroup;
+    [SerializeField] private Button _submitButton;
 
     private void SetText()
     {
@@ -21,7 +25,7 @@ public class HighScoreInput : MonoBehaviour
     private void OnEnable()
     {
         SetText();
-        StartCoroutine("GetLeaderboardCoroutine");
+        //StartCoroutine("GetLeaderboardCoroutine");
     }
 
     public void PostScore()
@@ -31,6 +35,8 @@ public class HighScoreInput : MonoBehaviour
 
     public IEnumerator PostScoreCoroutine()
     {
+        _submitButton.interactable = false;
+
         Score score = new Score();
         score.value = _score.RuntimeValue.ToString();
         score.description = _username.text;
@@ -48,9 +54,13 @@ public class HighScoreInput : MonoBehaviour
 
         yield return www.SendWebRequest();
 
+        _inputGroup.SetActive(false);
+        _menuGroup.SetActive(true);
+
         if (www.isNetworkError || www.isHttpError)
         {
             Debug.Log(www.error);
+            _submitButton.interactable = true;
         }
         else
         {
@@ -90,6 +100,28 @@ public class HighScoreInput : MonoBehaviour
                 throw;
             }
         }
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+
+    public void Restart()
+    {
+        int i = SceneManager.GetActiveScene().buildIndex;
+        int nextScene = UnityEngine.Random.Range(2, 4);
+        do
+        {
+            nextScene = UnityEngine.Random.Range(2, 4);
+
+        } while (i == nextScene);
+        SceneManager.LoadSceneAsync(nextScene);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 
     [Serializable()]

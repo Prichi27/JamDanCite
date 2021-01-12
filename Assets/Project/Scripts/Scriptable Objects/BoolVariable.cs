@@ -18,4 +18,9 @@ public class BoolVariable : ScriptableObject, ISerializationCallbackReceiver
     }
 
     public void OnBeforeSerialize() { }
+
+    public void Reset()
+    {
+        _runtimeValue = Value;
+    }
 }

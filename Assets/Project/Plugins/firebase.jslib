@@ -15,4 +15,22 @@ mergeInto(LibraryManager.library, {
 		}
   },
 
+  FetchData: function (path, objectName, callback, fallback) {
+    var parsedPath = Pointer_stringify(path);
+    var parsedObjectName = Pointer_stringify(objectName);
+    var parsedCallback = Pointer_stringify(callback);
+    var parsedFallback = Pointer_stringify(fallback);
+
+	try {
+		firebase.firestore().collection(parsedPath).get().then(function(querySnapshot){
+			querySnapshot.forEach(function(doc){
+				unityInstance.Module.SendMessage(parsedObjectName, parsedCallback, JSON.strinify(doc.data()));
+			});
+			
+		});
+	} catch (error) {
+		unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, "Ther was an error " + error.message);
+	}
+  },
+
 });

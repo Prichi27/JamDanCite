@@ -143,13 +143,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 693225616}
+  - component: {fileID: 1268239701}
   m_Layer: 5
   m_Name: LeaderBoard Input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &693225616
 RectTransform:
   m_ObjectHideFlags: 0
@@ -170,6 +171,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1268239701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693225615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bff52722b0aad0f42a40083e67b87dfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _score: {fileID: 11400000, guid: 4ca65edabbbc4634784cfa99c5a9a81a, type: 2}
+  _scoreText: {fileID: 1547087576}
+  _username: {fileID: 1609315858}
 --- !u!1 &867819369
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +356,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 896237561}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1268239701}
+        m_MethodName: PostScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &906239379
 GameObject:
   m_ObjectHideFlags: 0
@@ -1337,6 +1364,9 @@ MonoBehaviour:
   _playerAttackEventResponse:
     m_PersistentCalls:
       m_Calls: []
+  _powerPickupEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6430779702956833349
 GameObject:
   m_ObjectHideFlags: 0
@@ -1571,7 +1601,7 @@ PrefabInstance:
     - target: {fileID: 5710100678842108764, guid: e47ffd134f6071b459f966473219f0db,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 7.6
+      value: 7.6000004
       objectReference: {fileID: 0}
     - target: {fileID: 5710100678842108764, guid: e47ffd134f6071b459f966473219f0db,
         type: 3}

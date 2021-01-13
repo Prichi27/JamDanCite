@@ -14,7 +14,7 @@ public class BloodParticleSystemHandler : MonoBehaviour
     {
         Instance = this;
         singleList = new List<Single>();
-        meshParticleSystem.GetComponent<MeshRenderer>().sortingLayerName = "Projectile";
+        meshParticleSystem.GetComponent<MeshRenderer>().sortingLayerName = "Background";
     }
 
     private void Update()

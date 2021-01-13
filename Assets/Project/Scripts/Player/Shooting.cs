@@ -27,8 +27,12 @@ public class Shooting : MonoBehaviour
 
     [SerializeField] BoolVariable _isDead;
 
+    [SerializeField] float _coolDown;
+
     private Vector2 _direction;
     private GameObject _currentStaffPosition;
+    private float _nextAttack = 0;
+
 
     private void Start()
     {
@@ -48,11 +52,13 @@ public class Shooting : MonoBehaviour
 
         SetStaffPosition();
         ProcessInputs();
-        
-        if (Input.GetButtonDown("Fire1"))
+
+        if (Input.GetButtonDown("Fire1") && Time.time > _nextAttack )
         {
             _shootEvent.Raise();
             Attack();
+            _nextAttack = Time.time + _coolDown;
+            
         }
     }
 

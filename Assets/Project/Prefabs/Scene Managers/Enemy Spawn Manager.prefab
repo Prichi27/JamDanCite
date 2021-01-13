@@ -52,6 +52,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0482be2b46f6cbe49b1516afe72d0aba, type: 2}
   - {fileID: 11400000, guid: 51b3010cf7057e74d90506b9fbd4945a, type: 2}
   - {fileID: 11400000, guid: e50cd6e8d68e7134a8bfac945011e927, type: 2}
+  - {fileID: 11400000, guid: 9c597c5a918aa1f49af29d84384b8cd2, type: 2}
   _waveEnemy: {fileID: 11400000, guid: 8ea38989318e09943bff14b4414851fc, type: 2}
   _spawnPosition: {fileID: 11400000, guid: 2615a8d9bd1afe64db4bb08bf7446cee, type: 2}
   _spawnRadius: {fileID: 11400000, guid: 4eb24007b9b0c694eb64ace5b881e09d, type: 2}
@@ -60,7 +61,7 @@ MonoBehaviour:
   _enemyRuntimeSet: {fileID: 11400000, guid: e5711c5ddef92c14ab13ec26e298151e, type: 2}
   _layerMask:
     serializedVersion: 2
-    m_Bits: 7680
+    m_Bits: 7936
 --- !u!114 &6376810910275875243
 MonoBehaviour:
   m_ObjectHideFlags: 0

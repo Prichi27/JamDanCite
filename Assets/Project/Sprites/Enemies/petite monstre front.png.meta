@@ -1,0 +1,656 @@
+fileFormatVersion: 2
+guid: 99b670b5cd40a2549b0233ca92b6e43f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6370369685251902211
+    second: petite monstre front_0
+  - first:
+      213: -1997252904462742132
+    second: petite monstre front_1
+  - first:
+      213: -7512168011315885513
+    second: petite monstre front_2
+  - first:
+      213: -6699876048093788106
+    second: petite monstre front_3
+  - first:
+      213: -6078184106227694318
+    second: petite monstre front_4
+  - first:
+      213: 6461993656294677597
+    second: petite monstre front_5
+  - first:
+      213: -5357944863094227072
+    second: petite monstre front_6
+  - first:
+      213: 9026194607291279689
+    second: petite monstre front_7
+  - first:
+      213: 4314029998747705869
+    second: petite monstre front_8
+  - first:
+      213: 4027309323127801716
+    second: petite monstre front_9
+  - first:
+      213: 2574375032699474028
+    second: petite monstre front_10
+  - first:
+      213: -1150355352106480212
+    second: petite monstre front_11
+  - first:
+      213: 6107989006701599297
+    second: petite monstre front_12
+  - first:
+      213: 4156119807049841293
+    second: petite monstre front_13
+  - first:
+      213: -4460361015415477922
+    second: petite monstre front_14
+  - first:
+      213: 8528432871719332915
+    second: petite monstre front_15
+  - first:
+      213: -4570810510317473167
+    second: petite monstre front_16
+  - first:
+      213: -7367175332399421301
+    second: petite monstre front_17
+  - first:
+      213: -3983688687507284939
+    second: petite monstre front_18
+  - first:
+      213: -3380795271945946445
+    second: petite monstre front_19
+  - first:
+      213: -6297688865334851009
+    second: petite monstre front_20
+  - first:
+      213: -7713133041675336802
+    second: petite monstre front_21
+  - first:
+      213: -2537885095421025646
+    second: petite monstre front_22
+  - first:
+      213: -564294728552319146
+    second: petite monstre front_23
+  - first:
+      213: 596059849435945789
+    second: petite monstre front_24
+  - first:
+      213: -5410490816351002956
+    second: petite monstre front_25
+  - first:
+      213: -8400567108065376078
+    second: petite monstre front_26
+  - first:
+      213: 6908923882009436218
+    second: petite monstre front_27
+  - first:
+      213: 3451311789334875036
+    second: petite monstre front_28
+  - first:
+      213: -964034304730556613
+    second: petite monstre front_29
+  - first:
+      213: 6665538594442098792
+    second: petite monstre front_30
+  - first:
+      213: 6942856237219815463
+    second: petite monstre front_31
+  - first:
+      213: 870199988686877227
+    second: petite monstre front_32
+  - first:
+      213: 7723236295441112766
+    second: petite monstre front_33
+  - first:
+      213: -6817371438735457899
+    second: petite monstre front_34
+  - first:
+      213: 9062988018067833843
+    second: petite monstre front_35
+  - first:
+      213: -4765912305683041165
+    second: petite monstre front_36
+  - first:
+      213: -6660121155846807253
+    second: petite monstre front_37
+  - first:
+      213: 5690806262608259363
+    second: petite monstre front_38
+  - first:
+      213: -4181247106222622365
+    second: petite monstre front_39
+  - first:
+      213: -4368449510060477324
+    second: petite monstre front_40
+  - first:
+      213: -5601424602210713538
+    second: petite monstre front_41
+  - first:
+      213: -1583839738198872068
+    second: petite monstre front_42
+  - first:
+      213: -1949675158131829367
+    second: petite monstre front_43
+  - first:
+      213: 8044513941488752757
+    second: petite monstre front_44
+  - first:
+      213: 2442179971996474122
+    second: petite monstre front_45
+  - first:
+      213: 1599467299760978120
+    second: petite monstre front_46
+  - first:
+      213: -4744411843750758572
+    second: petite monstre front_47
+  - first:
+      213: 2258203605970454708
+    second: petite monstre front_48
+  - first:
+      213: -8176779805348531251
+    second: petite monstre front_49
+  - first:
+      213: -4188748991694046610
+    second: petite monstre front_50
+  - first:
+      213: -3119666665072496938
+    second: petite monstre front_51
+  - first:
+      213: 8366283831598497062
+    second: petite monstre front_52
+  - first:
+      213: 8783193589021673187
+    second: petite monstre front_53
+  - first:
+      213: 4961399967472489114
+    second: petite monstre front_54
+  - first:
+      213: -8301942487120918671
+    second: petite monstre front_55
+  - first:
+      213: 605145671755958830
+    second: petite monstre front_56
+  - first:
+      213: 501541522903633007
+    second: petite monstre front_57
+  - first:
+      213: -8887230137562449812
+    second: petite monstre front_58
+  - first:
+      213: -6200515310668047613
+    second: petite monstre front_59
+  - first:
+      213: 3496615494116879147
+    second: petite monstre front_60
+  - first:
+      213: 2307387071254936004
+    second: petite monstre front_61
+  - first:
+      213: 4206044996952347115
+    second: petite monstre front_62
+  - first:
+      213: 9213875938861550978
+    second: petite monstre front_63
+  - first:
+      213: 6886693583207280819
+    second: petite monstre front_64
+  - first:
+      213: 4643805081069344487
+    second: petite monstre front_65
+  - first:
+      213: 5085762489258116736
+    second: petite monstre front_66
+  - first:
+      213: 5090501296823763757
+    second: petite monstre front_67
+  - first:
+      213: -1128458680238488585
+    second: petite monstre front_68
+  - first:
+      213: -746488437069001760
+    second: petite monstre front_69
+  - first:
+      213: 8661422808231676783
+    second: petite monstre front_70
+  - first:
+      213: 7944015459525018179
+    second: petite monstre front_71
+  - first:
+      213: -7024169800134206171
+    second: petite monstre front_72
+  - first:
+      213: 4652284986400531639
+    second: petite monstre front_73
+  - first:
+      213: 1254704794340884005
+    second: petite monstre front_74
+  - first:
+      213: 8722667612855034644
+    second: petite monstre front_75
+  - first:
+      213: -2441724152155084844
+    second: petite monstre front_76
+  - first:
+      213: 1691698689187900734
+    second: petite monstre front_77
+  - first:
+      213: -380381109427515862
+    second: petite monstre front_78
+  - first:
+      213: 5784576294587119003
+    second: petite monstre front_79
+  - first:
+      213: 5641840064198589235
+    second: petite monstre front_80
+  - first:
+      213: 9034437589437334872
+    second: petite monstre front_81
+  - first:
+      213: -6963950015735860213
+    second: petite monstre front_82
+  - first:
+      213: -7823271862468721229
+    second: petite monstre front_83
+  - first:
+      213: 9173180378790498049
+    second: petite monstre front_84
+  - first:
+      213: -5455778767692414855
+    second: petite monstre front_85
+  - first:
+      213: -150608200318563115
+    second: petite monstre front_86
+  - first:
+      213: 3442063245515877335
+    second: petite monstre front_87
+  - first:
+      213: 5687418246811945430
+    second: petite monstre front_88
+  - first:
+      213: -545927295758890654
+    second: petite monstre front_89
+  - first:
+      213: 9063858621545767562
+    second: petite monstre front_90
+  - first:
+      213: 2141022543869682021
+    second: petite monstre front_91
+  - first:
+      213: 4493542961349042746
+    second: petite monstre front_92
+  - first:
+      213: -7781792030264933011
+    second: petite monstre front_93
+  - first:
+      213: -2541579721221374373
+    second: petite monstre front_94
+  - first:
+      213: -2271436566433599644
+    second: petite monstre front_95
+  - first:
+      213: 5970636844443034384
+    second: petite monstre front_96
+  - first:
+      213: -6228932726972681955
+    second: petite monstre front_97
+  - first:
+      213: -2022360018581161437
+    second: petite monstre front_98
+  - first:
+      213: 5073037280482271107
+    second: petite monstre front_99
+  - first:
+      213: 5156378076354416326
+    second: petite monstre front_100
+  - first:
+      213: 5107443662780601645
+    second: petite monstre front_101
+  - first:
+      213: -1871183556131654035
+    second: petite monstre front_102
+  - first:
+      213: 3616120712035040632
+    second: petite monstre front_103
+  - first:
+      213: 3998088242067873293
+    second: petite monstre front_104
+  - first:
+      213: -5325549195827133644
+    second: petite monstre front_105
+  - first:
+      213: 8070083076441717796
+    second: petite monstre front_106
+  - first:
+      213: -8203136540500753109
+    second: petite monstre front_107
+  - first:
+      213: -3537968801509608642
+    second: petite monstre front_108
+  - first:
+      213: 4240412181131197797
+    second: petite monstre front_109
+  - first:
+      213: -8575586150184058285
+    second: petite monstre front_110
+  - first:
+      213: 2106338000187742805
+    second: petite monstre front_111
+  - first:
+      213: -9053740072523131513
+    second: petite monstre front_112
+  - first:
+      213: 6028651795070661754
+    second: petite monstre front_113
+  - first:
+      213: 30627940987217411
+    second: petite monstre front_114
+  - first:
+      213: 1658346451846132897
+    second: petite monstre front_115
+  - first:
+      213: -4843453249578283662
+    second: petite monstre front_116
+  - first:
+      213: 1273942651940024789
+    second: petite monstre front_117
+  - first:
+      213: 8088056745803717474
+    second: petite monstre front_118
+  - first:
+      213: -5479968771283061354
+    second: petite monstre front_119
+  - first:
+      213: 3252693226605961794
+    second: petite monstre front_120
+  - first:
+      213: -5588632509571497387
+    second: petite monstre front_121
+  - first:
+      213: -8243058020952357306
+    second: petite monstre front_122
+  - first:
+      213: -3938766642618333524
+    second: petite monstre front_123
+  - first:
+      213: 4357495988682023457
+    second: petite monstre front_124
+  - first:
+      213: -1470903012980502062
+    second: petite monstre front_125
+  - first:
+      213: 3641759088349460146
+    second: petite monstre front_126
+  - first:
+      213: -6089970948856329042
+    second: petite monstre front_127
+  - first:
+      213: 321636416971209219
+    second: petite monstre front_128
+  - first:
+      213: 4436165134900129944
+    second: petite monstre front_129
+  - first:
+      213: -1739984269221455717
+    second: petite monstre front_130
+  - first:
+      213: 8449849786039412031
+    second: petite monstre front_131
+  - first:
+      213: 4326378367434946181
+    second: petite monstre front_132
+  - first:
+      213: 6891655546465747897
+    second: petite monstre front_133
+  - first:
+      213: 2817008632088404184
+    second: petite monstre front_134
+  - first:
+      213: 6745765085458642288
+    second: petite monstre front_135
+  - first:
+      213: 5077278892624006131
+    second: petite monstre front_136
+  - first:
+      213: 5385931359267785991
+    second: petite monstre front_137
+  - first:
+      213: 3013766062779432189
+    second: petite monstre front_138
+  - first:
+      213: -3532803065849110425
+    second: petite monstre front_139
+  - first:
+      213: -857137925058499209
+    second: petite monstre front_140
+  - first:
+      213: -8077520853717610104
+    second: petite monstre front_141
+  - first:
+      213: -4367297869966322399
+    second: petite monstre front_142
+  - first:
+      213: -3652179317238307534
+    second: petite monstre front_143
+  - first:
+      213: -1682552970405303616
+    second: petite monstre front_144
+  - first:
+      213: -8794427282238631565
+    second: petite monstre front_145
+  - first:
+      213: -1123211460033109584
+    second: petite monstre front_146
+  - first:
+      213: -941295156886226441
+    second: petite monstre front_147
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: petite monstre front_0
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 1173
+        width: 323
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df4b4aed586e797a0800000000000000
+      internalID: -6370369685251902211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: petite monstre front_1
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 1173
+        width: 323
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d81e6b0155844e0800000000000000
+      internalID: -1997252904462742132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: petite monstre front_4
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 323
+        width: 323
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2158fdc42c3f5aba0800000000000000
+      internalID: -6078184106227694318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: petite monstre front_5
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 323
+        width: 323
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5c95484efc9da950800000000000000
+      internalID: 6461993656294677597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

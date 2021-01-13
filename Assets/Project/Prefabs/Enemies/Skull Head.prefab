@@ -34,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 2024227110546994298}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5580853821406704843}
   - {fileID: 703179202172564048}
@@ -54,9 +54,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06, y: -0.17}
+  m_Offset: {x: 0.01, y: 0.1}
   serializedVersion: 2
-  m_Radius: 1.2
+  m_Radius: 0.91
 --- !u!50 &4021704085724370
 Rigidbody2D:
   serializedVersion: 4
@@ -279,7 +279,7 @@ Transform:
   m_GameObject: {fileID: 3142601390514237271}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 5580853821406704843}
   m_RootOrder: 0

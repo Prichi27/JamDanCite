@@ -398,7 +398,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: Enter your name...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 979503f0f969edf4f9f61d2735e4550e, type: 2}
   m_sharedMaterial: {fileID: -7852164187344308356, guid: 979503f0f969edf4f9f61d2735e4550e,
@@ -783,7 +783,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1609315856}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 867819370}
@@ -1529,7 +1529,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 576899235
+  m_SortingLayerID: 1148003473
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &6430779702956833347
@@ -1898,7 +1898,7 @@ PrefabInstance:
     - target: {fileID: 750336675807902221, guid: 340df84ec11883843ace46171d160133,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 750336675807902221, guid: 340df84ec11883843ace46171d160133,
         type: 3}

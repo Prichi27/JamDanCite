@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6034294127258370970}
   - component: {fileID: 6034294127258370974}
   - component: {fileID: 6034294127258370975}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Potion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1447625707
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 3189129711994982714, guid: 7407df7864a666e45a6bb834eef61278,
     type: 3}

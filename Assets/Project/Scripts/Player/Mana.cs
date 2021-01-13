@@ -17,7 +17,6 @@ public class Mana : MonoBehaviour
         {
             GetComponent<Shooting>().SetDefaultPool();
         }
-        Debug.Log("Mana decreased: " + _mana.RuntimeValue);
     }
 
     public void IncreaseMana(Pickup pickup)
@@ -25,6 +24,5 @@ public class Mana : MonoBehaviour
         _mana.RuntimeValue += pickup.manaIncrease;
         if (_mana.RuntimeValue >= _mana.Value) _mana.RuntimeValue = _mana.Value;
         _powerPickup.Raise();
-        Debug.Log("Mana increased: " + _mana.RuntimeValue);
     }
 }

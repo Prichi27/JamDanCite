@@ -25,7 +25,6 @@ public class HighScoreInput : MonoBehaviour
     private void OnEnable()
     {
         SetText();
-        //StartCoroutine("GetLeaderboardCoroutine");
     }
 
     public void PostScore()
@@ -65,40 +64,6 @@ public class HighScoreInput : MonoBehaviour
         else
         {
             Debug.Log("Form upload complete!");
-        }
-    }
-
-    public IEnumerator GetLeaderboardCoroutine()
-    {
-        UnityWebRequest www = new UnityWebRequest("https://jamdanssite-app.azurewebsites.net/api/scores/top/10", "GET");
-        www.downloadHandler = new DownloadHandlerBuffer();
-        www.SetRequestHeader("Accept", "application/json");
-        www.SetRequestHeader("Content-Type", "application/json");
-        www.SetRequestHeader("x-ms-client-principal-id", "1234");
-        www.SetRequestHeader("x-ms-client-principal-name", "bob");
-
-        yield return www.SendWebRequest();
-
-        if (www.isNetworkError || www.isHttpError)
-        {
-            Debug.Log(www.error);
-        }
-        else
-        {
-            try
-            {
-
-                UserList users = JsonUtility.FromJson<UserList>("{\"users\":" + www.downloadHandler.text + "}");
-                for (int i = 0; i < users.users.Length; i++)
-                {
-                    Debug.Log($"Name: {users.users[i].username}, Score: {users.users[i].value}");
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.Log(ex.Message);
-                throw;
-            }
         }
     }
 

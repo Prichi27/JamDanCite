@@ -23,4 +23,9 @@ public class IntVariable : ScriptableObject, ISerializationCallbackReceiver
     {
         _runtimeValue = Value;
     }
+
+    private void OnEnable()
+    {
+        Reset();
+    }
 }

@@ -20,4 +20,4 @@ MonoBehaviour:
   manaDrain: 10
   attackSpeed: 2
   particleOnShoot: {fileID: 0}
-  particleOnDestroy: {fileID: 0}
+  particleOnDestroy: {fileID: 11400000, guid: da3c2b645b45f504a8996344b96f28b1, type: 2}

@@ -11,6 +11,7 @@ public class EnemyProjectile : MonoBehaviour
     [SerializeField] private GameObjectPool _particlesPool;
     private Animator _animator;
     private bool _isAnimationOver;
+    private bool _isPlayerDamaged;
 
     Vector2 _direction;
 
@@ -26,6 +27,7 @@ public class EnemyProjectile : MonoBehaviour
             gameObject.GetComponent<Rigidbody2D>().AddForce(_direction * _speed);
         }
         _isAnimationOver = false;
+        _isPlayerDamaged = false;
     }
 
     private void OnDisable() 
@@ -44,7 +46,7 @@ public class EnemyProjectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag(Constants.PLAYER_TAG))
+        if(collision.gameObject.CompareTag(Constants.PLAYER_TAG) && !_isPlayerDamaged)
         {
             DamagePlayer();
             if(_speed != 0) gameObject.SetActive(false);
@@ -53,7 +55,7 @@ public class EnemyProjectile : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision) 
     {
-        if(collision.gameObject.CompareTag(Constants.PLAYER_TAG)) 
+        if(collision.gameObject.CompareTag(Constants.PLAYER_TAG) && !_isPlayerDamaged) 
         {
             DamagePlayer();
         }
@@ -80,6 +82,7 @@ public class EnemyProjectile : MonoBehaviour
         BloodParticleSystemHandler.Instance.SpawnBlood(_playerPostion.RuntimeValue, new Vector3(-dir.x, -dir.y, 0));
         _onPlayerDamaged.Raise(_enemy);
         _onPlayerDamaged.Raise();
+        _isPlayerDamaged = true;
 
     }
 

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Snowflake
   m_EditorClassIdentifier: 
   prefab: {fileID: 3395682125340707497, guid: 7426438bf9924064e8040437d34e4bad, type: 3}
-  amount: 5
+  amount: 50
   canExpand: 1

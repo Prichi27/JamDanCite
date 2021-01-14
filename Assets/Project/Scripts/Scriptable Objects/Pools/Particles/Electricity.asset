@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Electricity
   m_EditorClassIdentifier: 
   prefab: {fileID: 7513866911617728404, guid: 4149f35c402f85f4b84b3ef672cc31eb, type: 3}
-  amount: 10
+  amount: 50
   canExpand: 1

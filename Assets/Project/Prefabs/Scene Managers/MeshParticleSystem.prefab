@@ -117,3 +117,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meshParticleSystem: {fileID: 659494479172365724}
+  destroyTime: 5

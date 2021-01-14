@@ -1,7 +1,70 @@
 fileFormatVersion: 2
 guid: 0acacede1961e1348a89c84cb36b791f
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3097818438563791880
+    second: buch-outdoor-tiles_0
+  - first:
+      213: 4986000149738887308
+    second: buch-outdoor-tiles_1
+  - first:
+      213: -2260924104811937979
+    second: buch-outdoor-tiles_2
+  - first:
+      213: 8475737224040425958
+    second: buch-outdoor-tiles_3
+  - first:
+      213: 8392922078115383207
+    second: buch-outdoor-tiles_4
+  - first:
+      213: 8611641982469514810
+    second: buch-outdoor-tiles_5
+  - first:
+      213: -2994122467509566450
+    second: buch-outdoor-tiles_6
+  - first:
+      213: 8513084983655153376
+    second: buch-outdoor-tiles_7
+  - first:
+      213: 1931827239249419946
+    second: buch-outdoor-tiles_8
+  - first:
+      213: -5789581197492662157
+    second: buch-outdoor-tiles_9
+  - first:
+      213: 7693192977091540846
+    second: buch-outdoor-tiles_10
+  - first:
+      213: -3678279557591222324
+    second: buch-outdoor-tiles_11
+  - first:
+      213: -8761427214195825767
+    second: buch-outdoor-tiles_12
+  - first:
+      213: -1677295344805009318
+    second: buch-outdoor-tiles_13
+  - first:
+      213: 6395065168663678078
+    second: buch-outdoor-tiles_14
+  - first:
+      213: 8245941851611938197
+    second: buch-outdoor-tiles_15
+  - first:
+      213: 4899337470462936633
+    second: buch-outdoor-tiles_16
+  - first:
+      213: -3684293851178534942
+    second: buch-outdoor-tiles_17
+  - first:
+      213: 8220833853059870257
+    second: buch-outdoor-tiles_18
+  - first:
+      213: 5371025177089718482
+    second: buch-outdoor-tiles_19
+  - first:
+      213: -4360475086915054393
+    second: buch-outdoor-tiles_20
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,12 +103,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -71,9 +134,486 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: buch-outdoor-tiles_0
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 32
+        width: 44
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8040049f479adfa20800000000000000
+      internalID: 3097818438563791880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buch-outdoor-tiles_1
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 66
+        width: 32
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c881b3f18b4d13540800000000000000
+      internalID: 4986000149738887308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buch-outdoor-tiles_2
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 17
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54ff09c61859f90e0800000000000000
+      internalID: -2260924104811937979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buch-outdoor-tiles_3
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e92c70591edf9570800000000000000
+      internalID: 8475737224040425958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buch-outdoor-tiles_4
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a7c9959926a97470800000000000000
+      internalID: 8392922078115383207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buch-outdoor-tiles_5
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 5
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36afe1b1c2b28770800000000000000
+      internalID: 8611641982469514810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buch-outdoor-tiles_6
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 5
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e048316ba7db276d0800000000000000
+      internalID: -2994122467509566450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buch-outdoor-tiles_7
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 128
+        width: 29
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee3a7930bd842670800000000000000
+      internalID: 8513084983655153376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buch-outdoor-tiles_8
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 112
+        width: 29
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aae92ea83aa3fca10800000000000000
+      internalID: 1931827239249419946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buch-outdoor-tiles_9
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 96
+        width: 29
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3705b2d439647afa0800000000000000
+      internalID: -5789581197492662157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buch-outdoor-tiles_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e67321c9046b3ca60800000000000000
+      internalID: 7693192977091540846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buch-outdoor-tiles_11
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 100
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc7b1311b3024fcc0800000000000000
+      internalID: -3678279557591222324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buch-outdoor-tiles_12
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 116
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 993ea646e58296680800000000000000
+      internalID: -8761427214195825767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buch-outdoor-tiles_13
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 145
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a582b7545cc09b8e0800000000000000
+      internalID: -1677295344805009318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buch-outdoor-tiles_14
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 145
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7c0cad63e5dfb850800000000000000
+      internalID: 6395065168663678078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buch-outdoor-tiles_15
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 160
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d3bd7dc687f6270800000000000000
+      internalID: 8245941851611938197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buch-outdoor-tiles_16
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 144
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93644b9b871fdf340800000000000000
+      internalID: 4899337470462936633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buch-outdoor-tiles_17
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 128
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e7f8583342cedcc0800000000000000
+      internalID: -3684293851178534942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buch-outdoor-tiles_18
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 162
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ea32165d4461270800000000000000
+      internalID: 8220833853059870257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buch-outdoor-tiles_19
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 49
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8bc1011f6b98a40800000000000000
+      internalID: 5371025177089718482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buch-outdoor-tiles_20
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 49
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c4dc70e20b7c73c0800000000000000
+      internalID: -4360475086915054393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

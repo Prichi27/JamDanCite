@@ -70,7 +70,7 @@ public class SpawnManager : MonoBehaviour
 
     private int SpawnEnemyIndex()
     {
-        return (int)Mathf.Ceil((float)_waveNumber / 3f) < _enemyPools.Length ? (int)Mathf.Ceil((float)_waveNumber / 3f) : _enemyPools.Length;
+        return (int)Mathf.Ceil((float)_waveNumber / 2f) < _enemyPools.Length ? (int)Mathf.Ceil((float)_waveNumber / 2f) : _enemyPools.Length;
     }
 
     /// <summary>

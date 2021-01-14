@@ -15,7 +15,7 @@ MonoBehaviour:
   powerName: Fireball
   sprite: {fileID: 5353841184698615464, guid: 40580ca8d0cf2c14f87d319fba5f18d1, type: 3}
   projectileSpeed: 8
-  damage: 500
+  damage: 50
   damageRadius: 1
   manaDrain: 0
   attackSpeed: 1

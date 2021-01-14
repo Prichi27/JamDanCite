@@ -14,6 +14,10 @@ public class SpawnManager : MonoBehaviour
     private IntVariable _waveEnemy;
 
     [SerializeField]
+    [Tooltip("The number of enemies in current wave")]
+    private IntVariable _maxWave;
+
+    [SerializeField]
     [Tooltip("Gets the current player location")]
     private Vector2Variable _spawnPosition;
 
@@ -36,6 +40,8 @@ public class SpawnManager : MonoBehaviour
     [SerializeField]
     LayerMask _layerMask;
 
+    private int _waveNumber = 1;
+
     void Start()
     {
         SpawnEnemy();
@@ -48,7 +54,7 @@ public class SpawnManager : MonoBehaviour
     {
         for (int i = 0; i < _waveEnemy.RuntimeValue; i++)
         {
-            _enemyPools[Random.Range(0, _enemyPools.Length)].GetPooledObject(SetSpawnPosition(), Quaternion.identity);
+            _enemyPools[Random.Range(0, SpawnEnemyIndex())].GetPooledObject(SetSpawnPosition(), Quaternion.identity);
         }
     }
 
@@ -56,9 +62,15 @@ public class SpawnManager : MonoBehaviour
     {
         if(_enemyRuntimeSet.Count() <= 0)
         {
-            _waveEnemy.RuntimeValue += 5;
+            if(_waveEnemy.RuntimeValue < _maxWave.RuntimeValue) _waveEnemy.RuntimeValue += 5;
+            _waveNumber++;
             SpawnEnemy();
         }
+    }
+
+    private int SpawnEnemyIndex()
+    {
+        return (int)Mathf.Ceil((float)_waveNumber / 3f) < _enemyPools.Length ? (int)Mathf.Ceil((float)_waveNumber / 3f) : _enemyPools.Length;
     }
 
     /// <summary>

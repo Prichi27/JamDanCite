@@ -71,7 +71,7 @@ public class MeshParticleSystem : MonoBehaviour
 
     public int AddQuad(Vector3 pos, float rot, Vector3 scale, bool skewed, int uvIndex)
     {
-        if (quadIndex >= MAX_QUAD_AMOUNT) return 0;
+        if (quadIndex >= MAX_QUAD_AMOUNT) quadIndex = 0;
 
         UpdateQuad(quadIndex, pos, rot, scale, skewed, uvIndex);
 

@@ -22,12 +22,15 @@ public class EnemyAttack : MonoBehaviour
 
     private EnemyAI _enemyAI;
     private Animator _anim;
+    private int _id;
 
     private float _nextAttack = 0f;
     private bool _canAttack = false;
+    private bool _isFrozen = false;
 
     private void Start()
     {
+        _id = transform.gameObject.GetInstanceID();
         _enemyAI = GetComponent<EnemyAI>();
         _anim = GetComponentInChildren<Animator>();
     }
@@ -42,7 +45,7 @@ public class EnemyAttack : MonoBehaviour
 
     private void Attack()
     {
-        if (_canAttack && Time.time > _nextAttack)
+        if (_canAttack && !_isFrozen && Time.time > _nextAttack)
         {
             // Play Attack Animation 
             if (_anim)
@@ -101,5 +104,15 @@ public class EnemyAttack : MonoBehaviour
         {
             _canAttack = false;
         }
+    }
+
+    public void Freeze(int id)
+    {
+        if(_id == id) _isFrozen = true;
+    } 
+
+    public void Unfreeze(int id)
+    {
+        if(_id == id) _isFrozen = false;
     }
 }

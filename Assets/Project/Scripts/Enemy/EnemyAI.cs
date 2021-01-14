@@ -13,7 +13,9 @@ public class EnemyAI : MonoBehaviour
     private EnemyStats _enemy;
 
     [SerializeField] 
-    private GameEventListener _damageEvent;
+    private GameEventListener _freezeEvent;
+    [SerializeField] 
+    private GameEvent OnEnemyUnfreeze;
 
     [SerializeField]
     private BoolVariable _isDead;
@@ -36,7 +38,7 @@ public class EnemyAI : MonoBehaviour
     private void Start()
     {
         _id = transform.gameObject.GetInstanceID();
-        _damageEvent.AddResponse(FreezeEnemy);
+        _freezeEvent.AddResponse(FreezeEnemy);
         _seeker = GetComponent<Seeker>();
         _rigidbody = GetComponent<Rigidbody2D>();
 
@@ -90,9 +92,9 @@ public class EnemyAI : MonoBehaviour
         return Vector2.Distance(_target.RuntimeValue, _rigidbody.position) <= _enemy.WaypointDistance;
     }
 
-    public void FreezeEnemy(int id, Power power, bool isIce)
+    public void FreezeEnemy(int id)
     {
-        if (_id == id && isIce)
+        if (_id == id)
         {
             _currentSpeed = 1;
             _rigidbody.bodyType = RigidbodyType2D.Static;
@@ -106,6 +108,7 @@ public class EnemyAI : MonoBehaviour
         _currentSpeed = _enemy.Speed;
         _rigidbody.bodyType = RigidbodyType2D.Dynamic;
         transform.Find("FreezeLayer").GetComponent<SpriteRenderer>().enabled = false;
+        OnEnemyUnfreeze.Raise(transform.gameObject.GetInstanceID());
     }
 
 }

@@ -42,7 +42,7 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    public void UpdateHealth(int id, Power power, bool isIce)
+    public void UpdateHealth(int id, Power power)
     {
         if (_id == id)
         {

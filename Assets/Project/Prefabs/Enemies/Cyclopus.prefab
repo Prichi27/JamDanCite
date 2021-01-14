@@ -17,7 +17,9 @@ GameObject:
   - component: {fileID: 1127444142527757376}
   - component: {fileID: 448824869723553334}
   - component: {fileID: 8955945441990695130}
+  - component: {fileID: 5651393516000388588}
   - component: {fileID: 6557585662408909389}
+  - component: {fileID: 5870568820313075415}
   m_Layer: 9
   m_Name: Cyclopus
   m_TagString: Enemy
@@ -133,7 +135,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 11400000, guid: e4559eebfd4e7e34f9b1b5ea2191e214, type: 2}
   _enemy: {fileID: 11400000, guid: 107b077b47fdd5346bf1a5e1fd6368bb, type: 2}
-  _damageEvent: {fileID: 6557585662408909389}
+  _freezeEvent: {fileID: 6557585662408909389}
+  OnEnemyUnfreeze: {fileID: 11400000, guid: ab47fe6a2aabb6b4da1ccb010570db1a, type: 2}
   _isDead: {fileID: 11400000, guid: d31c92d3fde3d294e820796a5ee9039d, type: 2}
 --- !u!114 &1127444142527757376
 MonoBehaviour:
@@ -183,14 +186,14 @@ MonoBehaviour:
   _scaleSpeed: {fileID: 11400000, guid: 283a1f1931582c546ba0f2d815995933, type: 2}
   _eulerAngle: {fileID: 11400000, guid: 520c2cf55732a714991031ede26cb102, type: 2}
   playerPosition: {fileID: 11400000, guid: e4559eebfd4e7e34f9b1b5ea2191e214, type: 2}
-  _damageEvent: {fileID: 6557585662408909389}
+  _damageEvent: {fileID: 5651393516000388588}
   _deathEvent: {fileID: 11400000, guid: eb73e180abe2a5749a047d39672fb035, type: 2}
   _drops:
   - {fileID: 11400000, guid: b56a608770fbc9b47971db590b85313d, type: 2}
   - {fileID: 11400000, guid: 915e2cb706005504ebeb00f3554aad8f, type: 2}
   - {fileID: 11400000, guid: 711bbfacb69d695409eeca75158cc8d5, type: 2}
   - {fileID: 11400000, guid: 37f4a69bb7b101f4cb5d897f44a4ac90, type: 2}
---- !u!114 &6557585662408909389
+--- !u!114 &5651393516000388588
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -209,6 +212,90 @@ MonoBehaviour:
   _specificResponse:
     m_PersistentCalls:
       m_Calls: []
+  _enemyEventResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  _attackEventResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  _playerAttackEventResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  _powerPickupEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6557585662408909389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024227110546994298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0243da7405d4af4b9574566f64455b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: 15492035a34955a408ddac8583426b04, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls: []
+  _specificResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1127444142527757376}
+        m_MethodName: Freeze
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _enemyEventResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  _attackEventResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  _playerAttackEventResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  _powerPickupEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &5870568820313075415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024227110546994298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0243da7405d4af4b9574566f64455b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: ab47fe6a2aabb6b4da1ccb010570db1a, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls: []
+  _specificResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1127444142527757376}
+        m_MethodName: Unfreeze
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _enemyEventResponse:
     m_PersistentCalls:
       m_Calls: []

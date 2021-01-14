@@ -27,8 +27,10 @@ public class Ice : Projectile
             {
                 
                 OnEnemyDamaged.Raise(other.GetInstanceID());
-                OnEnemyDamaged.Raise(other.GetInstanceID(), power, true);
+                OnEnemyDamaged.Raise(other.GetInstanceID(), power);
                 OnEnemyDamaged.Raise();
+
+                OnEnemyFreeze.Raise(other.GetInstanceID());
 
                 ShowParticleOnDestroy();
                 DeactivateProjectile();

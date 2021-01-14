@@ -27,7 +27,7 @@ public class Fireball : Projectile
                 AddExplosionForce(other);
                 
                 OnEnemyDamaged.Raise(other.GetInstanceID());
-                OnEnemyDamaged.Raise(other.GetInstanceID(), power, false);
+                OnEnemyDamaged.Raise(other.GetInstanceID(), power);
                 OnEnemyDamaged.Raise();
 
                 ShowParticleOnDestroy();

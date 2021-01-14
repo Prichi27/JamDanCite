@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5239676917966988740}
   - component: {fileID: 5239676917966988743}
   - component: {fileID: 5239676917966988742}
+  - component: {fileID: 1690971883}
   m_Layer: 10
   m_Name: Zelda
   m_TagString: Untagged
@@ -102,6 +103,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1690971883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5239676917966988741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eded5d96edd09284ba812b9672fee2cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sortingOrderBase: 5000
 --- !u!1 &5239676918300438936
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,7 +314,7 @@ MonoBehaviour:
   _defaultPool: {fileID: 11400000, guid: e18f81b062339ab47b5d99a1e5f2ea76, type: 2}
   _shootEvent: {fileID: 11400000, guid: f35169fe5b73b1243975409e395aa765, type: 2}
   _isDead: {fileID: 11400000, guid: d31c92d3fde3d294e820796a5ee9039d, type: 2}
-  _coolDown: 2
+  _coolDown: 0.5
 --- !u!114 &554949656824476878
 MonoBehaviour:
   m_ObjectHideFlags: 0

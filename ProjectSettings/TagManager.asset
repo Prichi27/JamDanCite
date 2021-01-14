@@ -65,11 +65,14 @@ TagManager:
   - name: Enemy
     uniqueID: 1644575477
     locked: 0
-  - name: Projectile
-    uniqueID: 979733229
-    locked: 0
   - name: Player
     uniqueID: 576899235
+    locked: 0
+  - name: Freeze
+    uniqueID: 2396072159
+    locked: 0
+  - name: Projectile
+    uniqueID: 979733229
     locked: 0
   - name: UI
     uniqueID: 1148003473

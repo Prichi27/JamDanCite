@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3049607611171679069}
   - component: {fileID: 3049607611171679058}
   - component: {fileID: 234400487}
+  - component: {fileID: 1254620793}
   m_Layer: 8
   m_Name: Up
   m_TagString: Untagged
@@ -66,6 +67,45 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.47, y: 1.0000002}
   m_EdgeRadius: 0
+--- !u!23 &1254620793
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3049607611171679070}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &3049607612444947791
 GameObject:
   m_ObjectHideFlags: 0
@@ -77,6 +117,7 @@ GameObject:
   - component: {fileID: 3049607612444947790}
   - component: {fileID: 3049607612444947779}
   - component: {fileID: 1104426230}
+  - component: {fileID: 531413558}
   m_Layer: 8
   m_Name: Right
   m_TagString: Untagged
@@ -132,6 +173,45 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.47, y: 1}
   m_EdgeRadius: 0
+--- !u!23 &531413558
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3049607612444947791}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &3049607612794587951
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,6 +223,7 @@ GameObject:
   - component: {fileID: 3049607612794587950}
   - component: {fileID: 3049607612794587939}
   - component: {fileID: 1832733334}
+  - component: {fileID: 1810357017}
   m_Layer: 8
   m_Name: Left
   m_TagString: Untagged
@@ -198,6 +279,45 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.47, y: 1}
   m_EdgeRadius: 0
+--- !u!23 &1810357017
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3049607612794587951}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &3049607612813127136
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,6 +329,7 @@ GameObject:
   - component: {fileID: 3049607612813127143}
   - component: {fileID: 3049607612813127140}
   - component: {fileID: 1874996317}
+  - component: {fileID: 235513758}
   m_Layer: 8
   m_Name: Down
   m_TagString: Untagged
@@ -264,6 +385,45 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.47, y: 1.0000002}
   m_EdgeRadius: 0
+--- !u!23 &235513758
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3049607612813127136}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &3049607613277736522
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,9 +484,8 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 24.639675, y: -12.324271}
-      - {x: 24.935127, y: 24.722067}
-      - {x: -24.673124, y: 24.435436}
-      - {x: -24.579422, y: -24.935442}
-      - {x: -0.76005685, y: -25.070227}
-      - {x: 24.538342, y: -25.03047}
+    - - {x: 25.337992, y: -24.99569}
+      - {x: 25.250845, y: 25.96899}
+      - {x: -25.186312, y: 25.983364}
+      - {x: -25.14704, y: -25.330305}
+      - {x: -0.62776697, y: -25.219204}

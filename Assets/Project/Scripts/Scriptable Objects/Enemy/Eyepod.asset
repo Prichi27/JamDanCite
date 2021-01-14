@@ -15,8 +15,9 @@ MonoBehaviour:
   enemyName: Eyepod
   health: 400
   damage: 75
-  speed: 20
+  speed: 200
   waypointDistance: 4
   score: 50
   isLongRanged: 1
+  canAttackAtPlayerPosition: 0
   attackSpeed: 5

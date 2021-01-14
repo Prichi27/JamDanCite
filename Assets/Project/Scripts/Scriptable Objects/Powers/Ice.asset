@@ -15,9 +15,9 @@ MonoBehaviour:
   powerName: Ice
   sprite: {fileID: -856085545168688419, guid: 6250e678db476354e92529793850f441, type: 3}
   projectileSpeed: 5
-  damage: 30
+  damage: 100
   damageRadius: 1
-  manaDrain: 10
+  manaDrain: 15
   attackSpeed: 2
   particleOnShoot: {fileID: 0}
   particleOnDestroy: {fileID: 11400000, guid: da3c2b645b45f504a8996344b96f28b1, type: 2}

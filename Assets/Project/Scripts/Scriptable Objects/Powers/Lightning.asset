@@ -15,9 +15,9 @@ MonoBehaviour:
   powerName: Lightning
   sprite: {fileID: -1183300073134848680, guid: 402bb3dc590a3664e9f3fa5071ceb39b, type: 3}
   projectileSpeed: 5
-  damage: 50
+  damage: 75
   damageRadius: 2
-  manaDrain: 15
+  manaDrain: 20
   attackSpeed: 3
   particleOnShoot: {fileID: 11400000, guid: a3047c70b62a3904eb9402f5ed5e2639, type: 2}
   particleOnDestroy: {fileID: 0}

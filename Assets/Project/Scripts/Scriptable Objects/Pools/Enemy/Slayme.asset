@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70756fe085663cc47a98eb14da10ed46, type: 3}
   m_Name: Slayme
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
-  amount: 0
-  canExpand: 0
+  prefab: {fileID: 1351551005696184163, guid: 97e333b3af7935d4bbf6338e0a5ba12c, type: 3}
+  amount: 50
+  canExpand: 1

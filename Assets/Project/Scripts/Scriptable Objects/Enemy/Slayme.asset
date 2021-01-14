@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed34495bdda0d7469389f385c829002, type: 3}
   m_Name: Slayme
   m_EditorClassIdentifier: 
-  enemyName: 
-  health: 0
-  damage: 0
-  speed: 0
-  waypointDistance: 0
-  score: 0
+  enemyName: Slayme
+  health: 100
+  damage: 8
+  speed: 400
+  waypointDistance: 1
+  score: 5
   isLongRanged: 0
   canAttackAtPlayerPosition: 0
-  attackSpeed: 0
+  attackSpeed: 6

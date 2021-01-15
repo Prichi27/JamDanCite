@@ -25,6 +25,7 @@ public class EnemyAttack : MonoBehaviour
     private int _id;
 
     private float _nextAttack = 0f;
+    private Rigidbody2D _rb;
     private bool _canAttack = false;
     private bool _isFrozen = false;
 
@@ -33,6 +34,7 @@ public class EnemyAttack : MonoBehaviour
         _id = transform.gameObject.GetInstanceID();
         _enemyAI = GetComponent<EnemyAI>();
         _anim = GetComponentInChildren<Animator>();
+        _rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -95,6 +97,7 @@ public class EnemyAttack : MonoBehaviour
         if(other.collider.CompareTag("Player"))
         {
             _canAttack = true;
+            _rb.constraints = RigidbodyConstraints2D.FreezeAll;
         }
     }
 
@@ -103,6 +106,7 @@ public class EnemyAttack : MonoBehaviour
         if(other.collider.CompareTag("Player"))
         {
             _canAttack = false;
+            _rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
     }
 

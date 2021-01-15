@@ -25,6 +25,7 @@ public class HighScoreInput : MonoBehaviour
     private void OnEnable()
     {
         SetText();
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 
     public void PostScore()

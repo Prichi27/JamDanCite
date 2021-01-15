@@ -42,7 +42,11 @@ public class Shooting : MonoBehaviour
 
     private void Awake() 
     {
-        Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
+        #if UNITY_WEBGL
+            Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.ForceSoftware);
+        #else
+            Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
+        #endif
     }
 
     // Update is called once per frame
@@ -98,5 +102,5 @@ public class Shooting : MonoBehaviour
         _currentPool = _defaultPool;
     }
 
-    private bool IsLightningPower(){ return _currentPool.name.Equals("Lightning"); }
+    private bool IsLightningPower(){ return _currentPool.name.Equals("Lightning"); }    
 }

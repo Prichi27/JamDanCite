@@ -6,6 +6,7 @@ public class PowerPickup : MonoBehaviour
 {
     [SerializeField] private Pickup _pickup;
     [SerializeField] private GameEvent _powerPickupEvent;
+    [SerializeField] private FloatVariable _despawnTime;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class PowerPickup : MonoBehaviour
 
     private void OnEnable() 
     {
-        Invoke("DeactivateObject", 10.0f);
+        Invoke("DeactivateObject", _despawnTime.RuntimeValue);
     }
 
     private void DeactivateObject()

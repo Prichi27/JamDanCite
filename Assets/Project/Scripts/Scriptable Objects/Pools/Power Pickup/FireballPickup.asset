@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: FireballPickup
   m_EditorClassIdentifier: 
   prefab: {fileID: 3755798356007068083, guid: c91cf2d3c9d004d4988301af5a7e438d, type: 3}
-  amount: 1
+  amount: 2
   canExpand: 0

@@ -133,3 +133,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pickup: {fileID: 11400000, guid: 1252b07af62e7f9499c39fb93efe4738, type: 2}
   _powerPickupEvent: {fileID: 11400000, guid: 431bcde8b89b34d4a8b0ebe673e37c9a, type: 2}
+  _despawnTime: {fileID: 11400000, guid: f071c35115b8ba540ae42b4e533683f6, type: 2}

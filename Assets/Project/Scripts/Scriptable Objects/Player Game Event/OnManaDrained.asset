@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70756fe085663cc47a98eb14da10ed46, type: 3}
-  m_Name: IcePickup
+  m_Script: {fileID: 11500000, guid: 75b469f0d7f0cfd44aae3e97e068824e, type: 3}
+  m_Name: OnManaDrained
   m_EditorClassIdentifier: 
-  prefab: {fileID: 3755798356007068083, guid: 14caef85206a65d43a17395b570aad9c, type: 3}
-  amount: 2
-  canExpand: 0

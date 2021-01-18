@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d3577db8b2f83b4abaf49f0e2138404, type: 3}
   m_Name: FireballPickup
   m_EditorClassIdentifier: 
-  sprite: {fileID: -2368140150131854295, guid: 0f5776b3b622cf743b14ebb91204b815, type: 3}
+  sprite: {fileID: 8302833338459390095, guid: 0f5776b3b622cf743b14ebb91204b815, type: 3}
   projectilePool: {fileID: 11400000, guid: e18f81b062339ab47b5d99a1e5f2ea76, type: 2}
   particleOnPickup: {fileID: 0}
   manaIncrease: 20

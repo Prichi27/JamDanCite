@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70756fe085663cc47a98eb14da10ed46, type: 3}
-  m_Name: Potion
+  m_Name: Mana Potion
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6034294127258370971, guid: 2a02e83fd6efa3f4c95409967a235b0a, type: 3}
+  prefab: {fileID: 3755798356007068083, guid: c91cf2d3c9d004d4988301af5a7e438d, type: 3}
   amount: 10
   canExpand: 0

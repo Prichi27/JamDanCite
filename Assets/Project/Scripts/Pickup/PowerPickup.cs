@@ -30,12 +30,10 @@ public class PowerPickup : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    private void OnCollisionEnter2D(Collision2D other) 
+    private void OnTriggerEnter2D(Collider2D other) 
     {
-        if(other.collider.CompareTag("Player"))
+        if(other.gameObject.CompareTag(Constants.PLAYER_TAG))
         {
-            Shooting script = other.gameObject.GetComponent<Shooting>();
-            // script.SetProjectilePool(_pickup.projectilePool);
             _powerPickupEvent.Raise(_pickup);
             gameObject.SetActive(false);
         }

@@ -271,7 +271,7 @@ MonoBehaviour:
   _deathEvent: {fileID: 11400000, guid: eb73e180abe2a5749a047d39672fb035, type: 2}
   _drops:
   - {fileID: 11400000, guid: b56a608770fbc9b47971db590b85313d, type: 2}
-  - {fileID: 11400000, guid: 915e2cb706005504ebeb00f3554aad8f, type: 2}
+  - {fileID: 11400000, guid: 24fb370c284f57c49a5284c6d5ace922, type: 2}
   - {fileID: 11400000, guid: 711bbfacb69d695409eeca75158cc8d5, type: 2}
   - {fileID: 11400000, guid: 37f4a69bb7b101f4cb5d897f44a4ac90, type: 2}
 --- !u!114 &-4977139373857572348

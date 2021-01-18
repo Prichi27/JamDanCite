@@ -44,7 +44,7 @@ public abstract class Projectile : MonoBehaviour
         isAnimationOver = false;
         HasSpawned = false;
 
-        Invoke("DeactivateProjectile", 3.0f);
+        Invoke("DeactivateProjectile", 2.0f);
     }
 
     private void OnDisable() 
@@ -78,7 +78,7 @@ public abstract class Projectile : MonoBehaviour
 
     void ChecksIfObjectOutOfCameraView()
     {
-        if(!GetComponent<Renderer>().isVisible) gameObject.SetActive(false);
+        if(!GetComponent<Renderer>().isVisible) DeactivateProjectile();
     }
 
     protected void ShowParticleOnShoot()

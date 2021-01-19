@@ -15,7 +15,7 @@ MonoBehaviour:
   enemyName: Goobs
   health: 350
   damage: 50
-  speed: 200
+  speed: 250
   waypointDistance: 1
   score: 30
   isLongRanged: 0

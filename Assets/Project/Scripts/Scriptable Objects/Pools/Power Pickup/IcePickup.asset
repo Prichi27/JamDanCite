@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: IcePickup
   m_EditorClassIdentifier: 
   prefab: {fileID: 3755798356007068083, guid: 14caef85206a65d43a17395b570aad9c, type: 3}
-  amount: 2
+  amount: 3
   canExpand: 0

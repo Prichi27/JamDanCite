@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: LightningPickup
   m_EditorClassIdentifier: 
   prefab: {fileID: 3755798356007068083, guid: a50a94050ad94244bb94d3cb9bb441fd, type: 3}
-  amount: 2
+  amount: 3
   canExpand: 0

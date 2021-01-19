@@ -15,7 +15,7 @@ MonoBehaviour:
   enemyName: Cyclopus
   health: 250
   damage: 40
-  speed: 300
+  speed: 350
   waypointDistance: 1
   score: 25
   isLongRanged: 0

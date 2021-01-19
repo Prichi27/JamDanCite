@@ -89,7 +89,7 @@ public class EnemyAI : MonoBehaviour
 
     public bool CanEnemyAttack()
     {
-        return Vector2.Distance(_target.RuntimeValue, _rigidbody.position) <= _enemy.WaypointDistance;
+        return Vector2.Distance(_target.RuntimeValue, _rigidbody.position) <= _enemy.DistanceFromPlayer;
     }
 
     public void FreezeEnemy(int id)

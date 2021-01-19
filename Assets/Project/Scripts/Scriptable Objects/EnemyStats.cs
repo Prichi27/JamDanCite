@@ -10,6 +10,7 @@ public class EnemyStats : ScriptableObject, ISerializationCallbackReceiver
     [SerializeField] public float damage;
     [SerializeField] public float speed;
     [SerializeField] public float waypointDistance;
+    [SerializeField] public float distanceFromPlayer;
     [SerializeField] public int score;
     [SerializeField] public bool isLongRanged;
     [SerializeField] public bool canAttackAtPlayerPosition;
@@ -20,6 +21,7 @@ public class EnemyStats : ScriptableObject, ISerializationCallbackReceiver
     public float Damage { get; set; }
     public float Speed { get; set; }
     public float WaypointDistance { get; set; }
+    public float DistanceFromPlayer { get; set; }
     public int Score { get; set; }
     public bool IsLongRanged { get; set; }
     public float AttackSpeed { get; set; }
@@ -34,6 +36,7 @@ public class EnemyStats : ScriptableObject, ISerializationCallbackReceiver
         Speed = speed;
         Score = score;
         WaypointDistance = waypointDistance;
+        DistanceFromPlayer = distanceFromPlayer;
         IsLongRanged = isLongRanged;
         AttackSpeed = attackSpeed;
     }

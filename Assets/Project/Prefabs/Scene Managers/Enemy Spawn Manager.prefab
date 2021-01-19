@@ -60,6 +60,7 @@ MonoBehaviour:
   _colliderRadius: {fileID: 11400000, guid: 9c0ab4d730bb1a548bc39e7f065e3f92, type: 2}
   _offset: {fileID: 11400000, guid: ace42438fc3d9dd4f8c3faea1931f230, type: 2}
   _enemyRuntimeSet: {fileID: 11400000, guid: e5711c5ddef92c14ab13ec26e298151e, type: 2}
+  _EnemyDeath: {fileID: 11400000, guid: eb73e180abe2a5749a047d39672fb035, type: 2}
   _layerMask:
     serializedVersion: 2
     m_Bits: 7936

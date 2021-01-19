@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9493efbf6c15a2847a2cb81c33876034, type: 3}
   m_Name: MaxEnemy
   m_EditorClassIdentifier: 
-  Value: 50
+  Value: 75

@@ -38,6 +38,10 @@ public class SpawnManager : MonoBehaviour
     private EnemyRuntimeSet _enemyRuntimeSet;
 
     [SerializeField]
+    [Tooltip("Enemy Death Event")]
+    private GameEvent _EnemyDeath;
+
+    [SerializeField]
     LayerMask _layerMask;
 
     private int _waveNumber = 1;
@@ -58,6 +62,9 @@ public class SpawnManager : MonoBehaviour
         {
             _enemyPools[Random.Range(0, SpawnEnemyIndex())].GetPooledObject(SetSpawnPosition(), Quaternion.identity);
         }
+
+        // Set enemy remaining
+        _EnemyDeath.Raise();
     }
 
     public void NextWave()

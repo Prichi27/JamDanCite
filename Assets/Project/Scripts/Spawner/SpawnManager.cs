@@ -42,6 +42,7 @@ public class SpawnManager : MonoBehaviour
 
     private int _waveNumber = 1;
 
+    private int _currentIteration = 0;
     void Start()
     {
         SpawnEnemy();
@@ -52,6 +53,7 @@ public class SpawnManager : MonoBehaviour
     /// </summary>
     public void SpawnEnemy()
     {
+        _currentIteration = 0;
         for (int i = 0; i < _waveEnemy.RuntimeValue; i++)
         {
             _enemyPools[Random.Range(0, SpawnEnemyIndex())].GetPooledObject(SetSpawnPosition(), Quaternion.identity);
@@ -84,7 +86,11 @@ public class SpawnManager : MonoBehaviour
 
         // Checks if Enemy is too close to Player 
         // and makes sure _spawnRadius is always greater than _offset to prevent Recursive from running endlessly 
-        if (_colliderRadius.RuntimeValue > _offset.RuntimeValue && !PreventSpawnOverlap(spawnPos)) spawnPos = SetSpawnPosition();
+        if (_colliderRadius.RuntimeValue > _offset.RuntimeValue && !PreventSpawnOverlap(spawnPos) && _currentIteration < 100)
+        {
+            spawnPos = SetSpawnPosition();
+            _currentIteration++;
+        } 
 
         return spawnPos;
     }

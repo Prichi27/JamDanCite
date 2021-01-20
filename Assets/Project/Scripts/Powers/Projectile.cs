@@ -43,8 +43,6 @@ public abstract class Projectile : MonoBehaviour
 
         isAnimationOver = false;
         HasSpawned = false;
-
-        Invoke("DeactivateProjectile", 2.0f);
     }
 
     private void OnDisable() 

@@ -70,7 +70,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 576899235
-  m_SortingLayer: 9
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: -7481209325198776049, guid: d3c3a4fef424e7746ac89119ef61c00d,
     type: 3}
@@ -166,6 +166,7 @@ GameObject:
   - component: {fileID: 308663346}
   - component: {fileID: 5061473888696643501}
   - component: {fileID: 4512198672984234802}
+  - component: {fileID: 6523830052189497044}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -264,7 +265,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 576899235
-  m_SortingLayer: 9
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -385,7 +386,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mana: {fileID: 11400000, guid: 09f3534c0328d5c4883781494b5aca35, type: 2}
-  _powerPickup: {fileID: 11400000, guid: 431bcde8b89b34d4a8b0ebe673e37c9a, type: 2}
+  OnPowerPickup: {fileID: 0}
+  OnManaDrained: {fileID: 0}
 --- !u!114 &5061473888696643501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,6 +483,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6523830052189497044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5239676918454948116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cbc690ea80d70d458725dc17149d5ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isGamePaused: {fileID: 11400000, guid: 6ad33e04ea3723e49bf379284ca953b2, type: 2}
 --- !u!1 &6518537766733683582
 GameObject:
   m_ObjectHideFlags: 0

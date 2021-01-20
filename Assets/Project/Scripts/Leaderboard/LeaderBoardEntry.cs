@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -14,5 +15,12 @@ public class LeaderBoardEntry : MonoBehaviour
         this.rank.text = rank;
         this.username.text = username;
         this.score.text = score;
+    }
+
+    public void SetColours(byte r, byte g, byte b)
+    {
+        this.rank.color = new Color32(r, g, b, 255);
+        this.username.color = new Color32(r, g, b, 255);
+        this.score.color = new Color32(r, g, b, 255);
     }
 }

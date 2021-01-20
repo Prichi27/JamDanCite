@@ -17,6 +17,16 @@ public class LeaderBoardDisplay : MonoBehaviour
         StartCoroutine("GetLeaderboardCoroutine"); 
     }
 
+    private void Start() 
+    {        
+        var entryGameobject = Instantiate(_leaderBoardItem);
+        entryGameobject.transform.SetParent(_leaderBoardParent);
+
+        LeaderBoardEntry entryScript = entryGameobject.GetComponent<LeaderBoardEntry>();
+        entryScript.SetColours(221, 212, 118);
+        entryScript.setHighcoreEntry("RANK", "NAME", "SCORE");
+    }
+
     public IEnumerator GetLeaderboardCoroutine()
     {
         UnityWebRequest www = new UnityWebRequest("https://jamdanssite-app.azurewebsites.net/api/scores/top/10", "GET");

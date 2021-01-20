@@ -15,9 +15,10 @@ MonoBehaviour:
   enemyName: Slayme
   health: 100
   damage: 8
-  speed: 450
-  waypointDistance: 1
+  speed: 1000
+  waypointDistance: 0.5
+  distanceFromPlayer: 1
   score: 5
   isLongRanged: 0
   canAttackAtPlayerPosition: 0
-  attackSpeed: 6
+  attackSpeed: 1

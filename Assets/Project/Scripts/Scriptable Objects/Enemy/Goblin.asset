@@ -15,8 +15,9 @@ MonoBehaviour:
   enemyName: Goblin
   health: 100
   damage: 10
-  speed: 550
-  waypointDistance: 1
+  speed: 1000
+  waypointDistance: 0.5
+  distanceFromPlayer: 1
   score: 5
   isLongRanged: 0
   canAttackAtPlayerPosition: 0

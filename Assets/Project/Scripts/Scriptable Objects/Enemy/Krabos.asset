@@ -15,8 +15,9 @@ MonoBehaviour:
   enemyName: Krabos
   health: 150
   damage: 15
-  speed: 350
-  waypointDistance: 1
+  speed: 1000
+  waypointDistance: 0.5
+  distanceFromPlayer: 1
   score: 10
   isLongRanged: 0
   canAttackAtPlayerPosition: 0

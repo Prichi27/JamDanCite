@@ -42,9 +42,13 @@ public class SpawnManager : MonoBehaviour
     private GameEvent _EnemyDeath;
 
     [SerializeField]
+    [Tooltip("Wave number")]
+    private IntVariable _waveNumber;
+
+    [SerializeField]
     LayerMask _layerMask;
 
-    private int _waveNumber = 1;
+    //private int _waveNumber = 1;
 
     private int _currentIteration = 0;
     void Start()
@@ -72,14 +76,14 @@ public class SpawnManager : MonoBehaviour
         if(_enemyRuntimeSet.Count() <= 0)
         {
             if(_waveEnemy.RuntimeValue < _maxWave.RuntimeValue) _waveEnemy.RuntimeValue += 5;
-            _waveNumber++;
+            _waveNumber.RuntimeValue++;
             SpawnEnemy();
         }
     }
 
     private int SpawnEnemyIndex()
     {
-        return (int)Mathf.Ceil((float)_waveNumber / 2f) < _enemyPools.Length ? (int)Mathf.Ceil((float)_waveNumber / 2f) : _enemyPools.Length;
+        return (int)Mathf.Ceil((float)_waveNumber.RuntimeValue / 2f) < _enemyPools.Length ? (int)Mathf.Ceil((float)_waveNumber.RuntimeValue / 2f) : _enemyPools.Length;
     }
 
     /// <summary>

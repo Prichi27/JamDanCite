@@ -57,7 +57,7 @@ public class Shooting : MonoBehaviour
         SetStaffPosition();
         ProcessInputs();
 
-        if (Input.GetButtonDown("Fire1") && Time.time > _nextAttack )
+        if (Input.GetButton("Fire1") && Time.time > _nextAttack )
         {
             _shootEvent.Raise();
             Attack();

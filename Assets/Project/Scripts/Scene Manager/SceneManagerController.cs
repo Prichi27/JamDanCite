@@ -7,6 +7,7 @@ public class SceneManagerController : MonoBehaviour
 {
     public void LoadScene(int i)
     {
+        if(i == 0) Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         SceneManager.LoadScene(i, LoadSceneMode.Single);
     }
 

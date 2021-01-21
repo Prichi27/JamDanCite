@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6376810910275875244}
   - component: {fileID: 6376810910275875245}
   - component: {fileID: 6376810910275875243}
+  - component: {fileID: 8090912444153448426}
   m_Layer: 0
   m_Name: Enemy Spawn Manager
   m_TagString: Untagged
@@ -92,6 +93,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8090912444153448426}
+        m_MethodName: UpdateEnemyStats
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _specificResponse:
     m_PersistentCalls:
       m_Calls: []
@@ -107,3 +119,26 @@ MonoBehaviour:
   _powerPickupEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8090912444153448426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6376810910275875246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017329267ee3eb9448a3cebbd4366334, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyStats:
+  - {fileID: 11400000, guid: 4ddbc9c2c21a4e74d94349d44e7aefbc, type: 2}
+  - {fileID: 11400000, guid: 9df8047f13a648944accb39e67132cf1, type: 2}
+  - {fileID: 11400000, guid: a7486028347cb2e4382e6ba458f41171, type: 2}
+  - {fileID: 11400000, guid: 8ca787c428b88fc408f2e5acddf4c7a5, type: 2}
+  - {fileID: 11400000, guid: 107b077b47fdd5346bf1a5e1fd6368bb, type: 2}
+  - {fileID: 11400000, guid: 13f7254efa52e924c80b30493cca744c, type: 2}
+  - {fileID: 11400000, guid: 3f6d906aebe4dd646b2a4e932d7ed48e, type: 2}
+  - {fileID: 11400000, guid: a052f4168b3f6134fbc157999151f75d, type: 2}
+  _waveNumber: {fileID: 11400000, guid: a70973d2d4570bf4badbab5c786eb188, type: 2}
+  _enemyRuntimeSet: {fileID: 11400000, guid: e5711c5ddef92c14ab13ec26e298151e, type: 2}

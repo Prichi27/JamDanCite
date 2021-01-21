@@ -15,7 +15,7 @@ MonoBehaviour:
   enemyName: Devil's Eye
   health: 300
   damage: 45
-  speed: 1000
+  speed: 300
   waypointDistance: 0.5
   distanceFromPlayer: 4
   score: 30

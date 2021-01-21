@@ -137,7 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerPostion: {fileID: 11400000, guid: e4559eebfd4e7e34f9b1b5ea2191e214, type: 2}
   _enemy: {fileID: 11400000, guid: 8ca787c428b88fc408f2e5acddf4c7a5, type: 2}
-  _speed: 50
+  _speed: 100
   _onPlayerDamaged: {fileID: 11400000, guid: e40096e452acc89429c442e169f25a1a, type: 2}
   _particlesPool: {fileID: 0}
 --- !u!95 &7520879077107018596

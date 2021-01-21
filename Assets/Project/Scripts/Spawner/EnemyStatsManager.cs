@@ -10,15 +10,13 @@ public class EnemyStatsManager : MonoBehaviour
 
     public void UpdateEnemyStats()
     {
-        if(_waveNumber.RuntimeValue % 5f == 0 && _enemyRuntimeSet.Count() <= 0)
+        if(_waveNumber.RuntimeValue % 7f == 0 && _enemyRuntimeSet.Count() == 1 )
         {
-            int currentIndex = GetIndex() - 1;
+            int currentIndex = GetIndex();
 
             for(int i=0; i < currentIndex; i++)
             {
-                _enemyStats[i].Speed += 150;
-                Debug.Log($"Speed increased for {_enemyStats[i].Name}");
-                Debug.Log($"New speed: {_enemyStats[i].Speed}");
+                if(_enemyStats[i].Speed < 1500) _enemyStats[i].Speed += 150;
             }
         }
     }

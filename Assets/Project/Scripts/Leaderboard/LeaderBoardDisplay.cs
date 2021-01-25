@@ -50,7 +50,7 @@ public class LeaderBoardDisplay : MonoBehaviour
             try
             {
                 _userList = JsonUtility.FromJson<UserList>("{\"users\":" + www.downloadHandler.text + "}");
-                //DisplayScore();
+                DisplayScore();
             }
             catch (Exception ex)
             {

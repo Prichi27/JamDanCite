@@ -7,6 +7,7 @@ using TMPro;
 using UnityEngine.Networking;
 using System.Text;
 using System;
+using System.Text.RegularExpressions;
 
 public class HighScoreInput : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class HighScoreInput : MonoBehaviour
     [SerializeField] private TMP_InputField _username;
     [SerializeField] private GameObject _inputGroup;
     [SerializeField] private GameObject _menuGroup;
+    [SerializeField] private GameObject _loading;
     [SerializeField] private Button _submitButton;
 
     private void SetText()
@@ -36,6 +38,7 @@ public class HighScoreInput : MonoBehaviour
     public IEnumerator PostScoreCoroutine()
     {
         _submitButton.interactable = false;
+        _loading.SetActive(true);
 
         Score score = new Score();
         score.value = _score.RuntimeValue.ToString();
@@ -56,11 +59,13 @@ public class HighScoreInput : MonoBehaviour
 
         _inputGroup.SetActive(false);
         _menuGroup.SetActive(true);
+        _loading.SetActive(false);
 
         if (www.isNetworkError || www.isHttpError)
         {
             Debug.Log(www.error);
             _submitButton.interactable = true;
+            _loading.SetActive(false);
         }
         else
         {

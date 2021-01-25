@@ -3537,10 +3537,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Loading
       objectReference: {fileID: 0}
+    - target: {fileID: 412780810119709114, guid: 0a89fe71aaaec724bad212026662c0b6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1762112491104313554, guid: 0a89fe71aaaec724bad212026662c0b6,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 25
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4554575973004536830, guid: 0a89fe71aaaec724bad212026662c0b6,
         type: 3}
@@ -3605,7 +3610,7 @@ PrefabInstance:
     - target: {fileID: 4554575973004536830, guid: 0a89fe71aaaec724bad212026662c0b6,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4554575973004536830, guid: 0a89fe71aaaec724bad212026662c0b6,
         type: 3}

@@ -11,7 +11,6 @@ public class InputValidator : MonoBehaviour
     private void Start() 
     {
         _input = GetComponent<TMP_InputField>();
-        //_input.contentType = TMP_InputField.ContentType.Alphanumeric;
     }
 
     private void OnGUI() 
